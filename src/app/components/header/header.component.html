@@ -1,14 +1,14 @@
 
 <header>
     <nav>
-        <div id="cont-img"><img  class="img-nav"  src="../assets/imgs/aplogo.png" > <p id="yo-prog">#YoProgramo</p></div>
+        <div id="cont-img"><img  class="img-nav"  [src]="header.apLogo" > <p id="yo-prog">{{header.apText}}</p></div>
         
         <div class="social-icons">
-            <a class="social-icon" href="https://www.linkedin.com/in/juan-jos%C3%A9-roma-11310a36?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2PrY1wymR9%2Bb4RcARsnrZw%3D%3D"><i class="fab fa-linkedin-in"></i></a>
-            <a class="social-icon" href="https://github.com/ArgLogan"><i class="fab fa-github"></i></a>
-            <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-            <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
-            <a class="social-icon cta" href="#"><i class="fas fa-sign-in-alt"></i></a>
+            <a class="social-icon" [href]="header.lidin"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" [href]="header.github"><i class="fab fa-github"></i></a>
+            <a class="social-icon" [href]="header.twitter"><i class="fab fa-twitter"></i></a>
+            <a class="social-icon" [href]="header.facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-icon cta" href="#" (click)="onLogin()"><i class="fas fa-sign-in-alt"></i></a>
             
         </div>
         
