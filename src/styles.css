@@ -1,1 +1,283 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+    background-image: linear-gradient(66deg, #3f946a, #032546);
+}
+nav{
+    height: 4vh;
+    width: 100%;
+    display: flex;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background-color: rgb(133, 198, 252);
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+#cont-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.img-nav{
+    height: 100%;
+    width: 70px;
+    align-items: center;
+}
+#yo-prog{
+    color:honeydew;
+}
+
+#button{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: bisque;
+    margin-right: 2%;
+}
+h1{
+    color:#8484ff5c;
+    text-shadow: 1px 1px 1px black;
+    margin-left: 5px;
+}
+h2{
+    margin-left: 5px;
+}
+#principal{
+    display: flex;
+    flex-direction: column;
+    height:89%;
+    width: 100%;
+    background-color:rgb(229, 153, 219);
+    background-image: linear-gradient(66deg, #3f946a, #032546);
+}
+#pie{
+    background-color:rgb(248, 205, 205);
+    width: 100vw;
+    height: 5vh;
+}
+#banner{
+    width: 100%;
+    height:25vh;
+    background-color: rgb(26, 156, 26);
+    border-bottom-color: #032546;
+    border-bottom-style:solid ;
+    border-bottom-width:15px ;
+}
+#foto-banner{
+    width: 100%;
+    height: 100%;
+}
+#fperfil{
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+}
+#foto-perfil{
+    margin-top: -75px;
+    margin-left: 25px;
+    display: flex;
+    border-style: solid;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-color: #032546 ;
+}
+.separador{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top-color: gray;
+    border-top-style:groove ;
+    border-top-width:3px ;
+}
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    background-color: #032546;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+  .social-icons .social-icon:last-child {
+    margin-right: 0;
+  }
+  .social-icons .social-icon:hover {
+    background-color: #0475f7;
+  }
+  #experiencia{
+      margin-left: 5px;
+      margin-bottom: 5px;
+  }
+  #acerca-de{
+      margin-left: 5px;
+      margin-bottom: 5px;
+  }
+
+  /* ESTILOS DEL MODAL  */
+  .formulario-login{
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+  }
+  .formulario-login label{
+      margin-top: 5px;
+      margin-bottom: 1px;
+  }
+  .formulario-login input{
+      margin: 0 0;
+  }
+  .formulario-login button{
+      margin-top: 5px;
+  }
+  .modal-container{
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      z-index: 1000px;
+      width: 100%;
+      height:100vh;
+      top:0;
+      left:0;
+      background:rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .modal{
+      width:40%;
+      height:40%;
+      background:white;
+      /*overflow: hidden;*/
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content:space-evenly;
+      align-items: center;
+      position:relative;
+      transition: transform 1s;
+      transform:translateY(0%);
+      border-radius: 10px;
+  }
+  .modal-close{
+    transform:translateY(-200%);
+  }
+  .modal > img{
+      height:50%;
+      width: 50%;
+      
+  }
+  .cta{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    background-color: #032546;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+  .close{
+      position:absolute;
+      top: 5px;;
+      right:5px;
+      display:inline-block;
+      width:25px;
+      height:25px;
+      background:#c44a4a;
+      color:#fff;
+      cursor: pointer;
+  }
+
+  /*barras*/
+
+.contiene-progres{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.progres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box{
+    position: relative;
+    width:200px;
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background:rgba(85, 81, 87,50%);
+    box-shadow: 0 30px 60px rgba(0,0,0,.2);
+    border-radius: 50%;
+}
+.box .percent{
+    position: relative;
+    width:150px;
+    height: 150px;
+}
+.box .percent svg{
+    position: relative;
+    width:160px;
+    height: 160px;
+}
+.box .percent svg circle{
+    width:160px;
+    height: 160px;
+    fill:none;
+    stroke-width: 12;
+    stroke:#000 ;
+    transform:translate(7px,7px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    /*stroke-linecap: round;*/
+}
+.box .prog1 svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke:#95f8f8;
+}
+.box .prog1 svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - ((85 * 440)/100));
+    stroke:#c70909;
+}
+
+.box .percent .number{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#111;
+}
+.box .percent .number h2{
+    font-size: 48px;
+}
+.box .percent .number h2 span{
+    font-size: 24px;
+}
+.box .text {
+    padding: 10px 0 0 ;
+    color:#999;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
