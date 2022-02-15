@@ -1,0 +1,47 @@
+.edit-icon-foto{
+    display: flex;
+    height: 25px;
+    width: 25px;
+    margin-left: 130px;
+    margin-top: -15px;
+    background: #c6c7e5;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+}
+.contiene-cosas{
+     display: flex;
+    flex-direction: column;
+}
+.edit-icon-about{
+    margin-left: 15px;
+    display: flex;
+    height: 25px;
+    width: 25px;
+    background: #c6c7e5;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    /*margin-bottom: 20px;*/
+    margin-top: 5px;
+
+}
+.about{
+    
+    display: flex;
+    flex-direction: column;
+    
+    padding-bottom: 10px;
+}
+.perro{
+    border-bottom: solid rgba(78, 76, 76, 0.5);
+    display: flex;
+}
+.gato{
+     display: flex;
+    align-items: flex-end;
+}
+.damian{
+    height: 25px;
+     
+}

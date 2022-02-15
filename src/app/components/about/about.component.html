@@ -1,13 +1,31 @@
-<div id="banner" >
-    <img id="foto-banner" src="../assets/imgs/Banner.jpg" >
-                   
-</div>
-<div id="foto-perfil">
-    <img id="fperfil" src="../assets/imgs/banner2.png">
-</div>
 
-<div id="acerca-de">
-    <h1>Juan José Roma</h1>
-    <h2>Acerca de</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam mollitia, culpa error animi illum suscipit ea molestiae. Accusamus, vero rem asperiores pariatur deserunt in voluptatum.</p>    
+<div class="contiene-cosas">
+    <div id="banner" >
+        <img id="foto-banner" [src]="about.banner" >
+                   
+    </div>
+
+    <div id="foto-perfil">
+        <img id="fperfil" [src]="about.fPerfil"> 
+    </div>
+    <div class="damian" >
+        <div class="edit-icon-foto" *ngIf="editIcon" >
+            <a class="social-icon" href="#" ><i class="fas fa-edit"></i></a>
+        </div>
+    </div>
+</div>
+<div class ="perro">
+
+    <div id="acerca-de" class="about">
+        <h1>{{about.nombre}}</h1>
+        <h2>{{about.titulo}}</h2>
+        <p>{{about.texto}}</p>    
+        
+    </div>
+    <div class="gato">
+
+        <div class="edit-icon-about" *ngIf="editIcon" >
+            <a class="social-icon" href="#" ><i class="fas fa-edit"></i></a>
+        </div>
+    </div>
 </div>
