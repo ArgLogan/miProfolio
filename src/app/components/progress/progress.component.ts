@@ -8,6 +8,11 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
   styleUrls: ['./progress.component.css']
 })
 export class ProgressComponent implements OnInit {
+  
+  datos ={
+    radio:"100",
+    porcent: 70
+  };
 
   constructor() { }
 

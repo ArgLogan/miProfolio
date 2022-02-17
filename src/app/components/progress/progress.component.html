@@ -1,5 +1,42 @@
-<div align="center" style="margin-top:10%;">
-    <circle-progress [percent]="70"  [space]="-10" [radius]="100" [outerStrokeWidth]="10"
-      [innerStrokeWidth]="10" [outerStrokeColor]="'#4882c2'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
-      [animationDuration]="1000"></circle-progress>
-  </div>
+    <circle-progress 
+      [percent]="70"  
+      [space]="-10" 
+      [radius]="60" 
+      [outerStrokeWidth]="15"
+      [innerStrokeWidth]="10" 
+      [outerStrokeColor]="'#4882c2'" 
+      [innerStrokeColor]="'#e7e8ea'" 
+      [animation]="true"
+      [animationDuration]="1000"
+      [showTitle]="true"
+      [title]="'HTML'"
+      [subtitle]="'70 %'"
+     ></circle-progress>
+     
+     <circle-progress 
+      [percent]="50"  
+      [space]="-10" 
+      [radius]="60" 
+      [outerStrokeWidth]="15"
+      [innerStrokeWidth]="10" 
+      [outerStrokeColor]="'#5023c2'" 
+      [innerStrokeColor]="'#e7e8ea'" 
+      [animation]="true"
+      [animationDuration]="1000"
+      [title]="'CSS'"
+      [subtitle]="'50 %'"
+     ></circle-progress>
+     <circle-progress 
+      [percent]="60"  
+      [space]="-10" 
+      [radius]="60" 
+      [outerStrokeWidth]="15"
+      [innerStrokeWidth]="10" 
+      [outerStrokeColor]="'#c923c2'" 
+      [innerStrokeColor]="'#e7e8ea'" 
+      [animation]="true"
+      [animationDuration]="1000"
+      [title]="'JS'"
+      [subtitle]="'60 %'"
+     ></circle-progress>
+

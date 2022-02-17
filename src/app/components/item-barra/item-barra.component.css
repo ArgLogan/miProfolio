@@ -54,10 +54,11 @@
     stroke-dashoffset: 0;
     stroke:#95f8f8;
 }
+/*
 .box .prog1 svg circle:nth-child(2){
-    stroke-dashoffset:  157/*calc(440 - ((50 * 360)/100))*/;
+    stroke-dashoffset: calc(314 - ((50 * 314)/100));
     stroke:#c70909;
-}
+}*/
 
 .box .percent .number{
     position: absolute;
