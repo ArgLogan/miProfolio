@@ -9,10 +9,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 })
 export class ProgressComponent implements OnInit {
   @Input() datos:any;
-  /*porcentje = this.datos.porcentje;
-  titulo = this.datos.titulo;
-  subtitulo =this.datos.subtitulo;
-  color = this.datos.color;*/
+ 
 
   constructor() { }
 
