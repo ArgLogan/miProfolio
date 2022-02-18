@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
 
@@ -8,15 +8,16 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
   styleUrls: ['./progress.component.css']
 })
 export class ProgressComponent implements OnInit {
-  
-  datos ={
-    radio:"100",
-    porcent: 70
-  };
+  @Input() datos:any;
+  /*porcentje = this.datos.porcentje;
+  titulo = this.datos.titulo;
+  subtitulo =this.datos.subtitulo;
+  color = this.datos.color;*/
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.datos);
   }
 
 }
