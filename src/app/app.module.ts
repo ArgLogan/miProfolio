@@ -26,7 +26,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       "backgroundGradientStopColor": "#c0c0c0",
       "backgroundPadding": -5,
       "radius": 60,
-      "space": 11,
+      "space": -10,
       "maxPercent": 100,
       "unitsFontSize": "25",
       "unitsFontWeight": "600",
@@ -43,7 +43,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       "imageWidth": 145,
       "showInnerStroke": false,
       "clockwise": false,
-      "startFromZero": false})
+      "startFromZero": false,
+      "animation":true,
+      "showUnits":false})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,18 +1,18 @@
     <circle-progress 
-      [percent]="datos.porcentje"  
-      [space]="-10" 
-      [radius]="60" 
+     [innerStrokeColor]="'#e7e8ea'" 
       [outerStrokeWidth]="15"
       [innerStrokeWidth]="10" 
-      [outerStrokeColor]="datos.color" 
-      [innerStrokeColor]="'#e7e8ea'" 
-      [animation]="true"
       [animationDuration]="2000"
       [showTitle]="true"
-      [title]="datos.titulo"
-      [subtitle]="datos.subtitulo"
-      [showUnits]="false"
       [responsive]="false"
       [subtitleFontSize]="'20'"
+
+
+      [title]="datos.titulo"
+      [subtitle]="datos.subtitulo"
+      [percent]="datos.porcentje"  
+      [outerStrokeColor]="datos.color" 
+     
+     
      ></circle-progress>
 
