@@ -1,7 +1,10 @@
 
 <header>
     <nav>
-        <div id="cont-img"><img  class="img-nav"  [src]="header.apLogo" > <p id="yo-prog">{{header.apText}}</p></div>
+        <div id="cont-img">
+            <img  class="img-nav"  [src]="header.apLogo" > 
+            <div id="yo-prog">{{header.apText}}</div>
+        </div>
         
         <div class="social-icons">
             <a class="social-icon" [href]="header.lidin"><i class="fab fa-linkedin-in"></i></a>
@@ -10,8 +13,9 @@
             <a class="social-icon" [href]="header.facebook"><i class="fab fa-facebook-f"></i></a>
             <a class="social-icon" href="#" (click)="onLogin()">
                 <i 
-                    class="fas fa-sign-in-alt"         
-
+                    class="fas fa-sign-in-alt"   
+                    data-bs-toggle="modal" 
+                    data-bs-target="#staticBackdrop"      
                 ></i>
             </a>
         </div>
@@ -21,3 +25,21 @@
     
   
 </header>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Login into porfolio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Login</button>
+
+        </div>
+      </div>
+    </div>
+  </div>

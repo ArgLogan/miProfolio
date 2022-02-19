@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  editIcon:boolean = false;
+  editIcon:boolean = true;
 
   about ={
     banner:"../assets/imgs/Banner.jpg",
