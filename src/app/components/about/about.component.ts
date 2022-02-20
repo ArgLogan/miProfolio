@@ -8,7 +8,7 @@ import { HeaderComponent } from '../header/header.component';
 })
 export class AboutComponent implements OnInit {
    //@Input() editIcon:boolean = loginToggle;
-   editIcon:boolean=false;
+   editIcon:boolean=true;
 
   about ={
     banner:"../assets/imgs/Banner.jpg",

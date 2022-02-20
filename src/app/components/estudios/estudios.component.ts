@@ -22,20 +22,6 @@ export class EstudiosComponent implements OnInit {
     descripcion:"Escuala de enseñansa tecnica"
   },
   {
-    institucion:"Universidad de la Matanza",
-    periodo:"1995-1996",
-    titulo:"Ingeniero en Electronica",
-    completo: false,
-    descripcion:"Educación Superior universitaria"
-  },
-  {
-    institucion:"Universidad de la Matanza",
-    periodo:"1998-1998",
-    titulo:"Ingeniero en Sistemas",
-    completo: false,
-    descripcion:"Educación Superior universitaria"
-  },
-  {
     institucion:"Universidad de Buenos Aires",
     periodo:"2010-2022",
     titulo:"Editor",
