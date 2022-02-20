@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class EstudiosComponent implements OnInit {
   estudios =[
     {
-    institucion:"Manuel Dorrego - Moron",
-    periodo:"1983-1989",
-    titulo:"primaario",
-    completo: true,
-    descripcion:"Estudios primarios nivel nacional"
-  },
+      institucion:"Manuel Dorrego - Moron",
+      periodo:"1983-1989",
+      titulo:"primaario",
+      completo: true,
+      descripcion:"Estudios primarios nivel nacional"
+    },
   {
     institucion:"EDET Nro2 Republica del Perú - Hurlingham",
     periodo:"1990-1995",

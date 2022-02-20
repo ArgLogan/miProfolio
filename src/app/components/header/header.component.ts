@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  
+  @Output() loginToggle:boolean=false;
+  @Output() onLoginClick: EventEmitter<boolean> = new EventEmitter()
   header = {
     nombre:"Juan José",
     apLogo:"../assets/imgs/aplogo.png",
@@ -19,8 +20,11 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
   onLogin(){
+    this.loginToggle = !this.loginToggle;
+    this.onLoginClick.emit(this.loginToggle);
     console.log("click en login");
   }
 

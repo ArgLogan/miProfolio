@@ -7,6 +7,8 @@
 body{
     background-color: gray;
     background-image: linear-gradient(66deg, #3f946a, #032546);
+    font-family: 'EB Garamond', serif;
+    font-size: 1.5rem;
 }
 nav{
     height: 4vh;
@@ -93,3 +95,23 @@ h2{
 }
 
 
+/*iconos */
+
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #032546;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+  .social-icons .social-icon:last-child {
+    margin-right: 0;
+  }
+  .social-icons .social-icon:hover {
+    background-color: #0475f7;
+ }

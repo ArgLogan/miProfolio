@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./estudio.component.css']
 })
 export class EstudioComponent implements OnInit {
-  editIcon:boolean = true;
+  editIcon:boolean = false;
  
   @Input() estudio:any;
   constructor() { }

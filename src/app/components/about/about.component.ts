@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-about',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  editIcon:boolean = false;
+   //@Input() editIcon:boolean = loginToggle;
+   editIcon:boolean=false;
 
   about ={
     banner:"../assets/imgs/Banner.jpg",
@@ -18,6 +20,7 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  
   }
 
 }
