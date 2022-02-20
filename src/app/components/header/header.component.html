@@ -25,7 +25,9 @@
     
   
 </header>
-  <!-- Modal -->
+
+
+  <!-- Modal Login -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -35,19 +37,30 @@
         </div>
         <div class="modal-body">
           <form action="">
-            <div class="input-group flex-nowrap">
-              <span class="input-group-text" id="addon-wrapping">@</span>
-              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-            </div>
-            <div class="input-group flex-nowrap">
-              <span class="input-group-text" id="addon-wrapping">@</span>
-              <input type="text" class="form-control" placeholder="password" aria-label="password" aria-describedby="addon-wrapping">
+            <div class="container">
+              <div class="col">
+                <div class="row">
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping"><i class="far fa-user-circle"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fas fa-key"></i></span>
+                    <input type="text" class="form-control" placeholder="password" aria-label="password" aria-describedby="addon-wrapping">
+                  </div>
+                </div>  
+                <div class="row ">
+                  <a href="#">olvido su password</a>
+                </div>
+              </div>
             </div>
 
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Login</button>
+          <button type="button " class="btn btn-success" data-bs-dismiss="modal">Login</button>
 
         </div>
       </div>
