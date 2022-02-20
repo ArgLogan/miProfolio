@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { ItemBarraComponent } from './components/item-barra/item-barra.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
@@ -15,7 +14,6 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     HeaderComponent,
     AboutComponent,
     SkillsComponent,
-    ItemBarraComponent,
     ProgressComponent
   ],
   imports: [
