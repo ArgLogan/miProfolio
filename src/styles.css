@@ -11,7 +11,7 @@ body{
     font-size: 1.5rem;
 }
 nav{
-    height: 4vh;
+    height: 30px;
     width: 100%;
     display: flex;
     background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
@@ -26,8 +26,6 @@ nav{
     flex-direction: row;
     align-items: center;
 }
-
-
 
 #button{
     padding: 5px;

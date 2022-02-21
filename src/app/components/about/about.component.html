@@ -14,19 +14,27 @@
         </div>
     </div>
 </div>
-<div class ="perro">
 
-    <div id="acerca-de" class="about">
-        <h1 fs-6>{{about.nombre}}</h1>
-        <h2 fs-4>{{about.titulo}}</h2>
-    </div>
+
+
+<div class ="container">
+    <div class="col-12 d-flex border border-2 border-secondary rounded-3 ">
+        <div class="about col-3 fs-8 p-2">
+            <h1 fs-6>{{about.nombre}}</h1>
+            <h2 fs-4>{{about.titulo}}</h2>
+        </div>
+        <div class="social-icons p-2 col-1" *ngIf="editIcon" >
+            <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
+        </div>
     
-    <div>
-        <p fs-4>{{about.texto}}</p>
-    </div>
+        <div class="col-6 fs-8 p-2">
+          <p fs-4>{{about.texto}}</p>
+        </div>
     
-    <div class="gato">
-       <app-icons></app-icons>
+         <div class="col-2">
+            <app-icons></app-icons>
+        </div>
     </div>
 </div>
-<div class="separedor"></div>
+<div class="separador"></div>
+

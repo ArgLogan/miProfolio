@@ -1,4 +1,8 @@
+*{
+    font-family: 'EB Garamond', serif; 
+}
 .container{
+
     display: flex;
     flex-direction: row;
 }

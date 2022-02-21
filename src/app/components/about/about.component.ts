@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   about ={
     banner:"../assets/imgs/Banner.jpg",
     fPerfil:"../assets/imgs/banner2.png",
-    titulo:"Progrador web Full Stack Jr",
+    titulo:"Programador web Full Stack Jr",
     nombre:"Juan José Roma",
     texto:"Acá va este texto: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam mollitia, culpa error animi illum suscipit ea molestiae. Accusamus, vero rem asperiores pariatur deserunt in voluptatum."
   }
