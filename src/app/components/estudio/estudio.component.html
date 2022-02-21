@@ -1,20 +1,14 @@
 <div class="container" >
-    <div class="contine-estudio  d-flex border border-2 border-secondary col-10">
-        <div class="estudio col-8 fs-8">
+    <div class="contine-estudio  d-flex border border-2 border-secondary col-12">
+        <div class="estudio col-10 fs-8 p-2">
             <h5><span>{{estudio.periodo}}</span> -- {{estudio.institucion}}</h5>
             <p class="titulo">Titulo obtenido: {{estudio.titulo}}</p>
             <p class="onserba">{{estudio.descripcion}}</p>
             <p *ngIf="estudio.completo">completo</p>
 
         </div>
-
-        <div class="icon-estudio   d-inline-flex p-2">
-            <div class="edit-icon-about social-icons" *ngIf="editIcon" >
-                <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
-            </div>
-            <div class="edit-icon-about social-icons" *ngIf="editIcon">
-                <a class="social-icon" href="#" ><i class="far fa-trash-alt"></i></a>
-            </div>
+        <div class="col2">
+            <app-icons></app-icons>
         </div>
     </div>
 </div>
