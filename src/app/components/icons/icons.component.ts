@@ -11,5 +11,11 @@ export class IconsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onEdit(){
+    alert("ESTE EDITA");
+  }
+  onDelete(){
+    alert("ESTE BORRA");
+  }
 
 }
