@@ -6,13 +6,13 @@
       [showTitle]="true"
       [responsive]="false"
       [subtitleFontSize]="'20'"
-
-
-      [title]="datos.titulo"
-      [subtitle]="datos.subtitulo"
+      [showImage]="true"
+      [imageSrc]="datos.titulo"
+      [imageHeight]="60"
+      [imageWidth]="60"
+      
       [percent]="datos.porcentje"  
       [outerStrokeColor]="datos.color" 
-     
-     
      ></circle-progress>
+     <h4 class="text-center">{{datos.subtitulo}} </h4>
 
