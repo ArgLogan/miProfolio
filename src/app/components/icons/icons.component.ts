@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icons.component.css']
 })
 export class IconsComponent implements OnInit {
-  editIcon:boolean =false;
+  editIcon:boolean =true;
   constructor() { }
 
   ngOnInit(): void {

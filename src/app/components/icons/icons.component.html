@@ -1,8 +1,12 @@
-<div class="icon-estudio   d-inline-flex p-2">
-    <div class="edit-icon-about social-icons p-2" *ngIf="editIcon" >
-        <a class="social-icon" href="#" (click)="onEdit()"><i class="fas fa-pen"></i></a>
-    </div>
-    <div class="edit-icon-about social-icons p-2" *ngIf="editIcon">
-        <a class="social-icon" href="#"(click)="onDelete()" ><i class="far fa-trash-alt"></i></a>
+<div class="container">
+
+    <div class="icon-estudio   d-flex p-2 flex-wrap">
+        <div class="edit-icon-about social-icons p-2" *ngIf="editIcon" >
+            <a class="social-icon" href="#" (click)="onEdit()"><i class="fas fa-pen"></i></a>
+        </div>
+        <div class="edit-icon-about social-icons p-2" *ngIf="editIcon">
+            <a class="social-icon" href="#"(click)="onDelete()" ><i class="far fa-trash-alt"></i></a>
+        </div>
     </div>
 </div>
+    

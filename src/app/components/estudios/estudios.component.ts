@@ -13,7 +13,14 @@ export class EstudiosComponent implements OnInit {
     titulo:"Programador web Full Stack",
     completo: false,
     descripcion:"curso certificado por el ministerio dedesarrollo porductivo de la Nación"
-  }
+  },
+  {
+    institucion:"Universidad de Buenos Aires",
+    periodo:"2010-2022",
+    titulo:"Editor",
+    completo: false,
+    descripcion:"Carrera de Grado nivel Universitrios"
+  },
 ]
   
   constructor() { }
