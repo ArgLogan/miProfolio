@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./estudio.component.css']
 })
 export class EstudioComponent implements OnInit {
-  editIcon:boolean = true;
+  editIconyo:boolean = true;
  
   @Input() estudio:any;
   constructor() { }
@@ -14,5 +14,8 @@ export class EstudioComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  onToggle(){
+    this.editIconyo =  !this.editIconyo;
+    alert("click"+this.editIconyo);
+  }
 }
