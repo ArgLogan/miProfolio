@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from 'src/app/servicios/datos.service';
 
 @Component({
   selector: 'app-estudios',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estudios.component.css']
 })
 export class EstudiosComponent implements OnInit {
-  estudios =[
+  estudios:any;
+  /*estudios =[
   {
     institucion:"Argentina Programa",
     periodo:"2021-2022",
@@ -21,11 +23,15 @@ export class EstudiosComponent implements OnInit {
     completo: false,
     descripcion:"Carrera de Grado nivel Universitrios"
   },
-]
+  ]*/
   
-  constructor() { }
+  constructor(private datosEstudio:DatosService) { }
 
   ngOnInit(): void {
+    this.datosEstudio.getDatos().subscribe(data =>{
+      console.log(data);
+      this.estudios = data[2];
+    });
   }
 
 }
