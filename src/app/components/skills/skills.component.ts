@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from 'src/app/servicios/datos.service';
 
 @Component({
   selector: 'app-skills',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  barras =[
+  barras:any;
+  /*barras =[
     {
       porcentje :  70,
       titulo :"../assets/imgs/html.svg",
@@ -38,10 +40,15 @@ export class SkillsComponent implements OnInit {
       color : "#0000ff"
     }
 
-  ]
-  constructor() { }
+  ]*/
+  constructor(private datosProgress:DatosService) { }
 
   ngOnInit(): void {
+    this.datosProgress.getDatos().subscribe(data =>{
+      console.log(data);
+      this.barras = data[4];
+    });
+
   }
 
 }
