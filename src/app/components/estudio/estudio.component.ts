@@ -12,7 +12,7 @@ export class EstudioComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    
   }
   onToggle(){
     this.editIconyo =  !this.editIconyo;
