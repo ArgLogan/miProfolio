@@ -10,15 +10,8 @@ import { DatosService } from 'src/app/servicios/datos.service';
 export class HeaderComponent implements OnInit {
   loginToggle:boolean=false;
   header:any;
-  /*header = {
-    nombre:"Juan José",
-    apLogo:"../assets/imgs/aplogo.png",
-    apText:"#YoProgramo",
-    lidin:"https://www.linkedin.com/in/juan-jos%C3%A9-roma-11310a36?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2PrY1wymR9%2Bb4RcARsnrZw%3D%3D",
-    github:"https://github.com/ArgLogan",
-    twitter:"https://twitter.com/Arglogan",
-    facebook:"#"
-  };*/
+  @Output() onLoginClick:EventEmitter<boolean> = new EventEmitter();
+ 
   constructor(private datosHeader:DatosService) { }
 
   ngOnInit(): void {
@@ -29,8 +22,9 @@ export class HeaderComponent implements OnInit {
     
     
   }
-  onLogin(){
-   
+  onLogin(loginToggle:boolean){
+    this.loginToggle = !this.loginToggle;
+    this.onLoginClick.emit(this.loginToggle);
   }
 
 }

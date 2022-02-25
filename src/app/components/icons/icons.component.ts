@@ -1,4 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-icons',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./icons.component.css']
 })
 export class IconsComponent implements OnInit {
-  @Input() editIcon:boolean =true;
+  editIcon:boolean =true;
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +17,9 @@ export class IconsComponent implements OnInit {
   }
   onDelete(){
     alert("ESTE BORRA");
+  }
+  onToggleEdit(valor:boolean){
+    this.editIcon = valor;
   }
 
 }
