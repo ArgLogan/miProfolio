@@ -7,7 +7,7 @@ import {Observable} from 'rxjs'
 })
 export class DatosService {
   apiUrl =' http://localhost:5000/porfolio';
-  jsonUrl='db.json';
+  jsonUrl=' db.json/porfolio';
 
   constructor( private http:HttpClient ) { }
 
