@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { DatosService } from 'src/app/servicios/datos.service';
-import { HeaderComponent } from '../header/header.component';
-
+import { EditService } from 'src/app/servicios/edit.service';
 
 @Component({
   selector: 'app-about',
@@ -9,17 +8,14 @@ import { HeaderComponent } from '../header/header.component';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-   //@Input() editIcon:boolean = loginToggle;
-   editIcon:boolean=true;
+   
+   @Input() editIcon:boolean=true;
   about:any;
-  /*about ={
-    banner:"../assets/imgs/Banner.jpg",
-    fPerfil:"../assets/imgs/banner2.png",
-    titulo:"Programador web Full Stack Jr",
-    nombre:"Juan José Roma",
-    texto:"Acá va este texto: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam mollitia, culpa error animi illum suscipit ea molestiae. Accusamus, vero rem asperiores pariatur deserunt in voluptatum."
-  }*/
-  constructor(private datosAbout:DatosService) { }
+
+  constructor(
+    private datosAbout:DatosService,
+    public editService:EditService
+  ) { }
 
   ngOnInit(): void {
     this.datosAbout.getDatos().subscribe(data =>{

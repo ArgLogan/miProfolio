@@ -1,5 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
+import { EditService } from 'src/app/servicios/edit.service';
 
 @Component({
   selector: 'app-icons',
@@ -8,9 +8,10 @@ import { HeaderComponent } from '../header/header.component';
 })
 export class IconsComponent implements OnInit {
   editIcon:boolean =true;
-  constructor() { }
+  constructor( public editService:EditService) { }
 
   ngOnInit(): void {
+    this.editIcon = this.editService.valorIcon;
   }
   onEdit(){
     alert("ESTE EDITA");
@@ -18,8 +19,9 @@ export class IconsComponent implements OnInit {
   onDelete(){
     alert("ESTE BORRA");
   }
-  onToggleEdit(valor:boolean){
-    this.editIcon = valor;
+
+  onToggle(){
+    this.editIcon = this.editService.valorIcon;
   }
 
 }

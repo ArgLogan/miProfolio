@@ -1,6 +1,6 @@
 
 <header>
-    <nav>
+    <nav (dblclick)="onDouble()">
         <div id="cont-img">
             <img  class="img-nav"  [src]="header.apLogo" > 
             <div id="yo-prog">{{header.apText}}</div>
@@ -11,7 +11,7 @@
             <a class="social-icon" [href]="header.github"><i class="fab fa-github"></i></a>
             <a class="social-icon" [href]="header.twitter"><i class="fab fa-twitter"></i></a>
             <a class="social-icon" [href]="header.facebook"><i class="fab fa-facebook-f"></i></a>
-            <a class="social-icon" href="#" (click)="onLogin(true)">
+            <a class="social-icon" href="#" >
                 <i 
                     class="fas fa-sign-in-alt"
                     data-bs-toggle="modal" 
@@ -60,7 +60,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button " class="btn btn-success" data-bs-dismiss="modal">Login</button>
+          <button type="button " class="btn btn-success" data-bs-dismiss="modal" (click)="onLogin()">Login</button>
 
         </div>
       </div>

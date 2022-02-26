@@ -1,6 +1,7 @@
 import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DatosService } from 'src/app/servicios/datos.service';
+import { EditService } from 'src/app/servicios/edit.service';
 
 @Component({
   selector: 'app-header',
@@ -12,19 +13,24 @@ export class HeaderComponent implements OnInit {
   header:any;
   @Output() onLoginClick:EventEmitter<boolean> = new EventEmitter();
  
-  constructor(private datosHeader:DatosService) { }
+  constructor(
+    private datosHeader:DatosService,
+    private editService:EditService
+  
+    ) { }
 
   ngOnInit(): void {
     this.datosHeader.getDatos().subscribe(data =>{
-      //console.log(data);
       this.header = data[0];
     });
     
     
   }
-  onLogin(loginToggle:boolean){
-    this.loginToggle = !this.loginToggle;
-    this.onLoginClick.emit(this.loginToggle);
+  onLogin(){
+    this.editService.valorIcon = true;
+  }
+  onDouble(){
+    this.editService.valorIcon = false;
   }
 
 }
