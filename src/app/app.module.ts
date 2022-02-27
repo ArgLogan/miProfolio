@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProgressComponent } from './components/progress/progress.component';
-import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EstudiosComponent } from './components/estudios/estudios.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { ExperienciasComponent } from './components/experiencias/experiencias.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { IconsComponent } from './components/icons/icons.component';
-import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({
       "backgroundGradient": true,
       "backgroundColor": "#ffffff",

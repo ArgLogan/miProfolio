@@ -49,10 +49,12 @@
                   <div class="input-group flex-nowrap">
                     <span class="input-group-text" id="addon-wrapping"><i class="far fa-user-circle"></i></span>
                     <input 
-                    [(ngModel)]="username" 
-                    
+                      [(ngModel)]="username" 
+                      class="form-control"
                       type="text" 
                       placeholder="Username" 
+                      aria-label="text" 
+                      aria-describedby="addon-wrapping"
                   
                     >
                   </div>
@@ -62,7 +64,7 @@
                     <span class="input-group-text" id="addon-wrapping"><i class="fas fa-key"></i></span>
                     <input 
                       [(ngModel)]="password" 
-                      type="text" 
+                      type="password" 
                       class="form-control" 
                       placeholder="password" 
                       aria-label="password" 
@@ -73,10 +75,6 @@
                 </div>  
                 <div class="row ">
                   <a href="#">olvido su password</a>
-                  <P>
-                    {{password}}
-                    {{username}}
-                  </P>
                 </div>
               </div>
             </div>
