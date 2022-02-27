@@ -9,7 +9,8 @@ import { EditService } from 'src/app/servicios/edit.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  loginToggle:boolean=false;
+  login:boolean=true;
+  logout:boolean = false;
   header:any;
   @Output() onLoginClick:EventEmitter<boolean> = new EventEmitter();
  
@@ -28,9 +29,13 @@ export class HeaderComponent implements OnInit {
   }
   onLogin(){
     this.editService.valorIcon = true;
+    this.logout = true;
+    this.login =false;
   }
   onDouble(){
     this.editService.valorIcon = false;
+    this.logout = false;
+    this.login =true;
   }
 
 }

@@ -11,12 +11,18 @@
             <a class="social-icon" [href]="header.github"><i class="fab fa-github"></i></a>
             <a class="social-icon" [href]="header.twitter"><i class="fab fa-twitter"></i></a>
             <a class="social-icon" [href]="header.facebook"><i class="fab fa-facebook-f"></i></a>
-            <a class="social-icon" href="#" >
+            <a class="social-icon" href="#" *ngIf="login" >
                 <i 
                     class="fas fa-sign-in-alt"
                     data-bs-toggle="modal" 
                     data-bs-target="#staticBackdrop"      
                 ></i>
+            </a>
+            <a class="social-icon" href="#" *ngIf="logout" (click)="onDouble()" >
+              <i 
+                    (click)="onDouble()"
+                    class="fas fa-sign-out-alt"
+              ></i>
             </a>
         </div>
         
