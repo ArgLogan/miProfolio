@@ -6,5 +6,8 @@ import { Injectable } from '@angular/core';
 export class EditService {
   valorIcon:boolean= false;
 
-  constructor() { }
+  constructor() {
+
+    
+   }
 }
