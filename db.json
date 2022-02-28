@@ -35,6 +35,22 @@
       "puesto": "Tecnico en electronica",
       "tareas": "Desarrollo de softwar y hardware. Armado, reparación y calibración del equipos (PLC -CONTROL DE TEMPERATURA)",
       "tipo": "Relación de dependencia"
+    },
+    {
+      "id": 3,
+      "periodo": "1999-2004",
+      "nombre": "Elytel Srl",
+      "puesto": "Tecnico en electronica",
+      "tareas": "Beta tester de softwar y hardware. Instalación de equipos (Controlador locutorios),soporte técnico",
+      "tipo": "Relación de dependencia"
+    },
+    {
+      "id": 4,
+      "periodo": "2005-2022",
+      "nombre": "Controles Electronicos Fermi",
+      "puesto": "Tecnico en electronica",
+      "tareas": "Desarrollo de softwar y hardware. Armado, reparación y calibración del equipos (PLC -CONTROL DE TEMPERATURA)",
+      "tipo": "Relación de dependencia"
     }
   ],
   "estudios": [
@@ -53,22 +69,6 @@
       "titulo": "Ingeniero en Sistemas",
       "completo": false,
       "descripcion": "Educación Superior universitaria"
-    },
-    {
-      "id": 3,
-      "institucion": "Argentina Programa",
-      "periodo": "2021-2022",
-      "titulo": "Programador web Full Stack",
-      "completo": false,
-      "descripcion": "curso certificado por el ministerio dedesarrollo porductivo de la Nación"
-    },
-    {
-      "id": 4,
-      "institucion": "Universidad de Buenos Aires",
-      "periodo": "2010-2022",
-      "titulo": "Editor",
-      "completo": false,
-      "descripcion": "Carrera de grado"
     }
   ],
   "skills": [

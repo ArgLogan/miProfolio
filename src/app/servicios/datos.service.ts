@@ -34,9 +34,14 @@ export class DatosService {
 
 
   deleteStudy(estudio:Study):Observable<Study>{
-    console.log(estudio)
-    const url = `${this.apiUrlStudy}/${estudio.id}`
+    //console.log(estudio)
+    const url = `${this.apiUrlExp}/${estudio.id}`
     return this.http.delete<Study>(url)
+  }
+  deleteExp(experiencia:Experience):Observable<Experience>{
+    console.log(experiencia)
+    const url = `${this.apiUrlStudy}/${experiencia.id}`
+    return this.http.delete<Experience>(url)
   }
  
 

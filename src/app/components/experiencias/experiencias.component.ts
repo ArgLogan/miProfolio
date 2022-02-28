@@ -9,16 +9,7 @@ import { Experience } from 'src/app/interfaces';
 })
 export class ExperienciasComponent implements OnInit {
   experiencias:Experience[]=[];
-  
-  /*experiencias =[
-    {
-      periodo:"2005-2022",
-      nombre:"Controles Electronicos Fermi",
-      puesto:"Tecnico en electronica",
-      tareas:"Desarrollo de softwar y hardware. Armado, reparación y calibración del equipos (PLC -CONTROL DE TEMPERATURA)",
-      tipo:"Relación de dependencia"
-    }
-  ]*/
+
   constructor( private datosExp:DatosService) { }
 
   ngOnInit(): void {
@@ -26,5 +17,16 @@ export class ExperienciasComponent implements OnInit {
       this.experiencias = data;
     })
   }
+  deleteExp(experiencia:Experience){
+    this.datosExp.deleteExp(experiencia)
+    .subscribe( 
+      ()=>{
+      this.experiencias = this.experiencias.filter( (t) => {
+        return t.id !== experiencia.id
+      })
+    })
+  }
+
+
 
 }
