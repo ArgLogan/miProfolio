@@ -1,7 +1,8 @@
 <h3 class="col-5 p-2">Educación</h3>
 <app-estudio
-    *ngFor="let dato of estudios.estudios"
+    *ngFor="let dato of estudios"
         [estudio]="dato"
+        (onDeleteStudy)="deleteStudy(dato)"
 
 ></app-estudio>
 <div class="separador"></div>

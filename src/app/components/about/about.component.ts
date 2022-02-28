@@ -18,8 +18,8 @@ export class AboutComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.datosAbout.getDatos().subscribe(data =>{
-      console.log(data);
+    this.datosAbout.getDatosPorfolio().subscribe(data =>{
+      //console.log(data);
       this.about = data[1];
     });
   }

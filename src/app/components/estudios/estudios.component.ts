@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/servicios/datos.service';
+import {Study}from '../../interfaces'
 
 @Component({
   selector: 'app-estudios',
@@ -7,31 +8,25 @@ import { DatosService } from 'src/app/servicios/datos.service';
   styleUrls: ['./estudios.component.css']
 })
 export class EstudiosComponent implements OnInit {
-  estudios:any;
-  /*estudios =[
-  {
-    institucion:"Argentina Programa",
-    periodo:"2021-2022",
-    titulo:"Programador web Full Stack",
-    completo: false,
-    descripcion:"curso certificado por el ministerio dedesarrollo porductivo de la Nación"
-  },
-  {
-    institucion:"Universidad de Buenos Aires",
-    periodo:"2010-2022",
-    titulo:"Editor",
-    completo: false,
-    descripcion:"Carrera de Grado nivel Universitrios"
-  },
-  ]*/
+  estudios:Study[]=[];
+
   
   constructor(private datosEstudio:DatosService) { }
 
   ngOnInit(): void {
-    this.datosEstudio.getDatos().subscribe(data =>{
-      console.log(data);
-      this.estudios = data[2];
+    this.datosEstudio.getDatosStudy().subscribe(data =>{
+      this.estudios = data;
+      console.log(this.estudios);
     });
+  }
+  deleteStudy(estudio:Study){
+    this.datosEstudio.deleteStudy(estudio)
+    .subscribe( 
+      ()=>{
+      this.estudios = this.estudios.filter( (t) => {
+        return t.id !== estudio.id
+      })
+    })
   }
 
 }
