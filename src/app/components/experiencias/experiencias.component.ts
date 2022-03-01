@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from 'src/app/servicios/datos.service';
+import { Experience } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-experiencias',
@@ -6,18 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiencias.component.css']
 })
 export class ExperienciasComponent implements OnInit {
-  experiencias =[
-    {
-      periodo:"2005-2022",
-      nombre:"Controles Electronicos Fermi",
-      puesto:"Tecnico en electronica",
-      tareas:"Desarrollo de softwar y hardware. Armado, reparación y calibración del equipos (PLC -CONTROL DE TEMPERATURA)",
-      tipo:"Relación de dependencia"
-    }
-  ]
-  constructor() { }
+  experiencias:Experience[]=[];
+
+  constructor( private datosExp:DatosService) { }
 
   ngOnInit(): void {
+    this.datosExp.getDatosExp().subscribe(data =>{
+      this.experiencias = data;
+    })
   }
+  deleteExp(experiencia:Experience){
+    this.datosExp.deleteExp(experiencia)
+    .subscribe( 
+      ()=>{
+      this.experiencias = this.experiencias.filter( (t) => {
+        return t.id !== experiencia.id
+      })
+    })
+  }
+
+
 
 }

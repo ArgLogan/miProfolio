@@ -8,6 +8,7 @@ import { EditService } from 'src/app/servicios/edit.service';
 })
 export class IconsComponent implements OnInit {
   editIcon:boolean =true;
+  quien:string ="aca id de quien quiero borrar";
   constructor( public editService:EditService) { }
 
   ngOnInit(): void {
@@ -16,8 +17,9 @@ export class IconsComponent implements OnInit {
   onEdit(){
     alert("ESTE EDITA");
   }
-  onDelete(){
+  onDelete(valQuien:string){
     alert("ESTE BORRA");
+    console.log(valQuien);
   }
 
   onToggle(){

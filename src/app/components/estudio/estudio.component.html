@@ -1,4 +1,4 @@
-<div class="container"(dblclick)="onToggle()" >
+<div class="container" id="estudio">
     <div class="contine-estudio  d-flex border border-2 border-secondary col-sm-12 mt-2">
         <div class="col-sm-10 fs-5 p-2">
             <h5><span>{{estudio.periodo}}</span> -- {{estudio.institucion}}</h5>
@@ -7,10 +7,42 @@
             <p *ngIf="estudio.completo">completo</p>
 
         </div>
-        <div class="col-sm-2" (dblclick)="onToggle()">
-            <app-icons>
-                [editIcon]="editIconyo"
-            </app-icons>
+        <div class="col-sm-2">
+            <div class="container m-0">
+                <div class="icon-estudio   d-flex p-2 flex-wrap" *ngIf="editService.valorIcon" >
+                    <div class="edit-icon-about social-icons p-2">
+                        <a class="social-icon" href="#estudio"(click)="onEdit(estudio)"data-bs-toggle="modal" data-bs-target="#static" ><i class="fas fa-pen"></i></a>
+                    </div>
+                    <div class="edit-icon-about social-icons p-2" >
+                        <a class="social-icon" href="#estudio" (click)="onDelete(estudio)" ><i class="far fa-trash-alt"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="static" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input type="text" placeholder="{{estudio.periodo}}">
+            <input type="text" placeholder="{{estudio.institucion}}">
+            <input type="text" placeholder="{{estudio.titulo}}">
+            <input type="text" placeholder="{{estudio.descripcion}}">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="separador"></div>
