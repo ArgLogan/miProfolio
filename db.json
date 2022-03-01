@@ -55,14 +55,6 @@
       "titulo": "Editor",
       "completo": false,
       "descripcion": "Carrera de Grado"
-    },
-    {
-      "id": 2,
-      "institucion": "ESTA UBA",
-      "periodo": "2010-2022",
-      "titulo": "Editor",
-      "completo": false,
-      "descripcion": "Carrera de Grado"
     }
   ],
   "skills": [

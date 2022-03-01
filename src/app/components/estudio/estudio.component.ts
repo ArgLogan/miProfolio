@@ -23,7 +23,7 @@ export class EstudioComponent implements OnInit {
   }
   onEdit(study:Study){
     const habilita:boolean=true;
-    this.onEditStudy.emit(study)  
+    this.estudio = study 
   }
 
 }
