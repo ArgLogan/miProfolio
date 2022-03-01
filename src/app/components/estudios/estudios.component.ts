@@ -28,5 +28,8 @@ export class EstudiosComponent implements OnInit {
       })
     })
   }
+  editStudy(estudio:Study){
+    console.log(estudio)
+  }
 
 }

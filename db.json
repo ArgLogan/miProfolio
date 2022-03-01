@@ -27,7 +27,7 @@
       "puesto": "Tecnico en electronica",
       "tareas": "Beta tester de softwar y hardware. Instalación de equipos (Controlador locutorios),soporte técnico",
       "tipo": "Relación de dependencia",
-      "actual":false
+      "actual": false
     },
     {
       "id": 1,
@@ -36,13 +36,13 @@
       "puesto": "Tecnico en electronica",
       "tareas": "Desarrollo de softwar y hardware. Armado, reparación y calibración del equipos (PLC -CONTROL DE TEMPERATURA)",
       "tipo": "Relación de dependencia",
-      "actual":false
+      "actual": false
     }
   ],
   "estudios": [
     {
       "id": 0,
-      "institucion": "UBA",
+      "institucion": "NO UBA",
       "periodo": "2010-2022",
       "titulo": "Editor",
       "completo": false,
@@ -58,21 +58,12 @@
     },
     {
       "id": 2,
-      "institucion": "UBA",
-      "periodo": "2010-2022",
-      "titulo": "Editor",
-      "completo": false,
-      "descripcion": "Carrera de Grado"
-    },
-    {
-      "id": 3,
-      "institucion": "UBA",
+      "institucion": "ESTA UBA",
       "periodo": "2010-2022",
       "titulo": "Editor",
       "completo": false,
       "descripcion": "Carrera de Grado"
     }
-
   ],
   "skills": [
     {

@@ -10,6 +10,7 @@ import {Study} from '../../interfaces'
 export class EstudioComponent implements OnInit {
   @Input() estudio:any;
   @Output() onDeleteStudy:EventEmitter<Study> = new EventEmitter();
+  @Output() onEditStudy:EventEmitter<Study> = new EventEmitter();
   
   constructor(public editService:EditService) { }
 
@@ -17,8 +18,12 @@ export class EstudioComponent implements OnInit {
     
   }
   onDelete(study:Study){
-    console.log(study);
+    //console.log(study);
     this.onDeleteStudy.emit(study)
+  }
+  onEdit(study:Study){
+    const habilita:boolean=true;
+    this.onEditStudy.emit(study)  
   }
 
 }
