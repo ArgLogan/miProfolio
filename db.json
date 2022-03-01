@@ -21,55 +21,58 @@
   ],
   "experiencias": [
     {
+      "id": 0,
+      "periodo": "1999-2004",
+      "nombre": "Elytel Srl",
+      "puesto": "Tecnico en electronica",
+      "tareas": "Beta tester de softwar y hardware. Instalación de equipos (Controlador locutorios),soporte técnico",
+      "tipo": "Relación de dependencia",
+      "actual":false
+    },
+    {
       "id": 1,
-      "periodo": "1999-2004",
-      "nombre": "Elytel Srl",
-      "puesto": "Tecnico en electronica",
-      "tareas": "Beta tester de softwar y hardware. Instalación de equipos (Controlador locutorios),soporte técnico",
-      "tipo": "Relación de dependencia"
-    },
-    {
-      "id": 2,
       "periodo": "2005-2022",
       "nombre": "Controles Electronicos Fermi",
       "puesto": "Tecnico en electronica",
       "tareas": "Desarrollo de softwar y hardware. Armado, reparación y calibración del equipos (PLC -CONTROL DE TEMPERATURA)",
-      "tipo": "Relación de dependencia"
-    },
-    {
-      "id": 3,
-      "periodo": "1999-2004",
-      "nombre": "Elytel Srl",
-      "puesto": "Tecnico en electronica",
-      "tareas": "Beta tester de softwar y hardware. Instalación de equipos (Controlador locutorios),soporte técnico",
-      "tipo": "Relación de dependencia"
-    },
-    {
-      "id": 4,
-      "periodo": "2005-2022",
-      "nombre": "Controles Electronicos Fermi",
-      "puesto": "Tecnico en electronica",
-      "tareas": "Desarrollo de softwar y hardware. Armado, reparación y calibración del equipos (PLC -CONTROL DE TEMPERATURA)",
-      "tipo": "Relación de dependencia"
+      "tipo": "Relación de dependencia",
+      "actual":false
     }
   ],
   "estudios": [
     {
-      "id": 1,
-      "institucion": "Universidad de la Matanza",
-      "periodo": "1995-1996",
-      "titulo": "Ingeniero en Electronica",
+      "id": 0,
+      "institucion": "UBA",
+      "periodo": "2010-2022",
+      "titulo": "Editor",
       "completo": false,
-      "descripcion": "Educación Superior universitaria"
+      "descripcion": "Carrera de Grado"
+    },
+    {
+      "id": 1,
+      "institucion": "UBA",
+      "periodo": "2010-2022",
+      "titulo": "Editor",
+      "completo": false,
+      "descripcion": "Carrera de Grado"
     },
     {
       "id": 2,
-      "institucion": "Universidad de la Matanza",
-      "periodo": "1998-1998",
-      "titulo": "Ingeniero en Sistemas",
+      "institucion": "UBA",
+      "periodo": "2010-2022",
+      "titulo": "Editor",
       "completo": false,
-      "descripcion": "Educación Superior universitaria"
+      "descripcion": "Carrera de Grado"
+    },
+    {
+      "id": 3,
+      "institucion": "UBA",
+      "periodo": "2010-2022",
+      "titulo": "Editor",
+      "completo": false,
+      "descripcion": "Carrera de Grado"
     }
+
   ],
   "skills": [
     {
