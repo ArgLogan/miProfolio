@@ -1,11 +1,24 @@
-<h3 class="col-5 p-2">Educación</h3>
+<div class="container d-inline-flex">
+    <h3 class="col-sm-9 p-2">Educación</h3>
+    <div class="col-sm-3">
+        <div class="d-flex p-2 flex-wrap">
+            <div class="social-icons p-2" *ngIf="editService.valorIcon" >
+                <a class="social-icon" href="#estudio" (click)="onEdit()"><i class="fas fa-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+    
 <app-estudio
     *ngFor="let dato of estudios"
         [estudio]="dato"
         (onDeleteStudy)="deleteStudy(dato)"
-        (onEditStudy)="editStudy(dato)"
+
 
 ></app-estudio>
+<div class="separador"></div>
+
+
 
 
 
