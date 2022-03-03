@@ -1,7 +1,14 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, } from '@angular/common/http';
 import { Injectable} from '@angular/core';
 import {Observable} from 'rxjs'
 import{ Study, Skills, Experience} from '../interfaces' 
+
+const httpOptions ={
+  headers:new HttpHeaders({
+    'Content-Type':'application/json'
+  })
+  
+}
 
 @Injectable({
   providedIn: 'root'
@@ -20,23 +27,30 @@ export class DatosService {
     //return  this.http.get(this.jsonUrl);
   }
 
+  //ESTUDIOS
+
   getDatosStudy():Observable<any>{
     return  this.http.get(this.apiUrlStudy);
   }
-
-  getDatosExp():Observable<any>{
-    return  this.http.get(this.apiUrlExp);
-  }
-  
-  getDatosSkills():Observable<any>{
-    return  this.http.get(this.apiUrlSkills);
-  }
-
-
   deleteStudy(estudio:Study):Observable<Study>{
     //console.log(estudio)
     const url = `${this.apiUrlStudy}/${estudio.id}`
     return this.http.delete<Study>(url)
+  }
+  addStudy(estudio:Study):Observable<any>{
+    return this.http.post<any>(this.apiUrlStudy, estudio, httpOptions)
+  }
+
+  //Skills
+
+  getDatosSkills():Observable<any>{
+    return  this.http.get(this.apiUrlSkills);
+  }
+
+//EXPERIENCIAS
+
+  getDatosExp():Observable<any>{
+    return  this.http.get(this.apiUrlExp);
   }
   
   deleteExp(experiencia:Experience):Observable<Experience>{
@@ -44,7 +58,13 @@ export class DatosService {
     const url = `${this.apiUrlExp}/${experiencia.id}`
     return this.http.delete<Experience>(url)
   }
+  
  
+
+  /*updateTaskReminder(task:Task):Observable<Task>{
+    const url = `${this.apiUrl}/${task.id}`
+    return this.http.put<Task>(url, task, httpOptions)
+  }*/
 
 
 }

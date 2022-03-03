@@ -3,7 +3,7 @@
     <div class="col-sm-3">
         <div class="d-flex p-2 flex-wrap">
             <div class="social-icons p-2" *ngIf="editService.valorIcon" >
-                <a class="social-icon" href="#estudio" (click)="onEdit()"><i class="fas fa-plus"></i></a>
+                <a class="social-icon" href="#estudio"  data-bs-toggle="modal" data-bs-target="#static"   ><i class="fas fa-plus"></i></a>
             </div>
         </div>
     </div>
@@ -17,6 +17,33 @@
 
 ></app-estudio>
 <div class="separador"></div>
+
+
+ <!-- Modal -->
+ <div class="modal fade" id="static" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input type="text" placeholder="periodo" [(ngModel)]="nuevo.periodo">
+            <input type="text" placeholder="institucion" [(ngModel)]="nuevo.institucion">
+            <input type="text" placeholder="titulo" [(ngModel)]="nuevo.titulo">
+            <input type="text" placeholder="descripcion" [(ngModel)]="nuevo.descripcion">
+            <input type="checkbox" placeholder="completo" [(ngModel)]="nuevo.completo">
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 

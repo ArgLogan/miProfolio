@@ -50,19 +50,19 @@
     },
     {
       "id": 1,
-      "institucion": "UBA",
-      "periodo": "2010-2022",
+      "institucion": "Universidas de Buenos Aires",
+      "periodo": "2022",
       "titulo": "Editor",
       "completo": false,
-      "descripcion": "Carrera de Grado"
+      "descripcion": "otro"
     },
     {
       "id": 2,
-      "institucion": "ESTA UBA",
-      "periodo": "2010-2022",
+      "institucion": "Universidas de Buenos Aires",
+      "periodo": "2022",
       "titulo": "Editor",
-      "completo": false,
-      "descripcion": "Carrera de Grado"
+      "completo": true,
+      "descripcion": "uno mas"
     }
   ],
   "skills": [

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/servicios/datos.service';
 import { EditService } from 'src/app/servicios/edit.service';
-import {Study}from '../../interfaces'
+import {Study} from '../../interfaces'
+import {STUDY} from '../../mok'
 
 @Component({
   selector: 'app-estudios',
@@ -11,6 +12,7 @@ import {Study}from '../../interfaces'
 export class EstudiosComponent implements OnInit {
   estudios:Study[]=[];
   editIcon:boolean =true;
+  nuevo:Study=STUDY;
 
   
   constructor(
@@ -39,8 +41,12 @@ export class EstudiosComponent implements OnInit {
   editStudy(estudio:Study){
     console.log(estudio)
   }
-  onEdit(){
-    console.log()
+  onAdd(estudio:Study){
+    
+      this.datosEstudio.addStudy(estudio).subscribe((estudio) =>{
+        this.estudios.push(estudio)
+      })
+
   }
 
 }
