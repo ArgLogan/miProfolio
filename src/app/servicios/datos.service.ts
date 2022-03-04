@@ -61,10 +61,10 @@ export class DatosService {
   
  
 
-  /*updateTaskReminder(task:Task):Observable<Task>{
-    const url = `${this.apiUrl}/${task.id}`
-    return this.http.put<Task>(url, task, httpOptions)
-  }*/
+  saveEditStudy(estudio:Study):Observable<Study>{
+    const url = `${this.apiUrlStudy}/${estudio.id}`
+    return this.http.put<Study>(url, estudio, httpOptions)
+  }
 
 
 }

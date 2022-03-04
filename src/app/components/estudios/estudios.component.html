@@ -13,6 +13,7 @@
     *ngFor="let dato of estudios"
         [estudio]="dato"
         (onDeleteStudy)="deleteStudy(dato)"
+        (onSaveEditStudy)="saveEdit(dato)"
 
 
 ></app-estudio>

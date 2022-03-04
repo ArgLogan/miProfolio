@@ -11,7 +11,7 @@
             <div class="container m-0">
                 <div class="icon-estudio   d-flex p-2 flex-wrap" *ngIf="editService.valorIcon" >
                     <div class="edit-icon-about social-icons p-2">
-                        <a class="social-icon" href="#estudio"(click)="onEdit(estudio)" ><i class="fas fa-pen"></i></a>
+                        <a class="social-icon" href="#estudio"(click)="onEdit()" ><i class="fas fa-pen"></i></a>
                     </div>
                     <div class="edit-icon-about social-icons p-2" >
                         <a class="social-icon" href="#estudio" (click)="onDelete(estudio)" ><i class="far fa-trash-alt"></i></a>
@@ -20,6 +20,26 @@
             </div>
         </div>
     </div>
+
+    <div class="container modal " *ngIf="editFlag" >
+        <div class="position-absolute top-50 start-50 translate-middle border border-1 border-primary">
+            <div class="modal-body">
+                <input type="text" placeholder="periodo" [(ngModel)]="estudio.periodo">
+                <input type="text" placeholder="institucion" [(ngModel)]="estudio.institucion">
+                <input type="text" placeholder="titulo" [(ngModel)]="estudio.titulo">
+                <input type="text" placeholder="descripcion" [(ngModel)]="estudio.descripcion">
+                <input type="checkbox" placeholder="completo" [(ngModel)]="estudio.completo">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="onEdit()"  data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"  (click)="onSaveEdit(estudio)">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
 
  
