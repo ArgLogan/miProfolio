@@ -9,10 +9,24 @@
         <img id="fperfil" [src]="about.fPerfil"> 
     </div>
     <div class="edit-foto" >
-        <div class="social-icons" *ngIf="editService.valorIcon" (click)="onFotos()"  >
+        <div class="social-icons" *ngIf="editService.valorIcon" (click)="onFotos()" data-toggle="modal" data-target="#modalfotos">
             <a class="social-icon foto-pen" href="#" ><i class="fas fa-pen"></i></a>
         </div>
     </div>
+
+    <div  *ngIf="toggleFotos"  id="modalfotos">
+        <div class="position-absolute top-50 start-50 translate-middle border border-1 border-primary modal-fotos">
+            <div class="modal-body">
+                <input type="text" placeholder="periodo" >
+                <input type="file" placeholder="institucion" >
+           </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="onFotos()"  data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"  (click)="onFotos()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
@@ -39,15 +53,3 @@
 </div>
 <div class="separador"></div>
 
-<div class="container modal " *ngIf="toggleFotos" >
-    <div class="position-absolute top-50 start-50 translate-middle border border-1 border-primary">
-        <div class="modal-body">
-            <input type="text" placeholder="periodo" >
-            <input type="file" placeholder="institucion" >
-       </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" (click)="onFotos()"  data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary"  (click)="onFotos()">Aceptar</button>
-        </div>
-    </div>
-</div>

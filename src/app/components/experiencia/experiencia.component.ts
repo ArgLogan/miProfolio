@@ -9,13 +9,24 @@ import {Experience} from '../../interfaces'
 export class ExperienciaComponent implements OnInit {
   @Input() experiencia:any;
   @Output() onDeleteExp:EventEmitter<Experience> = new EventEmitter();
+  @Output() onSaveEditExp:EventEmitter<Experience> = new EventEmitter();
+  editFlag:boolean= false
+  
   constructor(public editService:EditService) { }
+
 
   ngOnInit(): void {
   }
   onDelete(experiencia:Experience){
     console.log(experiencia);
     this.onDeleteExp.emit(experiencia)
+  }
+  onEdit(){
+    this.editFlag = !this.editFlag
+  }
+  onSaveEdit(editado:Experience){
+    this.onSaveEditExp.emit(editado)
+    this.editFlag = !this.editFlag
   }
 
 }
