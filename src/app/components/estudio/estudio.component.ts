@@ -28,6 +28,7 @@ export class EstudioComponent implements OnInit {
   }
   onSaveEdit(editado:Study){
     this.onSaveEditStudy.emit(editado)
+    this.editFlag = !this.editFlag
   }
 
 }

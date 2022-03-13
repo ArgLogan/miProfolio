@@ -42,19 +42,35 @@
   "estudios": [
     {
       "id": 1,
-      "institucion": "Universidas de Buenos Aires",
-      "periodo": "2022",
-      "titulo": "Editor",
-      "completo": false,
-      "descripcion": "otro"
+      "institucion": "Manuel Dorrego de Morón",
+      "periodo": "1984-1989",
+      "titulo": "Primario",
+      "completo": true,
+      "descripcion": "Escuela nacional normal superior"
     },
     {
       "id": 2,
-      "institucion": "Universidas de Buenos Aires",
-      "periodo": "2022",
-      "titulo": "Editor",
+      "institucion": "EDET Nro 2 Republica del Perú -Hurlingham",
+      "periodo": "1990-1995",
+      "titulo": "Técnico en electrónicca",
+      "completo": true,
+      "descripcion": ""
+    },
+    {
+      "id": 3,
+      "institucion": "UNLAM",
+      "periodo": "1996-1997",
+      "titulo": "Ingeniería en electrónica",
       "completo": false,
-      "descripcion": "uno mas"
+      "descripcion": ""
+    },
+    {
+      "id": 4,
+      "institucion": "EDET Nro 2 Republica del Perú - Hurlingham",
+      "periodo": "1990-1995",
+      "titulo": "Técnico en electrónica",
+      "completo": true,
+      "descripcion": ""
     }
   ],
   "skills": [

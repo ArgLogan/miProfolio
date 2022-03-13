@@ -53,7 +53,7 @@ export class EstudiosComponent implements OnInit {
       /*this.estudios = this.estudios.filter( (t) => {
         return t.id !== estudio.id
       })*/
-      this.estudios.push(estudio)
+      //this.estudios.push(estudio)
       
 
     })
