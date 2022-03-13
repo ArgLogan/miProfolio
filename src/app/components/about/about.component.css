@@ -27,7 +27,7 @@ h2{
     border-radius: 50%;
     justify-content: center;
 }
-.contiene-cosas{
+.contiene-fotos{
      display: flex;
     flex-direction: column;
 }

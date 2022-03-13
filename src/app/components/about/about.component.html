@@ -1,5 +1,5 @@
 
-<div class="contiene-cosas">
+<div class="contiene-fotos">
     <div id="banner" >
         <img id="foto-banner" [src]="about.banner" >
                    
@@ -9,7 +9,7 @@
         <img id="fperfil" [src]="about.fPerfil"> 
     </div>
     <div class="edit-foto" >
-        <div class="social-icons" *ngIf="editService.valorIcon" >
+        <div class="social-icons" *ngIf="editService.valorIcon" (click)="onFotos()"  >
             <a class="social-icon foto-pen" href="#" ><i class="fas fa-pen"></i></a>
         </div>
     </div>
@@ -25,7 +25,7 @@
             <h2 fs-4>{{about.titulo}}</h2>
         </div>
         <div class="social-icons p-2 col-sm-1 g-0" *ngIf="editService.valorIcon" >
-            <a class="social-icon" href="#"  ><i class="fas fa-pen"></i></a>
+            <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
         </div>
     
         <div class="col-sm-6 fs-8 g-0 ">
@@ -39,3 +39,15 @@
 </div>
 <div class="separador"></div>
 
+<div class="container modal " *ngIf="toggleFotos" >
+    <div class="position-absolute top-50 start-50 translate-middle border border-1 border-primary">
+        <div class="modal-body">
+            <input type="text" placeholder="periodo" >
+            <input type="file" placeholder="institucion" >
+       </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="onFotos()"  data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary"  (click)="onFotos()">Aceptar</button>
+        </div>
+    </div>
+</div>

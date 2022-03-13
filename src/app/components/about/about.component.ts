@@ -11,6 +11,8 @@ export class AboutComponent implements OnInit {
    
    @Input() editIcon:boolean=true;
   about:any;
+  toggleFotos:boolean = false;
+
 
   constructor(
     private datosAbout:DatosService,
@@ -22,6 +24,10 @@ export class AboutComponent implements OnInit {
       //console.log(data);
       this.about = data[1];
     });
+  }
+  onFotos(){
+    this.toggleFotos = !this.toggleFotos;
+    console.log("entra"+this.toggleFotos)
   }
 
 }
