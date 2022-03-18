@@ -14,6 +14,7 @@ import { EstudioComponent } from './components/estudio/estudio.component';
 import { ExperienciasComponent } from './components/experiencias/experiencias.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { IconsComponent } from './components/icons/icons.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { IconsComponent } from './components/icons/icons.component';
     ExperienciasComponent,
     ExperienciaComponent,
     IconsComponent,
+    ModalComponent,
    
   ],
   imports: [

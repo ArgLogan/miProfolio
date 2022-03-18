@@ -47,36 +47,7 @@ nav{
     width: 100vw;
     height: 5vh;
 }
-#banner{
-    width: 100%;
-    height:25vh;
-    background-color: rgb(26, 156, 26);
-    border-bottom-color: #032546;
-    border-bottom-style:solid ;
-    border-bottom-width:15px ;
-}
-#foto-banner{
-    width: 100%;
-    height: 100%;
-}
-#fperfil{
-    width: 95%;
-    height: 95%;
-    border-radius: 50%;
-}
-#foto-perfil{
-    margin-top: -75px;
-    margin-left: 25px;
-    display: flex;
-    border-style: solid;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-color: #032546 ;
-}
+
 .separador{
     margin-top: 5px;
     margin-bottom: 5px;
