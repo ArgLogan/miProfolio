@@ -11,8 +11,9 @@ export class AboutComponent implements OnInit {
    
   @Input() editIcon:boolean=true;
   about:any;
-  toggleFotos:boolean = false;
-  newDireccion:string ="";
+  toggleModal:boolean = false
+  toggleFotoPefil:boolean = false;
+  newPerfil:string ="";
 
 
   constructor(
@@ -26,9 +27,10 @@ export class AboutComponent implements OnInit {
       this.about = data[1];
     });
   }
-  onFotos(){
-    this.toggleFotos = !this.toggleFotos;
-    console.log("entra"+this.toggleFotos)
+  onFotoPerfil(){
+    this.toggleModal = !this.toggleModal;
+    this.toggleFotoPefil = !this.toggleFotoPefil;
+
   }
   onNombre(){
     
@@ -36,8 +38,11 @@ export class AboutComponent implements OnInit {
   onAbout(){
 
   }
-  onCambia(){
-    console.log(this.newDireccion);
+  onPerfil(){
+    console.log(this.newPerfil);
+    this.onFotoPerfil()
+    this.about.fPerfil= this.newPerfil;
+    console.log(this.about.fPerfil);
   }
 
 }

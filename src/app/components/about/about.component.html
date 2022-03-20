@@ -11,7 +11,7 @@
         <img id="fperfil" [src]="about.fPerfil"> 
     </div>
     <div class="edit-foto" >
-        <div class="social-icons" *ngIf="editService.valorIcon" (click)="onFotos()" >
+        <div class="social-icons" *ngIf="editService.valorIcon" (click)="onFotoPerfil()" >
             <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
         </div>
     </div>
@@ -32,6 +32,7 @@
     
         <div class="col-sm-6 fs-8 g-0 ">
           <p>{{about.texto}}</p>
+          <p>{{about.fPerfil}}</p>
         </div>
         
         <div class="social-icons p-2 col-sm-1 g-0" *ngIf="editService.valorIcon" (click)="onAbout()" >
@@ -44,21 +45,49 @@
 
 </section>
 
-<div class="fixed-top modal-fotos " *ngIf="toggleFotos" >
-  <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white">
-      <div class="modal-header">
-          <h3>Selecione la nueva foto</h3>
-      </div>
-      <div class="modal-body ">
-        <div class="input-group mb-3">
-            <input type="file" class="form-control" id="inputGroupFile02" ngModel="newDireccion">
-            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+<div class="fixed-top modal-fotos " *ngIf="toggleModal" enctype="multipart/form-data" >
+    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+        <!-- modal del edit foto de perfil  -->
+        <div *ngIf="toggleFotoPefil">
+          <div class="modal-header">
+              <h3>Selecione la nueva foto de Perfil </h3>
+            </div>
+            <div class="modal-body ">
+                
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Default file input example</label>
+                    <input class="form-control" type="file" accept=".jpg,.png" id="formFile" [(ngModel)]="newPerfil">
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="onFotoPerfil()">Close</button>
+                <button type="button" class="btn btn-primary"  (click)="onPerfil()">Aceptar</button>
+            </div>
         </div>
+         <!-- modal del edit foto de banner  
+         <div *ngIf="editFotoBanner">
+            <div class="modal-header">
+                <h3>Selecione la nueva foto de Perfil </h3>
+              </div>
+              <div class="modal-body ">
+                  
+                  <div class="mb-3">
+                      <label for="formFile" class="form-label">Ingrese nuevo banner</label>
+                      <input class="form-control" type="file" accept=".jpg,.png" id="formFile" [(ngModel)]="newBanner">
+                  </div>
+                  
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" (click)="onToggleBanner()">Close</button>
+                  <button type="button" class="btn btn-primary"  (click)="onFotoBanner()">Aceptar</button>
+              </div>
+          </div>-->
+  
 
-      </div>
-      <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="onFotos()">Close</button>
-          <button type="button" class="btn btn-primary"  (click)="onCambia()">Aceptar</button>
-      </div>
-  </div>
+
+
+
+
+    </div>
 </div>
