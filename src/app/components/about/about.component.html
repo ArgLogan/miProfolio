@@ -12,7 +12,7 @@
     </div>
     <div class="edit-foto" >
         <div class="social-icons" *ngIf="editService.valorIcon" (click)="onFotos()" >
-            <a class="social-icon foto-pen" href="#" ><i class="fas fa-pen"></i></a>
+            <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
         </div>
     </div>
 </div>
@@ -23,18 +23,18 @@
     <div class="col-sm-12 d-flex border border-2 border-secondary redondea">
         
         <div class="about col-sm-3 fs-8 p-2">
-            <h1 fs-6>{{about.nombre}}</h1>
-            <h2 fs-4>{{about.titulo}}</h2>
+            <h1 class="nombre" fs-6>{{about.nombre}}</h1>
+            <h2 class="titulo" fs-4>{{about.titulo}}</h2>
         </div>
-        <div class="social-icons p-2 col-sm-1 g-0" *ngIf="editService.valorIcon" (click)="onFotos()" >
+        <div class="social-icons p-2 col-sm-1 g-0" *ngIf="editService.valorIcon" (click)="onNombre()" >
             <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
         </div>
     
         <div class="col-sm-6 fs-8 g-0 ">
-          <p fs-4>{{about.texto}}</p>
+          <p>{{about.texto}}</p>
         </div>
         
-        <div class="social-icons p-2 col-sm-1 g-0" *ngIf="editService.valorIcon" (click)="onFotos()" >
+        <div class="social-icons p-2 col-sm-1 g-0" *ngIf="editService.valorIcon" (click)="onAbout()" >
             <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
         </div>
     </div>
@@ -45,18 +45,20 @@
 </section>
 
 <div class="fixed-top modal-fotos " *ngIf="toggleFotos" >
-  <div class="position-absolute top-50 start-50 translate-middle border border-1 border-primary bg-white">
+  <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white">
+      <div class="modal-header">
+          <h3>Selecione la nueva foto</h3>
+      </div>
       <div class="modal-body ">
-          <input type="text" placeholder="periodo" >
-          <input type="text" placeholder="institucion" >
-          <input type="text" placeholder="titulo" >
-          <input type="text" placeholder="descripcion" >
-          <input type="checkbox" placeholder="completo" >
+        <div class="input-group mb-3">
+            <input type="file" class="form-control" id="inputGroupFile02" ngModel="newDireccion">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        </div>
 
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="onFotos()"  data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary"  (click)="onFotos()">Aceptar</button>
+          <button type="button" class="btn btn-secondary" (click)="onFotos()">Close</button>
+          <button type="button" class="btn btn-primary"  (click)="onCambia()">Aceptar</button>
       </div>
   </div>
 </div>

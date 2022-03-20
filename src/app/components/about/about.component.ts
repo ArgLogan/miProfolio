@@ -9,9 +9,10 @@ import { EditService } from 'src/app/servicios/edit.service';
 })
 export class AboutComponent implements OnInit {
    
-   @Input() editIcon:boolean=true;
+  @Input() editIcon:boolean=true;
   about:any;
   toggleFotos:boolean = false;
+  newDireccion:string ="";
 
 
   constructor(
@@ -28,6 +29,15 @@ export class AboutComponent implements OnInit {
   onFotos(){
     this.toggleFotos = !this.toggleFotos;
     console.log("entra"+this.toggleFotos)
+  }
+  onNombre(){
+    
+  }
+  onAbout(){
+
+  }
+  onCambia(){
+    console.log(this.newDireccion);
   }
 
 }
