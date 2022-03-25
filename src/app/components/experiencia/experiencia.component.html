@@ -23,14 +23,17 @@
 </div>
 
 
-<div class="container modal " *ngIf="editFlag" >
-    <div class="position-absolute top-50 start-50 translate-middle border border-1 border-primary">
-        <div class="modal-body">
-            <input type="text" placeholder="periodo" [(ngModel)]="experiencia.periodo">
-            <input type="text" placeholder="institucion" [(ngModel)]="experiencia.institucion">
-            <input type="text" placeholder="titulo" [(ngModel)]="experiencia.titulo">
-            <input type="text" placeholder="descripcion" [(ngModel)]="experiencia.descripcion">
-            <input type="checkbox" placeholder="completo" [(ngModel)]="experiencia.completo">
+<div class="fixed-top modal-fotos " *ngIf="editFlag" enctype="multipart/form-data" >
+    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+        <div class="modal-header">
+            <h3>Modificar los datos de experiencia</h3>
+        </div>
+        <div class="modal-body d-flex flex-column">
+            <input class="form-control" type="text" placeholder="periodo" [(ngModel)]="experiencia.periodo">
+            <input class="form-control" type="text" placeholder="institucion" [(ngModel)]="experiencia.institucion">
+            <input class="form-control" type="text" placeholder="titulo" [(ngModel)]="experiencia.titulo">
+            <input class="form-control"  type="text" placeholder="descripcion" [(ngModel)]="experiencia.descripcion">
+            <input class="form-check-input mt-2" type="checkbox" placeholder="completo" [(ngModel)]="experiencia.completo">
 
         </div>
         <div class="modal-footer">

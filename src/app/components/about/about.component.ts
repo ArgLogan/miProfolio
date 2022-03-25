@@ -30,8 +30,12 @@ export class AboutComponent implements OnInit {
   onFotoPerfil(){
     this.toggleModal = !this.toggleModal;
     this.toggleFotoPefil = !this.toggleFotoPefil;
-
   }
+  onFotoBanner(){
+    this.toggleModal = !this.toggleModal;
+    
+  }
+
   onNombre(){
     
   }

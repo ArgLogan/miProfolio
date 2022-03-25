@@ -12,6 +12,7 @@ export class EstudioComponent implements OnInit {
   @Output() onDeleteStudy:EventEmitter<Study> = new EventEmitter();
   @Output() onSaveEditStudy:EventEmitter<Study> = new EventEmitter();
   editFlag:boolean = false
+  toggleModal:boolean= false
  
   
   constructor(public editService:EditService) { }
