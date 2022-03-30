@@ -14,11 +14,16 @@ const httpOptions ={
   providedIn: 'root'
 })
 export class DatosService {
-  apiUrlPorfolio:string =' http://localhost:5000/porfolio';
+ 
+  apiUrlPorfolio:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/porfolio';
+  apiUrlSkills:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/skills';
+  apiUrlStudy:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/estudios';
+  apiUrlExp:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/experiencias';
+  /*apiUrlPorfolio:string =' http://localhost:5000/porfolio';
   apiUrlSkills:string = ' http://localhost:5000/skills';
   apiUrlStudy:string = ' http://localhost:5000/estudios';
   apiUrlExp:string = ' http://localhost:5000/experiencias';
-  jsonUrl:string =' db.json/porfolio';
+  jsonUrl:string =' db.json/porfolio';*/
 
   constructor( private http:HttpClient ) { }
 
