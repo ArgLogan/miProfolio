@@ -1,17 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+    box-sizing: border-box;
+    font-size: 62,5%;
+}
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
 }
 body{
     background-color: gray;
     background-image: linear-gradient(66deg, #3f946a, #032546);
     font-family: 'EB Garamond', serif;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
 }
 nav{
-    height: 30px;
+    height: 2.8rem;
     width: 100%;
     display: flex;
     background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
@@ -28,8 +32,8 @@ nav{
 }
 
 #button{
-    padding: 5px;
-    border-radius: 5px;
+    padding: .5rem;
+    border-radius: .5rem;
     background-color: bisque;
     margin-right: 2%;
 }
@@ -49,11 +53,11 @@ nav{
 }
 
 .separador{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0.5rem;
+    margin-bottom: .5rem;
     border-top-color: gray;
     border-top-style:groove ;
-    border-top-width:3px ;
+    border-top-width:.3rem ;
 }
 
 
@@ -63,13 +67,13 @@ nav{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 1.6rem;
-    width: 1.6rem;
+    height: 2.6rem;
+    width: 2.6rem;
     background-color: #032546;
     color: #fff;
     border-radius: 50%;
-    font-size: 1rem;
-    margin-right: 0.5rem;
+    font-size: 1,6rem;
+    margin-right: 0.8rem;
   }
   .social-icons .social-icon:last-child {
     margin-right: 0;
