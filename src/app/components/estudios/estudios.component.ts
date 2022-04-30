@@ -45,18 +45,14 @@ export class EstudiosComponent implements OnInit {
     
       this.datosEstudio.addStudy(estudio).subscribe((estudio) =>{
         this.estudios.push(estudio)
+        this.ngOnInit();
       })
 
   }
   saveEdit(estudio:Study){
     this.datosEstudio.saveEditStudy(estudio).subscribe((estudio) =>{
-      /*this.estudios = this.estudios.filter( (t) => {
-        return t.id !== estudio.id
-      })*/
-      //this.estudios.push(estudio)
-      
-
     })
+
   }
 
 }

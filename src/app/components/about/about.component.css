@@ -2,14 +2,14 @@
     font-family: 'Vidaloka', serif;
 }
 .nombre{
-    text-shadow: -2px 2px 1px gray;
-    margin-left: 10px;
+    text-shadow: -.2rem .2rem .1rem gray;
+    margin-left: 1rem;
     font-size: 2rem;
 }
 .titulo{
-    margin-left: 10px;
-    font-size: 1.2rem;
-    text-shadow: -1px 1px 1px gray;
+    margin-left: 1rem;
+    font-size: 1.9rem;
+    text-shadow: -.1rem .1rem .1rem gray;
 }
 
 .contiene-fotos{
@@ -20,19 +20,20 @@
 .about{
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
     background-color:rgba(0,0,0,0.03);
 }
 
 .edit-foto{
-    margin-top: -70px;
-    margin-left: 72px;
-    margin-bottom: 50px;
-    height: 25px;
+    margin-top: -7rem;
+    margin-left: 7,2rem;
+    margin-bottom: 5rem;
+    height: 2.5rem;
+    width:3rem;
 }
 
 .redondea{
-    border-radius: 15px;
+    border-radius: 1.5rem;
     color:rgb(0, 0, 0);
 }
 
@@ -60,12 +61,12 @@
     border-radius: 50%;
 }
 #foto-perfil{
-    margin-top: -65px;
-    margin-left: 25px;
+    margin-top: -6.5rem;
+    margin-left: 2.5rem;
     display: flex;
     border-style: solid;
-    width: 120px;
-    height: 120px;
+    width: 12rem;
+    height: 12rem;
     border-radius: 50%;
     align-items: center;
     justify-content: center;

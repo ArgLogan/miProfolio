@@ -1,7 +1,7 @@
 
 export interface Skills{
     id?:number;//cuando creamos podria no venir
-    porcentje: number;
+    porcentaje: number;
     titulo:string;
     subtitulo:string;
     color:string;

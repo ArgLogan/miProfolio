@@ -15,6 +15,7 @@ export class SkillsComponent implements OnInit {
   ngOnInit(): void {
     this.datosProgress.getDatosSkills().subscribe(data =>{
       this.barras = data;
+      console.log(data)
     });
 
   }

@@ -2,6 +2,8 @@ import { HttpClient, HttpHeaders, } from '@angular/common/http';
 import { Injectable} from '@angular/core';
 import {Observable} from 'rxjs'
 import{ Study, Skills, Experience} from '../interfaces' 
+import {STUDY} from '../mok'
+
 
 const httpOptions ={
   headers:new HttpHeaders({
@@ -20,14 +22,17 @@ export class DatosService {
   apiUrlStudy:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/estudios';
   apiUrlExp:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/experiencias';*/
   apiUrlPorfolio:string =' http://localhost:5000/porfolio';
-  apiUrlSkills:string = ' http://localhost:5000/skills';
-  apiUrlStudy:string = ' http://localhost:5000/estudios';
+  //apiUrlSkills:string = ' http://localhost:5000/skills';
+  apiUrlSkills:string = ' http://localhost:8080/skill';
+  //apiUrlStudy:string = ' http://localhost:5000/estudios';
+  apiUrlStudy:string = ' http://localhost:8080/study';
   apiUrlExp:string = ' http://localhost:5000/experiencias';
   jsonUrl:string =' db.json/porfolio';
 
   constructor( private http:HttpClient ) { }
 
   getDatosPorfolio():Observable<any>{
+    console.log(this.http.get(this.apiUrlPorfolio))
     return  this.http.get(this.apiUrlPorfolio);
     //return  this.http.get(this.jsonUrl);
   }
@@ -35,21 +40,28 @@ export class DatosService {
   //ESTUDIOS
 
   getDatosStudy():Observable<any>{
-    return  this.http.get(this.apiUrlStudy);
+    const url = `${this.apiUrlStudy}/ver`
+    return  this.http.get(url);
   }
   deleteStudy(estudio:Study):Observable<Study>{
     //console.log(estudio)
-    const url = `${this.apiUrlStudy}/${estudio.id}`
+    const url = `${this.apiUrlStudy}/delete/${estudio.id}`
     return this.http.delete<Study>(url)
   }
   addStudy(estudio:Study):Observable<any>{
-    return this.http.post<any>(this.apiUrlStudy, estudio, httpOptions)
+    const url = `${this.apiUrlStudy}/new`
+    return this.http.post<any>(url, estudio)
+  }
+  saveEditStudy(estudio:Study):Observable<Study>{
+    const url = `${this.apiUrlStudy}/update`
+    return this.http.post<Study>(url, estudio)
   }
 
   //Skills
 
   getDatosSkills():Observable<any>{
-    return  this.http.get(this.apiUrlSkills);
+    const url = `${this.apiUrlSkills}/ver`
+    return  this.http.get(url);
   }
 
 //EXPERIENCIAS
@@ -66,10 +78,7 @@ export class DatosService {
   
  
 
-  saveEditStudy(estudio:Study):Observable<Study>{
-    const url = `${this.apiUrlStudy}/${estudio.id}`
-    return this.http.put<Study>(url, estudio, httpOptions)
-  }
+
 
 
 }
