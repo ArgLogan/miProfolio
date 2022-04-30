@@ -20,21 +20,29 @@ export class DatosService {
   /*apiUrlPorfolio:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/porfolio';
   apiUrlSkills:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/skills';
   apiUrlStudy:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/estudios';
-  apiUrlExp:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/experiencias';*/
+  apiUrlExp:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/experiencias';
+  apiUrlSkills:string = ' http://localhost:5000/skills';
+  apiUrlStudy:string = ' http://localhost:5000/estudios'; 
   apiUrlPorfolio:string =' http://localhost:5000/porfolio';
-  //apiUrlSkills:string = ' http://localhost:5000/skills';
-  apiUrlSkills:string = ' http://localhost:8080/skill';
-  //apiUrlStudy:string = ' http://localhost:5000/estudios';
-  apiUrlStudy:string = ' http://localhost:8080/study';
   apiUrlExp:string = ' http://localhost:5000/experiencias';
+    */
+  apiUrlPersona:string =' http://localhost:8080/persona';
+  apiUrlHeader:string =' http://localhost:8080/header';
+  apiUrlSkills:string = ' http://localhost:8080/skill';
+  apiUrlStudy:string = ' http://localhost:8080/study';
+  apiUrlExp:string = ' http://localhost:8080/experiencia';
   jsonUrl:string =' db.json/porfolio';
 
   constructor( private http:HttpClient ) { }
 
   getDatosPorfolio():Observable<any>{
-    console.log(this.http.get(this.apiUrlPorfolio))
-    return  this.http.get(this.apiUrlPorfolio);
-    //return  this.http.get(this.jsonUrl);
+    const url = `${this.apiUrlPersona}/ver`
+    return  this.http.get(url);
+  }
+
+  getDatosHeader():Observable<any>{
+    const url = `${this.apiUrlHeader}/ver`
+    return  this.http.get(url);
   }
 
   //ESTUDIOS
@@ -44,7 +52,6 @@ export class DatosService {
     return  this.http.get(url);
   }
   deleteStudy(estudio:Study):Observable<Study>{
-    //console.log(estudio)
     const url = `${this.apiUrlStudy}/delete/${estudio.id}`
     return this.http.delete<Study>(url)
   }
@@ -67,12 +74,12 @@ export class DatosService {
 //EXPERIENCIAS
 
   getDatosExp():Observable<any>{
-    return  this.http.get(this.apiUrlExp);
+    const url = `${this.apiUrlExp}/ver`
+    return  this.http.get(url);
   }
   
   deleteExp(experiencia:Experience):Observable<Experience>{
-    console.log(experiencia)
-    const url = `${this.apiUrlExp}/${experiencia.id}`
+    const url = `${this.apiUrlExp}/delete/${experiencia.id}`
     return this.http.delete<Experience>(url)
   }
   

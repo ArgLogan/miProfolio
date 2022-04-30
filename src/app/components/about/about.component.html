@@ -8,7 +8,7 @@
     
 
     <div id="foto-perfil">
-        <img id="fperfil" [src]="about.fPerfil"> 
+        <img id="fperfil" [src]="about.fperfil"> 
     </div>
     <span class="edit-foto">
         <div class="social-icons" *ngIf="editService.valorIcon" (click)="onFotoPerfil()" >
@@ -24,7 +24,7 @@
     <div class="col-sm-12 d-flex border border-2 border-secondary redondea">
         
         <div class="about col-sm-3 fs-8 p-2">
-            <h1 class="nombre" fs-6>{{about.nombre}}</h1>
+            <h1 class="nombre" fs-6>{{about.nombre}} {{about.apellido}}</h1>
             <h2 class="titulo" fs-4>{{about.titulo}}</h2>
         </div>
         <div class="social-icons p-2 col-sm-1 g-0" *ngIf="editService.valorIcon" (click)="onNombre()" >
@@ -32,8 +32,8 @@
         </div>
     
         <div class="col-sm-6 fs-8 g-0 ">
-          <p>{{about.texto}}</p>
-          <p>{{about.fPerfil}}</p>
+          <p>{{about.about}}</p>
+          <p>{{about.fperfil}}</p>
         </div>
         
         <div class="social-icons p-2 col-sm-1 g-0" *ngIf="editService.valorIcon" (click)="onAbout()" >

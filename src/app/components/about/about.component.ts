@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { DatosService } from 'src/app/servicios/datos.service';
 import { EditService } from 'src/app/servicios/edit.service';
+import {About} from '../../interfaces'
 
 @Component({
   selector: 'app-about',
@@ -23,8 +24,8 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosAbout.getDatosPorfolio().subscribe(data =>{
-      //console.log(data);
-      this.about = data[1];
+      console.log(data);
+      this.about = data[0];
     });
   }
   onFotoPerfil(){

@@ -24,3 +24,24 @@ export interface Experience{
     tipo:string;
     actual:boolean;
 }
+export interface About{
+    id?:number;
+    nombre:string;
+    apellido:string;
+    banner:string;
+    fPerfi:string;
+    titulo:string;
+    about:string;
+}
+export interface Header {
+    id?:number;
+    nombre:string;
+    apLogo:string;
+    apText:string;
+    lidin:string;
+    github:string;
+    twitter:string;
+    facebook:string;
+    email:string;
+    wahtsapp:string;
+}
