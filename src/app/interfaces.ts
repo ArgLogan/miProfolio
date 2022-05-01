@@ -24,14 +24,15 @@ export interface Experience{
     tipo:string;
     actual:boolean;
 }
-export interface About{
+export interface Persona{
     id?:number;
     nombre:string;
     apellido:string;
     banner:string;
-    fPerfi:string;
+    fperfi:string;
     titulo:string;
     about:string;
+    wahtsapp:string;
 }
 export interface Header {
     id?:number;

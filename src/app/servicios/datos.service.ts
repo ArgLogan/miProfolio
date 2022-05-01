@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders, } from '@angular/common/http';
 import { Injectable} from '@angular/core';
 import {Observable} from 'rxjs'
-import{ Study, Skills, Experience} from '../interfaces' 
+import{ Study, Skills, Experience, Persona} from '../interfaces' 
 import {STUDY} from '../mok'
 
 
@@ -34,11 +34,20 @@ export class DatosService {
   jsonUrl:string =' db.json/porfolio';
 
   constructor( private http:HttpClient ) { }
-
+   
+  //ABOUT
   getDatosPorfolio():Observable<any>{
     const url = `${this.apiUrlPersona}/ver`
     return  this.http.get(url);
   }
+
+   atualizaFotoPerfil(persona:Persona):Observable<Persona>{
+    console.log(persona)
+    const url = `${this.apiUrlPersona}/update`
+    console.log(url)
+    return this.http.post<Persona>(url, persona)
+  }
+
 
   getDatosHeader():Observable<any>{
     const url = `${this.apiUrlHeader}/ver`
@@ -82,6 +91,15 @@ export class DatosService {
     const url = `${this.apiUrlExp}/delete/${experiencia.id}`
     return this.http.delete<Experience>(url)
   }
+  addExp(exp:Experience):Observable<any>{
+    const url = `${this.apiUrlExp}/new`
+    return this.http.post<any>(url, exp)
+  }
+  saveEditExp(exp:Experience):Observable<Experience>{
+    const url = `${this.apiUrlExp}/update`
+    return this.http.post<Experience>(url, exp)
+  }
+ 
   
  
 

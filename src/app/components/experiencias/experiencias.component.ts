@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/servicios/datos.service';
+import { EditService } from 'src/app/servicios/edit.service';
 import { Experience } from 'src/app/interfaces';
+import {EXPERIENCIA} from '../../mok'
 
 @Component({
   selector: 'app-experiencias',
@@ -9,8 +11,14 @@ import { Experience } from 'src/app/interfaces';
 })
 export class ExperienciasComponent implements OnInit {
   experiencias:Experience[]=[];
+  editIcon:boolean =true;
+  nuevo:Experience = EXPERIENCIA;
 
-  constructor( private datosExp:DatosService) { }
+  constructor( 
+    private datosExp:DatosService,
+    public editService:EditService
+  
+  ) { }
 
   ngOnInit(): void {
     this.datosExp.getDatosExp().subscribe(data =>{
@@ -26,7 +34,19 @@ export class ExperienciasComponent implements OnInit {
       })
     })
   }
+  onAdd(exp:Experience){
+    
+    this.datosExp.addExp(exp).subscribe((experi) =>{
+      this.experiencias.push(exp)
+      this.ngOnInit();
+    })
 
+}
+saveEdit(exp:Experience){
+  this.datosExp.saveEditExp(exp).subscribe((experi) =>{
+  })
+
+}
 
 
 }

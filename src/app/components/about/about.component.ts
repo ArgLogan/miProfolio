@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { DatosService } from 'src/app/servicios/datos.service';
 import { EditService } from 'src/app/servicios/edit.service';
-import {About} from '../../interfaces'
+import {Persona} from '../../interfaces'
+
 
 @Component({
   selector: 'app-about',
@@ -44,10 +45,14 @@ export class AboutComponent implements OnInit {
 
   }
   onPerfil(){
-    console.log(this.newPerfil);
+    
     this.onFotoPerfil()
-    this.about.fPerfil= this.newPerfil;
-    console.log(this.about.fPerfil);
+    this.about.fperfil= this.newPerfil;
+    console.log(this.about)
+    this.datosAbout.atualizaFotoPerfil(this.about).subscribe((persona)=>{
+      
+    });
+
   }
 
 }

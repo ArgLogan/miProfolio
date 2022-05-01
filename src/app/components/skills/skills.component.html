@@ -1,4 +1,13 @@
-<h3 class="col2 p-2">Habilidades</h3>
+<div class="container d-inline-flex">
+    <h3 class="col-sm-9 p-2">Habilidades</h3>
+    <div class="col-sm-3">
+        <div class="d-flex p-2 flex-wrap">
+            <div class="social-icons p-2" *ngIf="editService.valorIcon" >
+                <a class="social-icon" href="#Habil"  data-bs-toggle="modal" data-bs-target="#static"   ><i class="fas fa-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="contiene-progress col-10" >
 
     <app-progress

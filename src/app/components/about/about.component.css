@@ -8,7 +8,7 @@
 }
 .titulo{
     margin-left: 1rem;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     text-shadow: -.1rem .1rem .1rem gray;
 }
 
@@ -22,14 +22,6 @@
     flex-direction: column;
     padding-bottom: 1rem;
     background-color:rgba(0,0,0,0.03);
-}
-
-.edit-foto{
-    margin-top: -7rem;
-    margin-left: 7,2rem;
-    margin-bottom: 5rem;
-    height: 2.5rem;
-    width:3rem;
 }
 
 .redondea{
@@ -73,7 +65,34 @@
     background-color: white;
     border-color: #032546 ;
 }
-
-.social-icons{
+.social-icons .social-icon {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.6rem;
+    width: 2.6rem;
+    background-color: #032546;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    margin-right: 0.8rem;
+  }
+  .social-icons .social-icon:last-child {
+    margin-right: 0;
+  }
+  .social-icons .social-icon:hover {
+    background-color: #0475f7;
+  }
+  .row{
+    margin-bottom: 1.6rem
+}
+
+.edit-foto{
+    display: inline;
+    margin-top: -7rem;
+    margin-left: 7,2rem;
+    margin-bottom: 5rem;
+    height: 2.5rem;
+    width:3rem;
+    z-index: 50;
 }

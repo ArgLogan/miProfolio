@@ -1,4 +1,13 @@
-<h3 class="col5 p-2">Experiencias</h3>
+<div class="container d-inline-flex">
+    <h3 class="col-sm-9 p-2">Experiencias</h3>
+    <div class="col-sm-3">
+        <div class="d-flex p-2 flex-wrap">
+            <div class="social-icons p-2" *ngIf="editService.valorIcon" >
+                <a class="social-icon" href="#exp"  data-bs-toggle="modal" data-bs-target="#static"   ><i class="fas fa-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
 <app-experiencia
     *ngFor="let dato of experiencias"
         [experiencia]="dato"
@@ -7,5 +16,31 @@
 <div class="separador"></div>
 
 
+ <!-- Modal -->
+ <div class="modal fade" id="static" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input class="form-control"  type="text" placeholder="Periodo" [(ngModel)]="nuevo.periodo">
+            <input class="form-control"  type="text" placeholder="Empresa" [(ngModel)]="nuevo.nombre">
+            <input class="form-control"  type="text" placeholder="Puesto" [(ngModel)]="nuevo.puesto">
+            <input class="form-control"  type="text" placeholder="Tareas" [(ngModel)]="nuevo.tareas">
+            <input class="form-control"  type="text" placeholder="Tipo de trabajo:" [(ngModel)]="nuevo.tipo">
+            <input type="checkbox" class="btn-check" id="btncheck1" [(ngModel)]="nuevo.actual">
+            <label class="btn btn-outline-primary" for="btncheck1">Completo</label>
+            
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
