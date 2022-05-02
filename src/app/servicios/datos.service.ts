@@ -26,11 +26,11 @@ export class DatosService {
   apiUrlPorfolio:string =' http://localhost:5000/porfolio';
   apiUrlExp:string = ' http://localhost:5000/experiencias';
     */
-  apiUrlPersona:string =' http://localhost:8080/persona';
-  apiUrlHeader:string =' http://localhost:8080/header';
-  apiUrlSkills:string = ' http://localhost:8080/skill';
-  apiUrlStudy:string = ' http://localhost:8080/study';
-  apiUrlExp:string = ' http://localhost:8080/experiencia';
+  apiUrlPersona:string =' https://arglogan.herokuapp.com/persona';
+  apiUrlHeader:string =' https://arglogan.herokuapp.com/header';
+  apiUrlSkills:string = ' https://arglogan.herokuapp.com/skill';
+  apiUrlStudy:string = ' https://arglogan.herokuapp.com/study';
+  apiUrlExp:string = ' https://arglogan.herokuapp.com/experiencia';
   jsonUrl:string =' db.json/porfolio';
 
   constructor( private http:HttpClient ) { }
