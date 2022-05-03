@@ -15,7 +15,9 @@ export class AboutComponent implements OnInit {
   about:any;
   toggleModal:boolean = false
   toggleFotoPefil:boolean = false;
+  editFotoBanner:boolean = false;
   newPerfil:string ="";
+  newBanner:string="";
 
 
   constructor(
@@ -35,6 +37,7 @@ export class AboutComponent implements OnInit {
   }
   onFotoBanner(){
     this.toggleModal = !this.toggleModal;
+    this.editFotoBanner = !this.editFotoBanner;
     
   }
 

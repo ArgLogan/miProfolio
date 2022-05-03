@@ -5,7 +5,7 @@
     <div id="banner" >
         <img id="foto-banner" [src]="about.banner" >
     </div> 
-    <div class="social-icons edit-banner" *ngIf="editService.valorIcon" (click)="onFotoPerfil()" >
+    <div class="social-icons edit-banner" *ngIf="editService.valorIcon" (click)="onFotoBanner()" >
         <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
     </div>
     
@@ -71,21 +71,21 @@
                 <button type="button" class="btn btn-primary"  (click)="onPerfil()">Aceptar</button>
             </div>
         </div>
-         <!-- modal del edit foto de banner  
+
          <div *ngIf="editFotoBanner">
             <div class="modal-header">
-                <h3>Selecione la nueva foto de Perfil </h3>
+                <h3>Selecione la nueva foto de banner</h3>
               </div>
               <div class="modal-body ">
                   
                   <div class="mb-3">
-                      <label for="formFile" class="form-label">Ingrese nuevo banner</label>
-                      <input class="form-control" type="file" accept=".jpg,.png" id="formFile" [(ngModel)]="newBanner">
+                      <label for="formFile" class="form-label">Ingrese la dirección del nuevo banner</label>
+                      <input class="form-control" type="text" id="formFile" [(ngModel)]="newBanner">
                   </div>
                   
               </div>
               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" (click)="onToggleBanner()">Close</button>
+                  <button type="button" class="btn btn-secondary" (click)="onFotoBanner()">Close</button>
                   <button type="button" class="btn btn-primary"  (click)="onFotoBanner()">Aceptar</button>
               </div>
           </div>-->
