@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
   onLogin(){
     console.log(this.username + " " + this.password);
 
-    if((this.password == "juan123" )&& (this.username == "juan" )){
+    if((this.password == "juanAdmin" )&& (this.username == "John" )){
       this.editService.valorIcon = true;
       this.logout = true;
       this.login = false;

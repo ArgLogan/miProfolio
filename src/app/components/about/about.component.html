@@ -5,13 +5,15 @@
     <div id="banner" >
         <img id="foto-banner" [src]="about.banner" >
     </div> 
+    <div class="social-icons edit-banner" *ngIf="editService.valorIcon" (click)="onFotoPerfil()" >
+        <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
+    </div>
     
 
     <div id="foto-perfil">
         <img id="fperfil" [src]="about.fperfil"> 
-        
     </div>
-
+        
     <div class="social-icons edit-foto" *ngIf="editService.valorIcon" (click)="onFotoPerfil()" >
         <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
     </div>
@@ -27,7 +29,7 @@
             <h1 class="nombre" fs-6>{{about.nombre}} {{about.apellido}}</h1>
             <h2 class="titulo" fs-2>{{about.titulo}}</h2>
             <div class="social-icons">
-                <a class="social-icon" [href]="about.wahtsapp" ><i class="fab fa-whatsapp"></i></a>
+                <a class="social-icon" [href]="about.wahtsapp" target="_blank" ><i class="fab fa-whatsapp"></i></a>
             </div>
 
         </div>

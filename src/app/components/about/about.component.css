@@ -1,6 +1,16 @@
 *{
     font-family: 'Vidaloka', serif;
 }
+.edit-foto{
+    z-index: 5;
+    display: inline-block;
+    margin: -7rem 0 4.5rem 7rem;
+
+}.edit-banner{
+    margin-left: 90%;
+    margin-top: -5rem;
+    margin-bottom: 2.5rem;
+}
 .nombre{
     text-shadow: -.2rem .2rem .1rem gray;
     margin-left: 1rem;
@@ -64,35 +74,6 @@
     justify-content: center;
     background-color: white;
     border-color: #032546 ;
-}
-.social-icons .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.6rem;
-    width: 2.6rem;
-    background-color: #032546;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 1.6rem;
-    margin-right: 0.8rem;
-  }
-  .social-icons .social-icon:last-child {
-    margin-right: 0;
-  }
-  .social-icons .social-icon:hover {
-    background-color: #0475f7;
-  }
-  .row{
-    margin-bottom: 1.6rem
+    z-index: 4;
 }
 
-.edit-foto{
-    display: inline;
-    margin-top: -7rem;
-    margin-left: 7,2rem;
-    margin-bottom: 5rem;
-    height: 2.5rem;
-    width:3rem;
-    z-index: 50;
-}
