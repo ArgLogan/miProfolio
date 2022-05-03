@@ -16,94 +16,42 @@ const httpOptions ={
   providedIn: 'root'
 })
 export class DatosService {
- 
-  /*apiUrlPorfolio:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/porfolio';
-  apiUrlSkills:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/skills';
-  apiUrlStudy:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/estudios';
-  apiUrlExp:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint/experiencias';
-  apiUrlSkills:string = ' http://localhost:5000/skills';
-  apiUrlStudy:string = ' http://localhost:5000/estudios'; 
-  apiUrlPorfolio:string =' http://localhost:5000/porfolio';
-  apiUrlExp:string = ' http://localhost:5000/experiencias';
+  /*
+  apiUrl:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint';
+  apiUrl:string = ' http://localhost:5000';
     */
-  apiUrlPersona:string =' https://arglogan.herokuapp.com/persona';
-  apiUrlHeader:string =' https://arglogan.herokuapp.com/header';
-  apiUrlSkills:string = ' https://arglogan.herokuapp.com/skill';
-  apiUrlStudy:string = ' https://arglogan.herokuapp.com/study';
-  apiUrlExp:string = ' https://arglogan.herokuapp.com/experiencia';
+  apiUrl:string = 'https://arglogan.herokuapp.com';
   jsonUrl:string =' db.json/porfolio';
+  
+  //Con esto elijo que secion usa los metodos 
+  metodoUrl:string[] = ['/persona',      //0
+                        '/header',       //1
+                        '/skill',        //2
+                        '/study',        //3
+                        '/experiencia',  //4
+                        '/idioma',       //5
+                        '/proyecto',     //6
+                        '/certificado']; //7
 
   constructor( private http:HttpClient ) { }
    
-  //ABOUT
-  getDatosPorfolio():Observable<any>{
-    const url = `${this.apiUrlPersona}/ver`
-    return  this.http.get(url);
-  }
-
-   atualizaFotoPerfil(persona:Persona):Observable<Persona>{
-    console.log(persona)
-    const url = `${this.apiUrlPersona}/update`
-    console.log(url)
-    return this.http.post<Persona>(url, persona)
-  }
-
-
-  getDatosHeader():Observable<any>{
-    const url = `${this.apiUrlHeader}/ver`
-    return  this.http.get(url);
-  }
-
-  //ESTUDIOS
-
-  getDatosStudy():Observable<any>{
-    const url = `${this.apiUrlStudy}/ver`
-    return  this.http.get(url);
-  }
-  deleteStudy(estudio:Study):Observable<Study>{
-    const url = `${this.apiUrlStudy}/delete/${estudio.id}`
-    return this.http.delete<Study>(url)
-  }
-  addStudy(estudio:Study):Observable<any>{
-    const url = `${this.apiUrlStudy}/new`
-    return this.http.post<any>(url, estudio)
-  }
-  saveEditStudy(estudio:Study):Observable<Study>{
-    const url = `${this.apiUrlStudy}/update`
-    return this.http.post<Study>(url, estudio)
-  }
-
-  //Skills
-
-  getDatosSkills():Observable<any>{
-    const url = `${this.apiUrlSkills}/ver`
-    return  this.http.get(url);
-  }
-
-//EXPERIENCIAS
-
-  getDatosExp():Observable<any>{
-    const url = `${this.apiUrlExp}/ver`
-    return  this.http.get(url);
-  }
   
-  deleteExp(experiencia:Experience):Observable<Experience>{
-    const url = `${this.apiUrlExp}/delete/${experiencia.id}`
-    return this.http.delete<Experience>(url)
+  getDatos(seccion:number):Observable<any>{
+    const url = `${this.apiUrl}${this.metodoUrl[seccion]}/ver`
+    return  this.http.get(url);
   }
-  addExp(exp:Experience):Observable<any>{
-    const url = `${this.apiUrlExp}/new`
-    return this.http.post<any>(url, exp)
+  atualizaDatos(dato:any, seccion:number):Observable<any>{
+    console.log(dato)
+    const url = `${this.apiUrl}${this.metodoUrl[seccion]}/update`
+    return this.http.post<any>(url, dato)
   }
-  saveEditExp(exp:Experience):Observable<Experience>{
-    const url = `${this.apiUrlExp}/update`
-    return this.http.post<Experience>(url, exp)
+  deleteDatos(dato:any, seccion:number):Observable<any>{
+    const url = `${this.apiUrl}${this.metodoUrl[seccion]}/delete/${dato.id}`
+    return this.http.delete<any>(url)
   }
- 
-  
- 
-
-
-
+  addSDatos(dato:any,seccion:number):Observable<any>{
+    const url = `${this.apiUrl}${this.metodoUrl[seccion]}/new`
+    return this.http.post<any>(url, dato)
+  }
 
 }

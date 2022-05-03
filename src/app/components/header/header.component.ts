@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.datosHeader.getDatosHeader().subscribe(data =>{
+    this.datosHeader.getDatos(1).subscribe(data =>{ // 1 es el valor que identifica la sección Header - ver DatosService
       this.header = data[0];
     });
     

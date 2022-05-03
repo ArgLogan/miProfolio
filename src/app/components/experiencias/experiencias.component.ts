@@ -21,12 +21,12 @@ export class ExperienciasComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.datosExp.getDatosExp().subscribe(data =>{
+    this.datosExp.getDatos(4).subscribe(data =>{ // 4 es el valor que identifica la sección Experiencias - ver DatosService
       this.experiencias = data;
     })
   }
   deleteExp(experiencia:Experience){
-    this.datosExp.deleteExp(experiencia)
+    this.datosExp.deleteDatos(experiencia, 4)
     .subscribe( 
       ()=>{
       this.experiencias = this.experiencias.filter( (t) => {
@@ -36,14 +36,14 @@ export class ExperienciasComponent implements OnInit {
   }
   onAdd(exp:Experience){
     
-    this.datosExp.addExp(exp).subscribe((experi) =>{
+    this.datosExp.addSDatos(exp , 4).subscribe((experi) =>{
       this.experiencias.push(exp)
       this.ngOnInit();
     })
 
 }
 saveEdit(exp:Experience){
-  this.datosExp.saveEditExp(exp).subscribe((experi) =>{
+  this.datosExp.atualizaDatos(exp, 4).subscribe((experi) =>{
   })
 
 }

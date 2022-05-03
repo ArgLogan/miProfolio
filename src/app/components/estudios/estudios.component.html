@@ -2,8 +2,8 @@
     <h3 class="col-sm-9 p-2">Educación</h3>
     <div class="col-sm-3">
         <div class="d-flex p-2 flex-wrap">
-            <div class="social-icons p-2" *ngIf="editService.valorIcon" >
-                <a class="social-icon" href="#estudio"  data-bs-toggle="modal" data-bs-target="#static"   ><i class="fas fa-plus"></i></a>
+            <div class="social-icons p-2" *ngIf="editService.valorIcon" (click)="onEdit()">
+                <a class="social-icon" href="#estudio"><i class="fas fa-plus"></i></a>
             </div>
         </div>
     </div>
@@ -20,30 +20,31 @@
 
 
  <!-- Modal -->
- <div class="modal fade" id="static" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+  <div class="fixed-top modal-edu " *ngIf="toggleModal" enctype="multipart/form-data" >
+    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+        <div> 
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Agregar Educación</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+            
+          <div class="modal-body">
             <input class="form-control"  type="text" placeholder="periodo" [(ngModel)]="nuevo.periodo">
             <input class="form-control"  type="text" placeholder="institucion" [(ngModel)]="nuevo.institucion">
             <input class="form-control"  type="text" placeholder="titulo" [(ngModel)]="nuevo.titulo">
             <input class="form-control"  type="text" placeholder="descripcion" [(ngModel)]="nuevo.descripcion">
             <input type="checkbox" class="btn-check" id="btncheck1" [(ngModel)]="nuevo.completo">
             <label class="btn btn-outline-primary" for="btncheck1">Completo</label>
-            
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="onEdit()">Close</button>
+            <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Understood</button>
+          </div>
 
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Understood</button>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
 
 

@@ -11,8 +11,9 @@ import {STUDY} from '../../mok'
 })
 export class EstudiosComponent implements OnInit {
   estudios:Study[]=[];
-  editIcon:boolean =true;
+  toggleModal:boolean =false;
   nuevo:Study=STUDY;
+
 
   
   constructor(
@@ -22,15 +23,14 @@ export class EstudiosComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.datosEstudio.getDatosStudy().subscribe(data =>{
+    this.datosEstudio.getDatos(3).subscribe(data =>{// 3 es el valor que identifica la sección Estudios - ver DatosService
       this.estudios = data;
       console.log(this.estudios);
     });
-    this.editIcon = this.editService.valorIcon;
 
   }
   deleteStudy(estudio:Study){
-    this.datosEstudio.deleteStudy(estudio)
+    this.datosEstudio.deleteDatos(estudio,3)
     .subscribe( 
       ()=>{
       this.estudios = this.estudios.filter( (t) => {
@@ -43,14 +43,17 @@ export class EstudiosComponent implements OnInit {
   }
   onAdd(estudio:Study){
     
-      this.datosEstudio.addStudy(estudio).subscribe((estudio) =>{
+      this.datosEstudio.addSDatos(estudio,3).subscribe((estudio) =>{
         this.estudios.push(estudio)
         this.ngOnInit();
       })
 
   }
+  onEdit(){
+    this.toggleModal = !this.toggleModal;
+  }
   saveEdit(estudio:Study){
-    this.datosEstudio.saveEditStudy(estudio).subscribe((estudio) =>{
+    this.datosEstudio.atualizaDatos(estudio,3).subscribe((estudio) =>{
     })
 
   }

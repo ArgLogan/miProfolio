@@ -26,7 +26,7 @@ export class AboutComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.datosAbout.getDatosPorfolio().subscribe(data =>{
+    this.datosAbout.getDatos(0).subscribe(data =>{ // El Cero identifica a la secion ABOUT
       console.log(data);
       this.about = data[0];
     });
@@ -52,7 +52,7 @@ export class AboutComponent implements OnInit {
     this.onFotoPerfil()
     this.about.fperfil= this.newPerfil;
     console.log(this.about)
-    this.datosAbout.atualizaFotoPerfil(this.about).subscribe((persona)=>{
+    this.datosAbout.atualizaDatos(this.about, 0).subscribe((persona)=>{
       
     });
 
