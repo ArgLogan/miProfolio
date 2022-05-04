@@ -57,5 +57,15 @@ export class AboutComponent implements OnInit {
     });
 
   }
+  cambioBanner(){
+    
+    this.onFotoBanner()
+    this.about.banner= this.newBanner;
+    console.log(this.about)
+    this.datosAbout.atualizaDatos(this.about, 0).subscribe((persona)=>{
+      
+    });
+
+  }
 
 }

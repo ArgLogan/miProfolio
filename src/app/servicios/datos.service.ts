@@ -19,10 +19,12 @@ export class DatosService {
   /*
   apiUrl:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint';
   apiUrl:string = ' http://localhost:5000';
-    */
-  apiUrl:string = 'https://arglogan.herokuapp.com';
+  apiUrl:string = ' http://localhost:8080/porfolio';
   jsonUrl:string =' db.json/porfolio';
-  
+    */
+  //apiUrl:string = 'https://arglogan.herokuapp.com';
+  apiUrl:string = ' http://localhost:8080';
+
   //Con esto elijo que secion usa los metodos 
   metodoUrl:string[] = ['/persona',      //0
                         '/header',       //1

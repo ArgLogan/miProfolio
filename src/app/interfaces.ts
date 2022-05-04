@@ -46,3 +46,10 @@ export interface Header {
     email:string;
     wahtsapp:string;
 }
+export interface Proyecto{
+    id?:number;
+    Nombre:string;
+    imagen:String;
+    enlace:String;
+    detalle:String;
+}
