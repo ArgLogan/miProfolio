@@ -48,7 +48,7 @@ export interface Header {
 }
 export interface Proyecto{
     id?:number;
-    Nombre:string;
+    ombre:string;
     imagen:String;
     enlace:String;
     detalle:String;

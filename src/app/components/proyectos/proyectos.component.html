@@ -9,7 +9,9 @@
     </div>
 </div>
 
-<app-proyecto></app-proyecto>
-<app-proyecto></app-proyecto>
-<app-proyecto></app-proyecto>
-
+<div class="container proyectos col-10">
+    <app-proyecto
+        *ngFor="let dato of cards"
+        [datos]="dato"
+    ></app-proyecto>
+</div>

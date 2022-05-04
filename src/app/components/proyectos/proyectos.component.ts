@@ -9,13 +9,18 @@ import { Proyecto } from 'src/app/interfaces';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
+  cards:Proyecto[]=[];
 
   constructor(
-    private datosExp:DatosService,
+    private datosProyect:DatosService,
     public editService:EditService
   ) { }
 
   ngOnInit(): void {
+    this.datosProyect.getDatos(6).subscribe(data =>{
+      this.cards = data;
+      console.log(data)
+    });
   }
 
 }

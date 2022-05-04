@@ -1,14 +1,11 @@
 <div class="container">
-    <div class="marco">
-        <h4 class="nombre">TITULO</h4>
-        <div class="foto"> <img src="./assets/imgs/banner2.png" alt=""> </div>
-        <a href="www.bytebooks.com.ar" class="link">acá el link al proyecto</a>
-        <div class="desccipion">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aliquam iure ullam eius, 
-                numquam expedita ut minima ea modi officia est quaerat similique autem cum, sunt optio 
-                ad iste nam explicabo eveniet voluptatum ex natus possimus illo. 
-                Obcaecati libero, maiores culpa quae, quam optio sint harum accusantium, fugit blanditiis dignissimos!
-            </p>
+    <div class="card" style="width: 18rem;">
+        <img [src]="datos.imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{datos.nombre}}</h5>
+          <p class="card-text">{{datos.detalle}}</p>
+          <a [href]="datos.enlace" class="btn btn-primary">visitar</a>
         </div>
-    </div>
+      </div>
 </div>
+

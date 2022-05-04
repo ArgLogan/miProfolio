@@ -32,7 +32,7 @@ export class DatosService {
                         '/study',        //3
                         '/experiencia',  //4
                         '/idioma',       //5
-                        '/proyecto',     //6
+                        '/proyect',      //6
                         '/certificado']; //7
 
   constructor( private http:HttpClient ) { }
