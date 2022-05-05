@@ -1,20 +1,34 @@
-import {Study, Experience} from './interfaces'
+import {Study, Experience, Proyecto, Skills} from './interfaces'
 
 export const STUDY:Study = {
     "id":0,
-    "institucion":"Institucion",
-    "periodo":"periodo",
-    "titulo": "titulo",
+    "institucion":"",
+    "periodo":"",
+    "titulo": "",
     "completo":false,
-    "descripcion":"ingrese una descripcion",
+    "descripcion":"",
 }
 
 export const EXPERIENCIA:Experience ={
     "id":0,
-    "periodo":"2000-2001",
-    "nombre":"Nombre de la  empresa",
-    "puesto":"puesto ocupado",
-    "tareas":"taares realizadas",
-    "tipo":"relacion de dependencia",
+    "periodo":"",
+    "nombre":"",
+    "puesto":"",
+    "tareas":"",
+    "tipo":"",
     "actual":true
+}
+export const PROYECTO:Proyecto ={
+    "id":0,
+    "nombre":"",
+    "imagen":"",
+    "enlace":"",
+    "detalle":""
+}
+export const SKILL:Skills ={
+    "id":0,
+    "porcentaje":0,
+    "titulo":"",
+    "subtitulo":"",
+    "color":""
 }

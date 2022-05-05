@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/servicios/datos.service';
 import {EditService} from 'src/app/servicios/edit.service';
 import {Skills} from '../../interfaces'
+import {SKILL} from '../../mok'
 
 @Component({
   selector: 'app-skills',
@@ -10,6 +11,8 @@ import {Skills} from '../../interfaces'
 })
 export class SkillsComponent implements OnInit {
   barras:Skills[]=[];
+  nuevo:Skills = SKILL;
+  toggleModal:boolean = false;
 
   constructor(
     private datosProgress:DatosService,
@@ -22,6 +25,12 @@ export class SkillsComponent implements OnInit {
       console.log(data)
     });
 
+  }
+  onNew(){
+    this.toggleModal = !this.toggleModal;
+  }
+  onAdd(dato:Skills){
+    console.log(dato);
   }
 
 }

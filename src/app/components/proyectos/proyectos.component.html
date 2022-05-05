@@ -2,8 +2,8 @@
     <h3 class="col-sm-9 p-2">Proyectos</h3>
     <div class="col-sm-3">
         <div class="d-flex p-2 flex-wrap">
-            <div class="social-icons p-2" *ngIf="editService.valorIcon" >
-                <a class="social-icon" href="#exp"  data-bs-toggle="modal" data-bs-target="#static"   ><i class="fas fa-plus"></i></a>
+            <div class="social-icons p-2" *ngIf="editService.valorIcon" (click)="onNew()">
+                <a class="social-icon" href="#exp"><i class="fas fa-plus"></i></a>
             </div>
         </div>
     </div>
@@ -15,3 +15,28 @@
         [datos]="dato"
     ></app-proyecto>
 </div>
+
+<!-- Modal -->
+<div class="fixed-top modal-proyect" *ngIf="toggleModal" enctype="multipart/form-data" >
+    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+        <div> 
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Agregar Proyecto</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+            
+          <div class="modal-body">
+            <input class="form-control"  type="text" placeholder="Nombre del proyecto" [(ngModel)]="nuevo.nombre">
+            <input class="form-control"  type="text" placeholder="Dirección de la imagen" [(ngModel)]="nuevo.imagen">
+            <input class="form-control"  type="text" placeholder="Dirección del proyecto" [(ngModel)]="nuevo.enlace">
+            <input class="form-control"  type="text" placeholder="descripcion" [(ngModel)]="nuevo.detalle">
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="onNew()">Close</button>
+            <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Understood</button>
+          </div>
+
+        </div>
+    </div>
+  </div>

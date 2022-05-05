@@ -11,6 +11,7 @@ export class ProyectoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.datos);
   }
 
 }
