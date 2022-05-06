@@ -55,16 +55,14 @@
     <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
         <!-- modal del edit foto de perfil  -->
         <div *ngIf="toggleFotoPefil">
-          <div class="modal-header">
-              <h3>Selecione la nueva foto de Perfil </h3>
+            <div class="modal-header">
+                <h3>Selecione la nueva foto de Perfil </h3>
             </div>
             <div class="modal-body col-sm-10">
-                
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Ingrese la direction de la nueva foto</label>
                     <input class="form-control" type="text"  id="formFile" [(ngModel)]="newPerfil">
                 </div>
-                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" (click)="onFotoPerfil()">Close</button>
@@ -72,22 +70,57 @@
             </div>
         </div>
 
-         <div *ngIf="editFotoBanner">
+        <!-- modal del edit banner -->
+        <div *ngIf="editFotoBanner">
             <div class="modal-header">
                 <h3>Selecione la nueva foto de banner</h3>
-              </div>
-              <div class="modal-body ">
-                  
-                  <div class="mb-3">
-                      <label for="formFile" class="form-label">Ingrese la dirección del nuevo banner</label>
-                      <input class="form-control" type="text" id="formFile" [(ngModel)]="newBanner">
-                  </div>
-                  
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" (click)="onFotoBanner()">Close</button>
-                  <button type="button" class="btn btn-primary"  (click)="cambioBanner()">Aceptar</button>
-              </div>
-          </div>-->
+            </div>
+            <div class="modal-body ">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Ingrese la dirección del nuevo banner</label>
+                    <input class="form-control" type="text" id="formFile" [(ngModel)]="newBanner">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="onFotoBanner()">Close</button>
+                <button type="button" class="btn btn-primary"  (click)="cambioBanner()">Aceptar</button>
+            </div>
+        </div>
+        <!-- modal del edit nombre -->
+        <div *ngIf="editNombre">
+            <div class="modal-header">
+                <h3>Selecione los nuevos datos</h3>
+            </div>
+            <div class="modal-body ">
+                <div class="mb-3">
+                    <input class="form-control"  type="text" placeholder="Nombre" [(ngModel)]="about.nombre">
+                    <input class="form-control"  type="text" placeholder="Apellido" [(ngModel)]="about.apellido">
+                    <input class="form-control"  type="text" placeholder="Título" [(ngModel)]="about.titulo">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="onNombre()">Close</button>
+                <button type="button" class="btn btn-primary"  (click)="cambioNombre()">Aceptar</button>
+            </div>
+        </div>
+        <!-- modal del edit about -->
+        <div *ngIf="editAbout">
+            <div class="modal-header">
+                <h3>Selecione los nuevos datos</h3>
+            </div>
+            <div class="modal-body ">
+                <div class="mb-3">
+                    <input class="form-control"  type="text" placeholder="Nombre" [(ngModel)]="about.about">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="onAbout()">Close</button>
+                <button type="button" class="btn btn-primary"  (click)="cambioAbout()">Aceptar</button>
+            </div>
+        </div>
+
+
+
+
     </div>
 </div>

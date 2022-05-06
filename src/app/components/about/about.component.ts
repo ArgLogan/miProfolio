@@ -16,6 +16,8 @@ export class AboutComponent implements OnInit {
   toggleModal:boolean = false
   toggleFotoPefil:boolean = false;
   editFotoBanner:boolean = false;
+  editNombre:boolean = false;
+  editAbout:boolean  = false;
   newPerfil:string ="";
   newBanner:string="";
 
@@ -42,10 +44,13 @@ export class AboutComponent implements OnInit {
   }
 
   onNombre(){
+    this.toggleModal = !this.toggleModal;
+    this.editNombre = !this.editNombre;
     
   }
   onAbout(){
-
+    this.toggleModal = !this.toggleModal;
+    this.editAbout =  !this.editAbout;
   }
   onPerfil(){
     
@@ -66,6 +71,18 @@ export class AboutComponent implements OnInit {
       
     });
 
+  }
+  cambioNombre(){
+    this.onNombre();
+    this.datosAbout.atualizaDatos(this.about,0).subscribe((perona)=>{
+
+    });
+  }
+  cambioAbout(){
+    this.onAbout();
+    this.datosAbout.atualizaDatos(this.about,0).subscribe((perona)=>{
+
+    });
   }
 
 }

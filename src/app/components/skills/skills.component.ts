@@ -31,6 +31,9 @@ export class SkillsComponent implements OnInit {
   }
   onAdd(dato:Skills){
     console.log(dato);
+    this.datosProgress.addSDatos(dato, 2).subscribe(data =>{
+      this.ngOnInit();
+    })
   }
 
 }
