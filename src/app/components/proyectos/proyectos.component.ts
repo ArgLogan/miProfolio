@@ -30,7 +30,8 @@ export class ProyectosComponent implements OnInit {
     
   }
   onAdd(dato:Proyecto){
-    console.log(dato);
+    this.datosProyect.addSDatos(dato, 6).subscribe(data =>{
+      this.ngOnInit();
+    })
   }
-
 }
