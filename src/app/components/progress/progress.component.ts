@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EditService } from 'src/app/servicios/edit.service';
 import {Skills} from '../../interfaces'
+import {SKILL} from '../../mok'
 
 
 @Component({
@@ -14,6 +15,7 @@ export class ProgressComponent implements OnInit {
   @Output() onDeleteProgress:EventEmitter<Skills> = new EventEmitter();
   @Output() onSave:EventEmitter<Skills> = new EventEmitter();
   editFlag:boolean = false;
+  nuevo:Skills =SKILL;
  
 
   constructor(public editService:EditService) { }
@@ -32,6 +34,7 @@ export class ProgressComponent implements OnInit {
   onDelete(progress:Skills){
     console.log(progress);
     this.onDeleteProgress.emit(progress)
+    this.editFlag = !this.editFlag
   }
 
 

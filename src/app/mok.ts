@@ -30,5 +30,5 @@ export const SKILL:Skills ={
     "porcentaje":0,
     "titulo":"",
     "subtitulo":"",
-    "color":""
+    "color":"#000000"
 }

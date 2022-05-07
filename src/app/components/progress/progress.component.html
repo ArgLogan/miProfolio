@@ -1,4 +1,4 @@
-<div class="">
+<div class="modulo-skil">
 
     <circle-progress 
     [innerStrokeColor]="'#e7e8ea'" 
@@ -18,7 +18,7 @@
     
     ></circle-progress>
     <h4 class="text-center">{{datos.porcentaje}}%</h4>
-    <div class="col-sm-3">
+    <div class="col-sm-3 edit-skill">
         <div class="d-flex p-2 flex-wrap">
             <div class="social-icons p-2" *ngIf="editService.valorIcon" (click)="onEdit()">
                 <a class="social-icon" href="#"><i class="fas fa-pen"></i></a>
@@ -28,6 +28,27 @@
     
 </div>
 
-<div class="container" *ngIf="editFlag">
-    <h3>modal</h3>
+<div class="fixed-top modal-skill " *ngIf="editFlag" enctype="multipart/form-data" >
+    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+        <div class="modal-header">
+            <h3>Modificar los datos de Habilidades</h3>
+        </div>
+        <div class="modal-body d-flex flex-column">
+            <div>
+                <label for="porcentaje">Elija el porcentaje</label>
+                <input class="form-control"  type="text" name="porcentaje"  [(ngModel)]="datos.porcentaje">
+                <input class="range-bar"  type="range" min="0" max="100" [(ngModel)]="datos.porcentaje">  
+              </div>
+              <label for="dirección">Escriba la dirección de la imagen</label>
+              <input class="form-control"  type="text" placeholder="http:/img/imagen.jpg" [(ngModel)]="datos.titulo">
+              <label for="color">Elija el color</label>            
+              <input class="form-control"  type="color" name="color" [(ngModel)]="datos.color">
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="onEdit()">Close</button>
+            <button type="button" class="btn btn-secondary" (click)="onDelete(datos)">Borrar</button>
+            <button type="button" class="btn btn-primary"  (click)="onSaveEdit(datos)">Aceptar</button>
+        </div>
+    </div>
 </div>

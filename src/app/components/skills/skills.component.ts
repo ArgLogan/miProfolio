@@ -34,5 +34,15 @@ export class SkillsComponent implements OnInit {
       this.ngOnInit();
     })
   }
+  deleteSkill(dato:Skills){
+    this.datosProgress.deleteDatos(dato, 2).subscribe(data =>{
+      this.ngOnInit();
+    })
+  }
+  onEdit(dato:Skills){
+    this.datosProgress.atualizaDatos(dato, 2).subscribe(data =>{
+      this.ngOnInit();
+    })
+  }
 
 }
