@@ -30,10 +30,15 @@
           </div>
             
           <div class="modal-body">
-            <input class="form-control"  type="text" placeholder="Porcentaje de Habilidad" [(ngModel)]="nuevo.porcentaje">
-            <input class="form-control"  type="text" placeholder="Dirección de la imagen" [(ngModel)]="nuevo.titulo">
-            <input class="form-control"  type="text" placeholder="porcentaje descripcion" [(ngModel)]="nuevo.subtitulo">
-            <input class="form-control"  type="text" placeholder="color de la barra HEX" [(ngModel)]="nuevo.color">
+            <div>
+              <label for="porcentaje">Elija el porcentaje</label>
+              <input class="form-control"  type="text" name="porcentaje"  [(ngModel)]="nuevo.porcentaje">
+              <input class="range-bar"  type="range" min="0" max="100" [(ngModel)]="nuevo.porcentaje">  
+            </div>
+            <label for="dirección">Escriba la dirección de la imagen</label>
+            <input class="form-control"  type="text" placeholder="http:/img/imagen.jpg" [(ngModel)]="nuevo.titulo">
+            <label for="color">Elija el color</label>            
+            <input class="form-control"  type="color" name="color" [(ngModel)]="nuevo.color">
           </div>
 
           <div class="modal-footer">

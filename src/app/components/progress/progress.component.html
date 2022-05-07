@@ -1,18 +1,33 @@
-    <circle-progress 
-     [innerStrokeColor]="'#e7e8ea'" 
-      [outerStrokeWidth]="15"
-      [innerStrokeWidth]="10" 
-      [animationDuration]="2000"
-      [showTitle]="true"
-      [responsive]="false"
-      [subtitleFontSize]="'20'"
-      [showImage]="true"
-      [imageSrc]="datos.titulo"
-      [imageHeight]="60"
-      [imageWidth]="60"
-      
-      [percent]="datos.porcentaje"  
-      [outerStrokeColor]="datos.color" 
-     ></circle-progress>
-     <h4 class="text-center">{{datos.subtitulo}} </h4>
+<div class="">
 
+    <circle-progress 
+    [innerStrokeColor]="'#e7e8ea'" 
+    [outerStrokeWidth]="15"
+    [innerStrokeWidth]="10" 
+    [animationDuration]="2000"
+    [showTitle]="true"
+    [responsive]="false"
+    [subtitleFontSize]="'20'"
+    [showImage]="true"
+    [imageSrc]="datos.titulo"
+    [imageHeight]="50"
+    [imageWidth]="50"
+    
+    [percent]="datos.porcentaje"  
+    [outerStrokeColor]="datos.color" 
+    
+    ></circle-progress>
+    <h4 class="text-center">{{datos.porcentaje}}%</h4>
+    <div class="col-sm-3">
+        <div class="d-flex p-2 flex-wrap">
+            <div class="social-icons p-2" *ngIf="editService.valorIcon" (click)="onEdit()">
+                <a class="social-icon" href="#"><i class="fas fa-pen"></i></a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="container" *ngIf="editFlag">
+    <h3>modal</h3>
+</div>

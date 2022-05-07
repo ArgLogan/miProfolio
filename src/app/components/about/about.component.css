@@ -77,3 +77,12 @@
     z-index: 4;
 }
 
+.range-bar{
+    width:95%;
+    appearance: auto;
+    cursor: default;
+    color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+    padding: initial;
+    border: initial;
+}
+
