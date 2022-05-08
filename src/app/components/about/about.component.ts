@@ -55,8 +55,12 @@ export class AboutComponent implements OnInit {
   onPerfil(){
     
     this.onFotoPerfil()
-    this.about.fperfil= this.newPerfil;
-    console.log(this.about)
+    if(this.newPerfil == ""){
+      this.newPerfil = this.about.fperfil;
+    }else{
+      this.about.fperfil= this.newPerfil;  
+    }
+    
     this.datosAbout.atualizaDatos(this.about, 0).subscribe((persona)=>{
       
     });
@@ -65,8 +69,11 @@ export class AboutComponent implements OnInit {
   cambioBanner(){
     
     this.onFotoBanner()
-    this.about.banner= this.newBanner;
-    console.log(this.about)
+    if(this.newBanner ==""){
+      this.newBanner = this.about.banner;
+    }else{
+      this.about.banner= this.newBanner;
+    }
     this.datosAbout.atualizaDatos(this.about, 0).subscribe((persona)=>{
       
     });
