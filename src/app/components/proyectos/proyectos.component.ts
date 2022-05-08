@@ -33,5 +33,7 @@ export class ProyectosComponent implements OnInit {
     this.datosProyect.addSDatos(dato, 6).subscribe(data =>{
       this.ngOnInit();
     })
+    alert("Se agregó un nuevo Proyecto");
   }
+  
 }
