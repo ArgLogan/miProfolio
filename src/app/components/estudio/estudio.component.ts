@@ -21,7 +21,6 @@ export class EstudioComponent implements OnInit {
     
   }
   onDelete(study:Study){
-    //console.log(study);
     this.onDeleteStudy.emit(study)
   }
   onEdit(){

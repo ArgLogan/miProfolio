@@ -30,23 +30,28 @@ export class EstudiosComponent implements OnInit {
 
   }
   deleteStudy(estudio:Study){
-    this.datosEstudio.deleteDatos(estudio,3)
-    .subscribe( 
-      ()=>{
-      this.estudios = this.estudios.filter( (t) => {
-        return t.id !== estudio.id
-      })
-    })
+    if(confirm("¿está seguro de quere borrar el estudio?")){
+
+      this.datosEstudio.deleteDatos(estudio,3)
+      .subscribe( 
+        ()=>{
+          this.estudios = this.estudios.filter( (t) => {
+            return t.id !== estudio.id
+          })
+        })
+    }
   }
   editStudy(estudio:Study){
     console.log(estudio)
   }
   onAdd(estudio:Study){
-    
+
       this.datosEstudio.addSDatos(estudio,3).subscribe((estudio) =>{
         this.estudios.push(estudio)
         this.ngOnInit();
       })
+      alert("Se Agrego un nuevo estudio");
+      this.nuevo = STUDY;
 
   }
   onEdit(){

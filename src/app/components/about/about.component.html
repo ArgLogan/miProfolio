@@ -25,15 +25,15 @@
 <div class ="container">
     <div class="col-sm-12 d-flex border border-2 border-secondary redondea">
         
-        <div class="about col-sm-3 fs-8 p-2">
+        <div class="about col-sm-4 fs-8 p-2">
             <h1 class="nombre" fs-6>{{about.nombre}} {{about.apellido}}</h1>
             <h2 class="titulo" fs-2>{{about.titulo}}</h2>
-            <div class="social-icons">
+            <div class="social-icons col-sm-2">
                 <a class="social-icon" [href]="about.wahtsapp" target="_blank" ><i class="fab fa-whatsapp"></i></a>
             </div>
 
         </div>
-        <div class="social-icons p-2 col-sm-1 g-0" *ngIf="editService.valorIcon" (click)="onNombre()" >
+        <div class="social-icons p-1 col-sm-1 g-0" *ngIf="editService.valorIcon" (click)="onNombre()" >
             <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
         </div>
     

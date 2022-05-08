@@ -26,13 +26,15 @@ export class ExperienciasComponent implements OnInit {
     })
   }
   deleteExp(experiencia:Experience){
-    this.datosExp.deleteDatos(experiencia, 4)
-    .subscribe( 
-      ()=>{
-      this.experiencias = this.experiencias.filter( (t) => {
-        return t.id !== experiencia.id
-      })
-    })
+    if(confirm("¿Está seguro de querer borrar la experiencia")){
+
+      this.datosExp.deleteDatos(experiencia, 4).subscribe( 
+        ()=>{
+          this.experiencias = this.experiencias.filter( (t) => {
+            return t.id !== experiencia.id
+          })
+        })
+    }
   }
   onAdd(exp:Experience){
     
@@ -40,6 +42,7 @@ export class ExperienciasComponent implements OnInit {
       this.experiencias.push(exp)
       this.ngOnInit();
     })
+    alert("Se agregó una nueva experiencia")
 
 }
 saveEdit(exp:Experience){

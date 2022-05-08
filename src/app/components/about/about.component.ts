@@ -81,7 +81,6 @@ export class AboutComponent implements OnInit {
   cambioAbout(){
     this.onAbout();
     this.datosAbout.atualizaDatos(this.about,0).subscribe((perona)=>{
-
     });
   }
 
