@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.datosHeader.getDatosPorfolio().subscribe(data =>{
+    this.datosHeader.getDatos(1).subscribe(data =>{ // 1 es el valor que identifica la sección Header - ver DatosService
       this.header = data[0];
     });
     
@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
   onLogin(){
     console.log(this.username + " " + this.password);
 
-    if((this.password == "juan123" )&& (this.username == "juan" )){
+    if((this.password == "admin" )&& (this.username == "admin" )){
       this.editService.valorIcon = true;
       this.logout = true;
       this.login = false;

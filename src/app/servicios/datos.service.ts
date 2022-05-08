@@ -1,50 +1,59 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, } from '@angular/common/http';
 import { Injectable} from '@angular/core';
 import {Observable} from 'rxjs'
-import{ Study, Skills, Experience} from '../interfaces' 
+import{ Study, Skills, Experience, Persona} from '../interfaces' 
+import {STUDY} from '../mok'
+
+
+const httpOptions ={
+  headers:new HttpHeaders({
+    'Content-Type':'application/json'
+  })
+  
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatosService {
-  apiUrlPorfolio:string =' http://localhost:5000/porfolio';
-  apiUrlSkills:string = ' http://localhost:5000/skills';
-  apiUrlStudy:string = ' http://localhost:5000/estudios';
-  apiUrlExp:string = ' http://localhost:5000/experiencias';
+  /*
+  apiUrl:string = 'https://my-json-server.typicode.com/ArgLogan/mokEndPoint';
+  apiUrl:string = ' http://localhost:5000';
+  apiUrl:string = ' http://localhost:8080/porfolio';
   jsonUrl:string =' db.json/porfolio';
+    */
+  apiUrl:string = 'https://arglogan.herokuapp.com';
+  //apiUrl:string = ' http://localhost:8080';
+
+  //Con esto elijo que secion usa los metodos 
+  metodoUrl:string[] = ['/persona',      //0
+                        '/header',       //1
+                        '/skill',        //2
+                        '/study',        //3
+                        '/experiencia',  //4
+                        '/idioma',       //5
+                        '/proyect',      //6
+                        '/certificado']; //7
 
   constructor( private http:HttpClient ) { }
-
-  getDatosPorfolio():Observable<any>{
-    return  this.http.get(this.apiUrlPorfolio);
-    //return  this.http.get(this.jsonUrl);
-  }
-
-  getDatosStudy():Observable<any>{
-    return  this.http.get(this.apiUrlStudy);
-  }
-
-  getDatosExp():Observable<any>{
-    return  this.http.get(this.apiUrlExp);
-  }
+   
   
-  getDatosSkills():Observable<any>{
-    return  this.http.get(this.apiUrlSkills);
+  getDatos(seccion:number):Observable<any>{
+    const url = `${this.apiUrl}${this.metodoUrl[seccion]}/ver`
+    return  this.http.get(url);
   }
-
-
-  deleteStudy(estudio:Study):Observable<Study>{
-    //console.log(estudio)
-    const url = `${this.apiUrlStudy}/${estudio.id}`
-    return this.http.delete<Study>(url)
+  atualizaDatos(dato:any, seccion:number):Observable<any>{
+    console.log(dato)
+    const url = `${this.apiUrl}${this.metodoUrl[seccion]}/update`
+    return this.http.post<any>(url, dato)
   }
-  
-  deleteExp(experiencia:Experience):Observable<Experience>{
-    console.log(experiencia)
-    const url = `${this.apiUrlExp}/${experiencia.id}`
-    return this.http.delete<Experience>(url)
+  deleteDatos(dato:any, seccion:number):Observable<any>{
+    const url = `${this.apiUrl}${this.metodoUrl[seccion]}/delete/${dato.id}`
+    return this.http.delete<any>(url)
   }
- 
-
+  addSDatos(dato:any,seccion:number):Observable<any>{
+    const url = `${this.apiUrl}${this.metodoUrl[seccion]}/new`
+    return this.http.post<any>(url, dato)
+  }
 
 }

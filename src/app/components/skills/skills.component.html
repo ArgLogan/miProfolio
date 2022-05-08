@@ -1,12 +1,53 @@
-<h3 class="col2 p-2">Habilidades</h3>
-<div class="contiene-progress col-10" >
+<div class="container d-inline-flex">
+    <h3 class="col-sm-6 p-2">Habilidades</h3>
+    <div class="col-sm-3">
+        <div class="d-flex p-2 flex-wrap">
+            <div class="social-icons p-2" *ngIf="editService.valorIcon" (click)="onNew()" >
+                <a class="social-icon" href="#Habil" ><i class="fas fa-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class=" container contiene-progress col-10" >
 
     <app-progress
 
         *ngFor="let dato of barras"
         [datos]="dato"
+        (onDeleteProgress)="deleteSkill(dato)"
+        (onSave)="onEdit(dato)"
     
     ></app-progress>
 
 </div>
 <div class="separador"></div>
+
+<!-- Modal -->
+<div class="fixed-top modal-skills" *ngIf="toggleModal" enctype="multipart/form-data" >
+    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+        <div> 
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Agregar Proyecto</h5>
+             <button type="button" class="btn-close"  aria-label="Close" (click)="onNew()"></button>
+          </div>
+            
+          <div class="modal-body">
+            <div>
+              <label for="porcentaje">Elija el porcentaje</label>
+              <input class="form-control"  type="text" name="porcentaje"  [(ngModel)]="nuevo.porcentaje">
+              <input class="range-bar"  type="range" min="0" max="100" [(ngModel)]="nuevo.porcentaje">  
+            </div>
+            <label for="dirección">Escriba la dirección de la imagen</label>
+            <input class="form-control"  type="text" placeholder="http:/img/imagen.jpg" [(ngModel)]="nuevo.titulo">
+            <label for="color">Elija el color</label>            
+            <input class="form-control"  type="color" name="color" [(ngModel)]="nuevo.color">
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="onNew()">Close</button>
+            <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Understood</button>
+          </div>
+
+        </div>
+    </div>
+  </div>

@@ -1,72 +1,102 @@
 *{
-    font-family: 'EB Garamond', serif; 
-    font-weight: 5px;
-    color:rgb(245, 238, 238);
-    text-shadow: -3px 3px 2px black;
+    font-family: 'Vidaloka', serif;
 }
-h1{
-    color:#8484ff5c;
-    text-shadow: -2px 2px 1px black;
-    margin-left: 10px;
+.edit-foto{
+    z-index: 5;
+    display: inline-block;
+    margin: -7rem 0 4.5rem 7rem;
+
+}.edit-banner{
+    margin-left: 90%;
+    margin-top: -5rem;
+    margin-bottom: 2.5rem;
+}
+.nombre{
+    text-shadow: -.2rem .2rem .1rem gray;
+    margin-left: 1rem;
     font-size: 2rem;
 }
-h2{
-    margin-left: 10px;
-    font-size: 1.2rem;
-    color:#8484ff5c;
-    text-shadow: 1px 1px 1px black;
+.titulo{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    text-shadow: -.1rem .1rem .1rem gray;
 }
-.edit-icon-foto{
-    display: flex;
-    height: 25px;
-    width: 25px;
-    margin-left: 130px;
-    margin-top: -15px;
-    background: #c6c7e5;
-    align-items: center;
-    border-radius: 50%;
-    justify-content: center;
-}
-.contiene-cosas{
-     display: flex;
-    flex-direction: column;
-}
-.edit-icon-about{
-    margin-left: 15px;
-    display: flex;
-    height: 25px;
-    width: 25px;
-    background: #c6c7e5;
-    align-items: center;
-    border-radius: 50%;
-    justify-content: center;
-    margin-top: 5px;
 
+.contiene-fotos{
+    display: flex;
+    flex-direction: column;
 }
 
 .about{
-    
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
     background-color:rgba(0,0,0,0.03);
 }
-.perro{
-    border-bottom: solid rgba(78, 76, 76, 0.5);
-    display: flex;
-}
-.gato{
-     display: flex;
-    align-items: flex-end;
-}
-.edit-foto{
-    margin-top: -70px;
-    margin-left: 72px;
-    margin-bottom: 50px;
-    height: 25px;
-     
-}
+
 .redondea{
-    border-radius: 15px;
+    border-radius: 1.5rem;
+    color:rgb(0, 0, 0);
 }
 
+.modal-fotos{
+    display:block;
+    width: 100%;
+    height: 100vh;
+    background : rgba(0, 0, 0, 0.2)
+}
+#banner{
+    width: 100%;
+    height: 30vh;
+    background-color: #f2f2f3;
+    border-bottom-color: #032546;
+    border-bottom-style:solid ;
+    /*border-bottom-width:15px ;*/
+}
+#foto-banner{
+    width: 100%;
+    height: 100%;
+}
+#fperfil{
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+}
+#foto-perfil{
+    margin-top: -6.5rem;
+    margin-left: 2.5rem;
+    display: flex;
+    border-style: solid;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-color: #032546 ;
+    z-index: 4;
+}
+
+.range-bar{
+    width:95%;
+    appearance: auto;
+    cursor: default;
+    color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+    padding: initial;
+    border: initial;
+}
+text-about{
+    font-size: 20rem;
+}
+
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2rem;
+    width: 2.2rem;
+    background-color: #032546;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.4rem;
+  }

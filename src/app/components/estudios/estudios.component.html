@@ -1,11 +1,53 @@
-<h3 class="col-5 p-2">Educación</h3>
+<div class="container d-inline-flex">
+    <h3 class="col-sm-6 p-2">Educación</h3>
+    <div class="col-sm-3">
+        <div class="d-flex p-2 flex-wrap">
+            <div class="social-icons p-2" *ngIf="editService.valorIcon" (click)="onEdit()">
+                <a class="social-icon" href="#estudio"><i class="fas fa-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+    
 <app-estudio
+    (onSaveEditStudy)="saveEdit(dato)"
     *ngFor="let dato of estudios"
         [estudio]="dato"
         (onDeleteStudy)="deleteStudy(dato)"
-        (onEditStudy)="editStudy(dato)"
 
 ></app-estudio>
+<div class="separador"></div>
+
+
+ <!-- Modal -->
+  <div class="fixed-top modal-edu " *ngIf="toggleModal" enctype="multipart/form-data" >
+    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+        <div> 
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Agregar Educación</h5>
+             <button type="button" class="btn-close" (click)="onEdit()" aria-label="Close"></button>
+          </div>
+            
+          <div class="modal-body">
+            <input class="form-control"  type="text" placeholder="periodo" [(ngModel)]="nuevo.periodo">
+            <input class="form-control"  type="text" placeholder="institucion" [(ngModel)]="nuevo.institucion">
+            <input class="form-control"  type="text" placeholder="titulo" [(ngModel)]="nuevo.titulo">
+            <input class="form-control"  type="text" placeholder="descripcion" [(ngModel)]="nuevo.descripcion">
+            <input type="checkbox" class="btn-check" id="btncheck1" [(ngModel)]="nuevo.completo">
+            <label class="btn btn-outline-primary" for="btncheck1">Completo</label>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="onEdit()">Close</button>
+            <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Understood</button>
+          </div>
+
+        </div>
+    </div>
+  </div>
+
+
+
 
 
 

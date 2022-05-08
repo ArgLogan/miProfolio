@@ -1,7 +1,7 @@
 
 export interface Skills{
     id?:number;//cuando creamos podria no venir
-    porcentje: number;
+    porcentaje: number;
     titulo:string;
     subtitulo:string;
     color:string;
@@ -23,4 +23,33 @@ export interface Experience{
     tareas:string;
     tipo:string;
     actual:boolean;
+}
+export interface Persona{
+    id?:number;
+    nombre:string;
+    apellido:string;
+    banner:string;
+    fperfi:string;
+    titulo:string;
+    about:string;
+    wahtsapp:string;
+}
+export interface Header {
+    id?:number;
+    nombre:string;
+    apLogo:string;
+    apText:string;
+    lidin:string;
+    github:string;
+    twitter:string;
+    facebook:string;
+    email:string;
+    wahtsapp:string;
+}
+export interface Proyecto{
+    id?:number;
+    nombre:string;
+    imagen:String;
+    enlace:String;
+    detalle:String;
 }
