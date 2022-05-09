@@ -36,7 +36,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Login into porfolio</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Ingresar al porfolio</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
@@ -50,7 +50,7 @@
                       [(ngModel)]="username" 
                       class="form-control"
                       type="text" 
-                      placeholder="Username" 
+                      placeholder="Nombre de usuario" 
                       aria-label="text" 
                       aria-describedby="addon-wrapping"
                     >
@@ -63,20 +63,17 @@
                       [(ngModel)]="password" 
                       type="password" 
                       class="form-control" 
-                      placeholder="password" 
+                      placeholder="Contraseña" 
                       aria-label="password" 
                       aria-describedby="addon-wrapping"
                     >
                   </div>
                 </div>  
-                <div class="row ">
-                  <a href="#">olvido su password</a>
-                </div>
               </div>
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button " class="btn btn-success" data-bs-dismiss="modal" (click)="onLogin()">Login</button>
+          <button type="button " class="btn btn-success" data-bs-dismiss="modal" (click)="onLogin()">Ingresar</button>
         </div>
       </div>
     </div>
