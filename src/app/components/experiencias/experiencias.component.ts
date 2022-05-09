@@ -13,6 +13,7 @@ export class ExperienciasComponent implements OnInit {
   experiencias:Experience[]=[];
   editIcon:boolean =true;
   nuevo:Experience = EXPERIENCIA;
+  toggleModal:boolean = false;
 
   constructor( 
     private datosExp:DatosService,
@@ -49,6 +50,9 @@ saveEdit(exp:Experience){
   this.datosExp.atualizaDatos(exp, 4).subscribe((experi) =>{
   })
 
+}
+onNew(){
+  this.toggleModal = !this.toggleModal;
 }
 
 
