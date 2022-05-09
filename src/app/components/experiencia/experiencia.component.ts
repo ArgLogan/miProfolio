@@ -25,6 +25,7 @@ export class ExperienciaComponent implements OnInit {
     this.editFlag = !this.editFlag
   }
   onSaveEdit(editado:Experience){
+    console.log(editado)
     this.onSaveEditExp.emit(editado)
     this.editFlag = !this.editFlag
   }

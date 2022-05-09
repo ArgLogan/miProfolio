@@ -1,6 +1,6 @@
 <div class="container mt-2" id="experiencia">
 
-    <div class="contine-exp d-flex border border-2 border-secondary col-sm-12">
+    <div class="contine-exp d-flex border border-2 col-sm-12" [ngClass]="{'border-secondary': !experiencia.actual , 'border-primary' : experiencia.actual }">
         <div class="col-sm-10 fs-8 p-2">
             <h5 mb-2>{{experiencia.nombre}} -- {{experiencia.periodo}} </h5>
             <p mt-0 >Pueto:{{experiencia.puesto}}</p>
@@ -29,15 +29,17 @@
             <h3>Modificar los datos de experiencia</h3>
         </div>
         <div class="modal-body d-flex flex-column">
-            <input class="form-control" type="text" placeholder="periodo" [(ngModel)]="experiencia.periodo">
-            <input class="form-control" type="text" placeholder="institucion" [(ngModel)]="experiencia.institucion">
-            <input class="form-control" type="text" placeholder="titulo" [(ngModel)]="experiencia.titulo">
-            <input class="form-control"  type="text" placeholder="descripcion" [(ngModel)]="experiencia.descripcion">
-            <input class="form-check-input mt-2" type="checkbox" placeholder="completo" [(ngModel)]="experiencia.completo">
+            <input class="form-control" type="text"  [(ngModel)]="experiencia.periodo">
+            <input class="form-control" type="text"  [(ngModel)]="experiencia.nombre">
+            <input class="form-control" type="text"  [(ngModel)]="experiencia.puesto">
+            <input class="form-control"  type="text" [(ngModel)]="experiencia.tareas">
+            <input class="form-control"  type="text" [(ngModel)]="experiencia.tipo">
+            <input type="checkbox" class="btn-check" id="btncheck1" [(ngModel)]="experiencia.actual">
+            <label class="btn btn-outline-primary" for="btncheck1">Actual</label>
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" (click)="onEdit()"  data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" (click)="onEdit()" >Cerrar</button>
             <button type="button" class="btn btn-primary"  (click)="onSaveEdit(experiencia)">Aceptar</button>
         </div>
     </div>

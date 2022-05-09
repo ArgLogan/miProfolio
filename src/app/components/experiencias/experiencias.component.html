@@ -9,6 +9,7 @@
     </div>
 </div>
 <app-experiencia
+    (onSaveEditExp)="saveEdit(dato)"
     *ngFor="let dato of experiencias"
         [experiencia]="dato"
         (onDeleteExp)="deleteExp(dato)"
