@@ -36,7 +36,7 @@ export class SkillsComponent implements OnInit {
     alert("Se agregó una nueva habilidad")
   }
   deleteSkill(dato:Skills){
-    if(confirm("¿Etsá seguro que quiere borrar la  habilidad?")){
+    if(confirm("¿Etsá seguro que quiere borrar la habilidad?")){
       this.datosProgress.deleteDatos(dato, 2).subscribe(data =>{
         this.ngOnInit();
       })

@@ -27,7 +27,7 @@ export class ExperienciasComponent implements OnInit {
     })
   }
   deleteExp(experiencia:Experience){
-    if(confirm("¿Está seguro de querer borrar la experiencia")){
+    if(confirm("¿Está seguro de querer borrar la experiencia?")){
 
       this.datosExp.deleteDatos(experiencia, 4).subscribe( 
         ()=>{
