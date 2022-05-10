@@ -28,6 +28,11 @@ export class ProgressComponent implements OnInit {
     this.editFlag = !this.editFlag
   }
   onSaveEdit(editado:Skills){
+    if (editado.porcentaje < 0){editado.porcentaje =  0}
+    if (editado.titulo == ""){
+      editado.titulo = "./assets/imgs/alert.png"
+    }
+    
     this.onSave.emit(editado)
     this.editFlag = !this.editFlag
   }

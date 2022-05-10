@@ -30,6 +30,10 @@ export class SkillsComponent implements OnInit {
     this.toggleModal = !this.toggleModal;
   }
   onAdd(dato:Skills){
+    if(dato.porcentaje < 0 ){ dato.porcentaje = 0 }
+    if (dato.titulo == ""){
+      dato.titulo = "./assets/imgs/alert.png"
+    }
     this.datosProgress.addSDatos(dato, 2).subscribe(data =>{
       this.ngOnInit();
     })
