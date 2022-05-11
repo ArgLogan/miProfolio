@@ -88,7 +88,6 @@ nav{
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
 	animation-duration: .8s;
-    transform: translate(50%, 50% );
 }
 
 @keyframes fadeInOpacity {
