@@ -51,7 +51,6 @@
     background-color: #f2f2f3;
     border-bottom-color: #032546;
     border-bottom-style:solid ;
-    /*border-bottom-width:15px ;*/
 }
 #foto-banner{
     width: 100%;
@@ -85,8 +84,9 @@
     padding: initial;
     border: initial;
 }
-text-about{
-    font-size: 20rem;
+.text-about{
+    font-size: 1.2rem;
+    text-align: justify;
 }
 
 .social-icons .social-icon {

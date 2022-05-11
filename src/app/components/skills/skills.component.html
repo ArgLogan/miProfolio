@@ -3,7 +3,7 @@
     <div class="col-sm-3">
         <div class="d-flex p-2 flex-wrap">
             <div class="social-icons p-2" *ngIf="editService.valorIcon" (click)="onNew()" >
-                <a class="social-icon" href="#Habil" ><i class="fas fa-plus"></i></a>
+                <a class="social-icon" href="#habil" ><i class="fas fa-plus"></i></a>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
         *ngFor="let dato of barras"
         [datos]="dato"
         (onDeleteProgress)="deleteSkill(dato)"
-        (onSave)="onEdit(dato)"
+        (onSave)="onEdit($event)"
     
     ></app-progress>
 
@@ -24,7 +24,7 @@
 
 <!-- Modal -->
 <div class="fixed-top modal-skills" *ngIf="toggleModal" enctype="multipart/form-data" >
-    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+    <div class="position-relative col-sm-6 fade-in border border-1 border-primary bg-white redondea">
         <div> 
           <div class="modal-header">
             <h5 class="modal-title" id="staticBackdropLabel">Agregar Proyecto</h5>
@@ -44,8 +44,8 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" (click)="onNew()">Close</button>
-            <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Understood</button>
+            <button type="button" class="btn btn-secondary" (click)="onNew()">Cerrar</button>
+            <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Aceptar</button>
           </div>
 
         </div>

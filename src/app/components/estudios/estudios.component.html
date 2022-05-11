@@ -10,7 +10,7 @@
 </div>
     
 <app-estudio
-    (onSaveEditStudy)="saveEdit(dato)"
+    (onSaveEditStudy)="saveEdit($event)"
     *ngFor="let dato of estudios"
         [estudio]="dato"
         (onDeleteStudy)="deleteStudy(dato)"
@@ -21,7 +21,7 @@
 
  <!-- Modal -->
   <div class="fixed-top modal-edu " *ngIf="toggleModal" enctype="multipart/form-data" >
-    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+    <div class="fade-in position-relative col-sm-6  border border-1 border-primary bg-white redondea">
         <div> 
           <div class="modal-header">
             <h5 class="modal-title" id="staticBackdropLabel">Agregar Educación</h5>
@@ -38,8 +38,8 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" (click)="onEdit()">Close</button>
-            <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Understood</button>
+            <button type="button" class="btn btn-secondary" (click)="onEdit()">Cerrar</button>
+            <button type="button" class="btn btn-primary" (click)="onAdd(nuevo)" >Aceptar</button>
           </div>
 
         </div>

@@ -25,7 +25,6 @@ export class EstudiosComponent implements OnInit {
   ngOnInit(): void {
     this.datosEstudio.getDatos(3).subscribe(data =>{// 3 es el valor que identifica la sección Estudios - ver DatosService
       this.estudios = data;
-      console.log(this.estudios);
     });
 
   }
@@ -42,7 +41,6 @@ export class EstudiosComponent implements OnInit {
     }
   }
   editStudy(estudio:Study){
-    console.log(estudio)
   }
   onAdd(estudio:Study){
 
@@ -59,6 +57,7 @@ export class EstudiosComponent implements OnInit {
   }
   saveEdit(estudio:Study){
     this.datosEstudio.atualizaDatos(estudio,3).subscribe((estudio) =>{
+      this.ngOnInit();
     })
 
   }

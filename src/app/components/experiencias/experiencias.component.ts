@@ -13,6 +13,7 @@ export class ExperienciasComponent implements OnInit {
   experiencias:Experience[]=[];
   editIcon:boolean =true;
   nuevo:Experience = EXPERIENCIA;
+  toggleModal:boolean = false;
 
   constructor( 
     private datosExp:DatosService,
@@ -26,7 +27,7 @@ export class ExperienciasComponent implements OnInit {
     })
   }
   deleteExp(experiencia:Experience){
-    if(confirm("¿Está seguro de querer borrar la experiencia")){
+    if(confirm("¿Está seguro de querer borrar la experiencia?")){
 
       this.datosExp.deleteDatos(experiencia, 4).subscribe( 
         ()=>{
@@ -47,8 +48,12 @@ export class ExperienciasComponent implements OnInit {
 }
 saveEdit(exp:Experience){
   this.datosExp.atualizaDatos(exp, 4).subscribe((experi) =>{
+    this.ngOnInit();
   })
 
+}
+onNew(){
+  this.toggleModal = !this.toggleModal;
 }
 
 

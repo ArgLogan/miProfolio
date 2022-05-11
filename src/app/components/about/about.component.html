@@ -52,7 +52,7 @@
 </section>
 
 <div class="fixed-top modal-fotos " *ngIf="toggleModal" enctype="multipart/form-data" >
-    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+    <div class="position-relative col-sm-6 fade-in border border-1 border-primary bg-white redondea">
         <!-- modal del edit foto de perfil  -->
         <div *ngIf="toggleFotoPefil">
             <div class="modal-header">
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" (click)="onFotoPerfil()">Close</button>
+                <button type="button" class="btn btn-secondary" (click)="onFotoPerfil()">Cerrar</button>
                 <button type="button" class="btn btn-primary"  (click)="onPerfil()">Aceptar</button>
             </div>
         </div>
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" (click)="onFotoBanner()">Close</button>
+                <button type="button" class="btn btn-secondary" (click)="onFotoBanner()">Cerrar</button>
                 <button type="button" class="btn btn-primary"  (click)="cambioBanner()">Aceptar</button>
             </div>
         </div>
@@ -93,13 +93,13 @@
             </div>
             <div class="modal-body ">
                 <div class="mb-3">
-                    <input class="form-control"  type="text" placeholder="Nombre" [(ngModel)]="about.nombre">
-                    <input class="form-control"  type="text" placeholder="Apellido" [(ngModel)]="about.apellido">
-                    <input class="form-control"  type="text" placeholder="Título" [(ngModel)]="about.titulo">
+                    <input class="form-control"  type="text" placeholder="Nombre" maxlength="20" [(ngModel)]="about.nombre">
+                    <input class="form-control"  type="text" placeholder="Apellido" maxlength="10" [(ngModel)]="about.apellido">
+                    <input class="form-control"  type="text" placeholder="Título" maxlength="15" [(ngModel)]="about.titulo">
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" (click)="onNombre()">Close</button>
+                <button type="button" class="btn btn-secondary" (click)="onNombre()">Cerrar</button>
                 <button type="button" class="btn btn-primary"  (click)="cambioNombre()">Aceptar</button>
             </div>
         </div>
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" (click)="onAbout()">Close</button>
+                <button type="button" class="btn btn-secondary" (click)="onAbout()">Cerrar</button>
                 <button type="button" class="btn btn-primary"  (click)="cambioAbout()">Aceptar</button>
             </div>
         </div>

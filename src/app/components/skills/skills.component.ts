@@ -30,13 +30,17 @@ export class SkillsComponent implements OnInit {
     this.toggleModal = !this.toggleModal;
   }
   onAdd(dato:Skills){
+    if(dato.porcentaje < 0 ){ dato.porcentaje = 0 }
+    if (dato.titulo == ""){
+      dato.titulo = "./assets/imgs/alert.png"
+    }
     this.datosProgress.addSDatos(dato, 2).subscribe(data =>{
       this.ngOnInit();
     })
     alert("Se agregó una nueva habilidad")
   }
   deleteSkill(dato:Skills){
-    if(confirm("¿Etsá seguro que quiere borrar la  habilidad?")){
+    if(confirm("¿Etsá seguro que quiere borrar la habilidad?")){
       this.datosProgress.deleteDatos(dato, 2).subscribe(data =>{
         this.ngOnInit();
       })
