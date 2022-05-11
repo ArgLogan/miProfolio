@@ -46,6 +46,9 @@
       "periodo": "2022",
       "titulo": "Editor",
       "completo": false,
+<<<<<<< HEAD
+      "descripcion": "Carrera de Grado"
+=======
       "descripcion": "otro"
     },
     {
@@ -55,6 +58,7 @@
       "titulo": "Editor",
       "completo": false,
       "descripcion": "uno mas"
+>>>>>>> 3e1739d3eec8cd168966e1cc0ecd95a38607521a
     }
   ],
   "skills": [

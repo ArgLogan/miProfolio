@@ -23,12 +23,18 @@ export class EstudioComponent implements OnInit {
   onDelete(study:Study){
     this.onDeleteStudy.emit(study)
   }
+<<<<<<< HEAD
+  onEdit(study:Study){
+    const habilita:boolean=true;
+    this.estudio = study 
+=======
   onEdit(){
     this.editFlag = !this.editFlag
   }
   onSaveEdit(editado:Study){
     this.onSaveEditStudy.emit(editado)
     this.editFlag = !this.editFlag
+>>>>>>> 3e1739d3eec8cd168966e1cc0ecd95a38607521a
   }
 
 }
