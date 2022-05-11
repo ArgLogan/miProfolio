@@ -26,22 +26,22 @@
     
     
     <div class="fixed-top modal-fotos " *ngIf="editFlag" enctype="multipart/form-data" >
-        <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+        <div class="position-relative col-sm-6 fade-in border border-1 border-primary bg-white redondea">
             <div class="modal-header">
                 <h3>Modificar los dados de estudio</h3>
             </div>
             <div class="modal-body d-flex flex-column">
-                <input class="form-control" type="text" placeholder="periodo" [(ngModel)]="estudio.periodo">
-                <input class="form-control" type="text" placeholder="institucion" [(ngModel)]="estudio.institucion">
-                <input  class="form-control" type="text" placeholder="titulo" [(ngModel)]="estudio.titulo">
-                <input class="form-control" type="text" placeholder="descripcion" [(ngModel)]="estudio.descripcion">
-                <input type="checkbox" class="btn-check" id="btncheck1" [(ngModel)]="estudio.completo">
+                <input class="form-control" type="text" placeholder="periodo" [(ngModel)]="editando.periodo">
+                <input class="form-control" type="text" placeholder="institucion" [(ngModel)]="editando.institucion">
+                <input  class="form-control" type="text" placeholder="titulo" [(ngModel)]="editando.titulo">
+                <input class="form-control" type="text" placeholder="descripcion" [(ngModel)]="editando.descripcion">
+                <input type="checkbox" class="btn-check" id="btncheck1" [(ngModel)]="editando.completo">
                 <label class="btn btn-outline-primary" for="btncheck1">Completo</label>
                 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" (click)="onEdit()"  data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary"  (click)="onSaveEdit(estudio)">Aceptar</button>
+                <button type="button" class="btn btn-primary"  (click)="onSaveEdit(editando)">Aceptar</button>
             </div>
         </div>
     </div>

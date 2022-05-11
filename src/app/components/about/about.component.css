@@ -84,8 +84,9 @@
     padding: initial;
     border: initial;
 }
-text-about{
-    font-size: 20rem;
+.text-about{
+    font-size: 1.2rem;
+    text-align: justify;
 }
 
 .social-icons .social-icon {

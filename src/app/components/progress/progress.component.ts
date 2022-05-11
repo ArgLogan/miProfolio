@@ -16,6 +16,7 @@ export class ProgressComponent implements OnInit {
   @Output() onSave:EventEmitter<Skills> = new EventEmitter();
   editFlag:boolean = false;
   nuevo:Skills =SKILL;
+  editando:Skills =SKILL;
  
 
   constructor(public editService:EditService) { }
@@ -25,6 +26,13 @@ export class ProgressComponent implements OnInit {
   }
 
   onEdit(){
+    this.editando.color = this.datos.color
+    this.editando.id = this.datos.id
+    this.editando.porcentaje =  this.datos.porcentaje
+    this.editando.subtitulo =  this.datos.subtitulo
+    this.editando.titulo =  this.datos.titulo
+
+
     this.editFlag = !this.editFlag
   }
   onSaveEdit(editado:Skills){

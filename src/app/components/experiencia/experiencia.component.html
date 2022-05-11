@@ -24,23 +24,23 @@
 
 
 <div class="fixed-top modal-fotos " *ngIf="editFlag" enctype="multipart/form-data" >
-    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+    <div class="position-relative col-sm-6 fade-in border border-1 border-primary bg-white redondea">
         <div class="modal-header">
             <h3>Modificar los datos de experiencia</h3>
         </div>
         <div class="modal-body d-flex flex-column">
-            <input class="form-control" type="text"  [(ngModel)]="experiencia.periodo">
-            <input class="form-control" type="text"  [(ngModel)]="experiencia.nombre">
-            <input class="form-control" type="text"  [(ngModel)]="experiencia.puesto">
-            <input class="form-control"  type="text" [(ngModel)]="experiencia.tareas">
-            <input class="form-control"  type="text" [(ngModel)]="experiencia.tipo">
-            <input type="checkbox" class="btn-check" id="btncheck1" [(ngModel)]="experiencia.actual">
+            <input class="form-control" type="text"  [(ngModel)]="editado.periodo">
+            <input class="form-control" type="text"  [(ngModel)]="editado.nombre">
+            <input class="form-control" type="text"  [(ngModel)]="editado.puesto">
+            <input class="form-control"  type="text" [(ngModel)]="editado.tareas">
+            <input class="form-control"  type="text" [(ngModel)]="editado.tipo">
+            <input type="checkbox" class="btn-check" id="btncheck1" [(ngModel)]="editado.actual">
             <label class="btn btn-outline-primary" for="btncheck1">Actual</label>
 
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" (click)="onEdit()" >Cerrar</button>
-            <button type="button" class="btn btn-primary"  (click)="onSaveEdit(experiencia)">Aceptar</button>
+            <button type="button" class="btn btn-primary"  (click)="onSaveEdit(editado)">Aceptar</button>
         </div>
     </div>
 </div>

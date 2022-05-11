@@ -48,6 +48,7 @@ export class ExperienciasComponent implements OnInit {
 }
 saveEdit(exp:Experience){
   this.datosExp.atualizaDatos(exp, 4).subscribe((experi) =>{
+    this.ngOnInit();
   })
 
 }

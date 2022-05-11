@@ -21,7 +21,7 @@
     <div class="col-sm-3 edit-skill">
         <div class="d-flex p-2 flex-wrap">
             <div class="social-icons p-2" *ngIf="editService.valorIcon" (click)="onEdit()">
-                <a class="social-icon" href="#"><i class="fas fa-pen"></i></a>
+                <a class="social-icon" href="#habil"><i class="fas fa-pen"></i></a>
             </div>
         </div>
     </div>
@@ -29,26 +29,26 @@
 </div>
 
 <div class="fixed-top modal-skill " *ngIf="editFlag" enctype="multipart/form-data" >
-    <div class="position-relative col-sm-6 top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
+    <div class="position-relative col-sm-6 fade-in border border-1 border-primary bg-white redondea">
         <div class="modal-header">
             <h3>Modificar los datos de Habilidades</h3>
         </div>
         <div class="modal-body d-flex flex-column">
             <div>
                 <label for="porcentaje">Elija el porcentaje</label>
-                <input class="form-control"  type="text" name="porcentaje"  [(ngModel)]="datos.porcentaje">
-                <input class="range-bar"  type="range" min="0" max="100" [(ngModel)]="datos.porcentaje">  
+                <input class="form-control"  type="number" name="porcentaje"  [(ngModel)]="editando.porcentaje">
+                <input class="range-bar"  type="range" min="0" max="100" [(ngModel)]="editando.porcentaje">  
               </div>
               <label for="dirección">Escriba la dirección de la imagen</label>
-              <input class="form-control"  type="text" placeholder="http:/img/imagen.jpg" [(ngModel)]="datos.titulo">
+              <input class="form-control"  type="text" placeholder="http:/img/imagen.jpg" [(ngModel)]="editando.titulo">
               <label for="color">Elija el color</label>            
-              <input class="form-control"  type="color" name="color" [(ngModel)]="datos.color">
+              <input class="form-control"  type="color" name="color" [(ngModel)]="editando.color">
 
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" (click)="onEdit()">Cerrar</button>
             <button type="button" class="btn btn-danger" (click)="onDelete(datos)">Borrar</button>
-            <button type="button" class="btn btn-primary"  (click)="onSaveEdit(datos)">Aceptar</button>
+            <button type="button" class="btn btn-primary"  (click)="onSaveEdit(editando)">Aceptar</button>
         </div>
     </div>
 </div>

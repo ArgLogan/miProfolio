@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { EditService } from 'src/app/servicios/edit.service';
 import {Study} from '../../interfaces'
+import {STUDY} from '../../mok'
 
 @Component({
   selector: 'app-estudio',
@@ -13,6 +14,7 @@ export class EstudioComponent implements OnInit {
   @Output() onSaveEditStudy:EventEmitter<Study> = new EventEmitter();
   editFlag:boolean = false
   toggleModal:boolean= false
+  editando:Study = STUDY;
  
   
   constructor(public editService:EditService) { }
@@ -24,6 +26,13 @@ export class EstudioComponent implements OnInit {
     this.onDeleteStudy.emit(study)
   }
   onEdit(){
+    this.editando.id = this.estudio.id
+    this.editando.completo =  this.estudio.completo
+    this.editando.descripcion =  this.estudio.descripcion
+    this.editando.institucion =  this.estudio.institucion
+    this.editando.periodo =  this.estudio.periodo
+    this.editando.titulo =  this.estudio.titulo
+
     this.editFlag = !this.editFlag
   }
   onSaveEdit(editado:Study){

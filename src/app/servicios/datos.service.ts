@@ -43,6 +43,7 @@ export class DatosService {
     return  this.http.get(url);
   }
   atualizaDatos(dato:any, seccion:number):Observable<any>{
+    console.log("SERVICIO")
     console.log(dato)
     const url = `${this.apiUrl}${this.metodoUrl[seccion]}/update`
     return this.http.post<any>(url, dato)
