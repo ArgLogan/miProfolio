@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   password:string ="pasword";
   username:string="user name";
  
-  
+  users:any;
   header:any;
   @Output() onLoginClick:EventEmitter<boolean> = new EventEmitter();
  
@@ -31,23 +31,33 @@ export class HeaderComponent implements OnInit {
     this.datosHeader.getDatos(1).subscribe(data =>{ // 1 es el valor que identifica la sección Header - ver DatosService
       this.header = data[0];
     });
+    this.datosHeader.getDatos(7).subscribe(data =>{ // 7 es el valor que identifica la sección Users - ver DatosService
+      this.users = data;
+    });
+     
     
     
   }
   onLogin(){
-    console.log(this.username + " " + this.password);
+    let flag:boolean = false;
 
-    if((this.password == "admin" )&& (this.username == "admin" )){
-      this.editService.valorIcon = true;
-      this.logout = true;
-      this.login = false;
-      this.username ="";
-      this.password ="";
-    }else{
-      this.username ="";
-      this.password ="";
-     alert("Password o usuario incorrecto")
+    console.log(this.username + " " + this.password);
+    for (let x of this.users){
+      if((this.password == x.password )&& (this.username == x.usuario )){
+        flag = true
+      }
     }
+      if(flag){
+        this.editService.valorIcon = true;
+        this.logout = true;
+        this.login = false;
+        this.username ="";
+        this.password ="";
+      }else{
+        this.username ="";
+        this.password ="";
+        alert("Password o usuario incorrecto")
+      }
     
   }
   onDouble(){
