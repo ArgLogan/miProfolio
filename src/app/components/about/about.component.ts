@@ -20,6 +20,7 @@ export class AboutComponent implements OnInit {
   editAbout:boolean  = false;
   newPerfil:string ="";
   newBanner:string="";
+  copir:boolean= false;
 
 
   constructor(
@@ -89,6 +90,10 @@ export class AboutComponent implements OnInit {
     this.onAbout();
     this.datosAbout.atualizaDatos(this.about,0).subscribe((perona)=>{
     });
+  }
+
+  obdoble(){
+    this.copir = !this.copir;
   }
 
 }

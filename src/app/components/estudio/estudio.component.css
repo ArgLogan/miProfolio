@@ -17,6 +17,7 @@
     background-color: rgba(128,128,128,0.09);
     color:rgb(0, 0, 0);
     border-radius: 1.5rem;
+    width: 100%;
 
 }
 .modal-fotos{
@@ -30,5 +31,5 @@
     color:rgb(0, 0, 0);
 }
 .test{
-    min-width: 350px;
+   width: 95%;
 }

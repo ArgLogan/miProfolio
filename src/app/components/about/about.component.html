@@ -104,13 +104,16 @@
             </div>
         </div>
         <!-- modal del edit about -->
-        <div *ngIf="editAbout">
+        <div *ngIf="editAbout" (dblclick)="ondoble()">
             <div class="modal-header">
                 <h3>Selecione los nuevos datos</h3>
             </div>
             <div class="modal-body ">
                 <div class="mb-3">
                     <textarea class="form-control" name="textarea" rows="10" cols="70" [(ngModel)]="about.about" ></textarea>
+                </div>
+                <div class="mb-1">
+                    <textarea class="form-control" name="number" *ngif="copyr" [(ngModel)]="about.copy" ></textarea>
                 </div>
             </div>
             <div class="modal-footer">

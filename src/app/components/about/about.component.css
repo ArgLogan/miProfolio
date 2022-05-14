@@ -25,6 +25,7 @@
 .contiene-fotos{
     display: flex;
     flex-direction: column;
+    margin-bottom: .5rem;
 }
 
 .about{
