@@ -104,7 +104,7 @@
             </div>
         </div>
         <!-- modal del edit about -->
-        <div *ngIf="editAbout" (dblclick)="ondoble()">
+        <div *ngIf="editAbout" >
             <div class="modal-header">
                 <h3>Selecione los nuevos datos</h3>
             </div>
@@ -112,11 +112,11 @@
                 <div class="mb-3">
                     <textarea class="form-control" name="textarea" rows="10" cols="70" [(ngModel)]="about.about" ></textarea>
                 </div>
-                <div class="mb-1">
-                    <textarea class="form-control" name="number" *ngif="copyr" [(ngModel)]="about.copy" ></textarea>
+                <div class="mb-1" *ngIf="copir">
+                    <textarea class="form-control" name="number"  [(ngModel)]="about.copy" ></textarea>
                 </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" (dblclick)="ondoble()">
                 <button type="button" class="btn btn-secondary" (click)="onAbout()">Cerrar</button>
                 <button type="button" class="btn btn-primary"  (click)="cambioAbout()">Aceptar</button>
             </div>

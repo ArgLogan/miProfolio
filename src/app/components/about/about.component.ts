@@ -92,8 +92,9 @@ export class AboutComponent implements OnInit {
     });
   }
 
-  obdoble(){
+  ondoble(){
     this.copir = !this.copir;
+    console.log(this.copir)
   }
 
 }
