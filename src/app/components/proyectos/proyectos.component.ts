@@ -21,7 +21,6 @@ export class ProyectosComponent implements OnInit {
   ngOnInit(): void {
     this.datosProyect.getDatos(6).subscribe(data =>{
       this.cards = data;
-      console.log(data)
     });
   }
 

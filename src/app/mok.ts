@@ -1,4 +1,4 @@
-import {Study, Experience, Proyecto, Skills} from './interfaces'
+import {Study, Experience, Proyecto, Skills, Header} from './interfaces'
 
 export const STUDY:Study = {
     "id":0,
@@ -31,4 +31,16 @@ export const SKILL:Skills ={
     "titulo":"",
     "subtitulo":"",
     "color":"#000000"
+}
+export const HEADER:Header ={
+    "id":0,
+    "nombre":"",
+    "apLogo":"",
+    "apText":"",
+    "lidin":"",
+    "github":"",
+    "twitter":"",
+    "facebook":"",
+    "email":"",
+    "wahtsapp":""
 }

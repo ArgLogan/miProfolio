@@ -12,7 +12,6 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosFooter.getDatos(0).subscribe(data =>{ // El Cero identifica a la secion ABOUT
-      console.log(data);
       this.footer = data[0];
     });
   }

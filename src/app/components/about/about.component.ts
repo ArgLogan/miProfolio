@@ -30,7 +30,6 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosAbout.getDatos(0).subscribe(data =>{ // El Cero identifica a la secion ABOUT
-      console.log(data);
       this.about = data[0];
     });
   }
@@ -94,7 +93,6 @@ export class AboutComponent implements OnInit {
 
   ondoble(){
     this.copir = !this.copir;
-    console.log(this.copir)
   }
 
 }

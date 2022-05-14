@@ -45,7 +45,6 @@ export class ProgressComponent implements OnInit {
     this.editFlag = !this.editFlag
   }
   onDelete(progress:Skills){
-    console.log(progress);
     this.onDeleteProgress.emit(progress)
     this.editFlag = !this.editFlag
   }

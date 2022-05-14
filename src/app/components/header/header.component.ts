@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { DatosService } from 'src/app/servicios/datos.service';
 import { EditService } from 'src/app/servicios/edit.service';
+import {Header} from '../../interfaces'
+import {HEADER} from '../../mok'
 
 
 @Component({
@@ -18,7 +20,7 @@ export class HeaderComponent implements OnInit {
   username:string="user name";
  
   users:any;
-  header:any;
+  header:Header = HEADER;
   @Output() onLoginClick:EventEmitter<boolean> = new EventEmitter();
  
   constructor(
@@ -40,8 +42,6 @@ export class HeaderComponent implements OnInit {
   }
   onLogin(){
     let flag:boolean = false;
-
-    console.log(this.username + " " + this.password);
     for (let x of this.users){
       if((this.password == x.password )&& (this.username == x.usuario )){
         flag = true
@@ -65,10 +65,5 @@ export class HeaderComponent implements OnInit {
     this.logout = false;
     this.login =true;
   }
-
-  usuario(valor:any){
-    console.log(valor)
-    this.username  = valor;
-  }
-
+ 
 }
