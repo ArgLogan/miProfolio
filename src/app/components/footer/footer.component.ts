@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/servicios/datos.service';
+import { Persona } from '../../interfaces';
+import {PERSONA} from '../../mok'
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +9,7 @@ import { DatosService } from 'src/app/servicios/datos.service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  public footer:any;
+  footer:Persona = PERSONA;
   constructor( private datosFooter:DatosService,) { }
 
   ngOnInit(): void {

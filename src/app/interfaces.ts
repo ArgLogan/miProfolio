@@ -29,10 +29,11 @@ export interface Persona{
     nombre:string;
     apellido:string;
     banner:string;
-    fperfi:string;
+    fperfil:string;
     titulo:string;
     about:string;
     wahtsapp:string;
+    copy:string;
 }
 export interface Header {
     id?:number;
