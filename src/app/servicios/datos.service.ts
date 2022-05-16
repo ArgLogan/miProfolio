@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders, } from '@angular/common/http';
 import { Injectable} from '@angular/core';
 import {Observable} from 'rxjs'
-import{ Study, Skills, Experience, Persona} from '../interfaces' 
+import{ Study, Skills, Experience, Persona } from '../interfaces' 
 import {STUDY} from '../mok'
 
 
@@ -22,8 +22,8 @@ export class DatosService {
   apiUrl:string = ' http://localhost:8080/porfolio';
   jsonUrl:string =' db.json/porfolio';
     */
-  apiUrl:string = 'https://arglogan.herokuapp.com';
-  //apiUrl:string = ' http://localhost:8080';
+  //apiUrl:string = 'https://arglogan.herokuapp.com';
+  apiUrl:string = ' http://localhost:8080';
 
   //Con esto elijo que secion usa los metodos 
   metodoUrl:string[] = ['/persona',      //0
@@ -53,6 +53,11 @@ export class DatosService {
   addSDatos(dato:any,seccion:number):Observable<any>{
     const url = `${this.apiUrl}${this.metodoUrl[seccion]}/new`
     return this.http.post<any>(url, dato)
+  }
+
+  verify(dato:any):Observable<any>{
+    const url = `http://localhost:8080/user/ok`
+    return this.http.post<any>(url,dato)
   }
 
 }

@@ -54,3 +54,11 @@ export interface Proyecto{
     enlace:String;
     detalle:String;
 }
+
+export interface User {
+    id?:number;
+    usuario: String;
+    password:String;
+    valido: boolean;
+}
+

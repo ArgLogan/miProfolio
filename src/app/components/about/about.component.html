@@ -3,7 +3,7 @@
 
 <div class="contiene-fotos">
     <div id="banner" >
-        <img id="foto-banner" [src]="about.banner" >
+        <img id="foto-banner" [src]="about.banner" alt="banner">
     </div> 
     <div class="social-icons edit-banner" *ngIf="editService.valorIcon" (click)="onFotoBanner()" >
         <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
@@ -11,7 +11,7 @@
     
 
     <div id="foto-perfil">
-        <img id="fperfil" [src]="about.fperfil"> 
+        <img id="fperfil" [src]="about.fperfil" alt="perfil"> 
     </div>
         
     <div class="social-icons edit-foto" *ngIf="editService.valorIcon" (click)="onFotoPerfil()" >

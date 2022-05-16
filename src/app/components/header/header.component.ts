@@ -3,8 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { DatosService } from 'src/app/servicios/datos.service';
 import { EditService } from 'src/app/servicios/edit.service';
-import {Header} from '../../interfaces'
-import {HEADER} from '../../mok'
+import {Header, User} from '../../interfaces'
+import {HEADER, USER} from '../../mok'
 
 
 @Component({
@@ -15,10 +15,11 @@ import {HEADER} from '../../mok'
 export class HeaderComponent implements OnInit {
   login:boolean=true;
   logout:boolean = false;
+  flag:boolean = false;
 
   password:string ="pasword";
   username:string="user name";
- 
+  user:User = USER;
   users:any;
   header:Header = HEADER;
   @Output() onLoginClick:EventEmitter<boolean> = new EventEmitter();
@@ -41,23 +42,27 @@ export class HeaderComponent implements OnInit {
     
   }
   onLogin(){
-    let flag:boolean = false;
-    for (let x of this.users){
-      if((this.password == x.password )&& (this.username == x.usuario )){
-        flag = true
-      }
-    }
-      if(flag){
+    
+    
+    this.user.password = this.password
+    this.user.usuario = this.username
+
+    this.datosHeader.verify(this.user).subscribe(data =>{ 
+      this.flag = data;
+      if(this.flag ){
         this.editService.valorIcon = true;
         this.logout = true;
         this.login = false;
-        this.username ="";
-        this.password ="";
+         this.username ="";
+         this.password ="";
       }else{
         this.username ="";
         this.password ="";
         alert("Password o usuario incorrecto")
       }
+
+    });
+   
     
   }
   onDouble(){
