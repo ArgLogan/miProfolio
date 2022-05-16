@@ -22,8 +22,8 @@ export class DatosService {
   apiUrl:string = ' http://localhost:8080/porfolio';
   jsonUrl:string =' db.json/porfolio';
     */
-  //apiUrl:string = 'https://arglogan.herokuapp.com';
-  apiUrl:string = ' http://localhost:8080';
+  apiUrl:string = 'https://arglogan.herokuapp.com';
+  //apiUrl:string = ' http://localhost:8080';
 
   //Con esto elijo que secion usa los metodos 
   metodoUrl:string[] = ['/persona',      //0
@@ -56,7 +56,7 @@ export class DatosService {
   }
 
   verify(dato:any):Observable<any>{
-    const url = `http://localhost:8080/user/ok`
+    const url = `${this.apiUrl}/user/ok`
     return this.http.post<any>(url,dato)
   }
 
