@@ -46,10 +46,10 @@ export const HEADER:Header ={
 }
 export const PERSONA:Persona={
     "id": 0,
-    "nombre":"",
+    "nombre":"Juan José",
     "apellido":"",
-    "banner":"",
-    "fperfil":"",
+    "banner":"./assets/imgs/Banner.jpg",
+    "fperfil":"./assets/imgs/banner2.png",
     "titulo":"",
     "about":"",
     "wahtsapp":"",
