@@ -16,6 +16,7 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { IconsComponent } from './components/icons/icons.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -33,6 +34,7 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
     IconsComponent,
     ProyectosComponent,
     ProyectoComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

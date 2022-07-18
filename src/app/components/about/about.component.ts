@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 import { DatosService } from 'src/app/servicios/datos.service';
 import { EditService } from 'src/app/servicios/edit.service';
 import {Persona} from '../../interfaces'
+import {PERSONA} from '../../mok'
 
 
 @Component({
@@ -12,7 +13,7 @@ import {Persona} from '../../interfaces'
 export class AboutComponent implements OnInit {
    
   @Input() editIcon:boolean=true;
-  about:any;
+  about:Persona = PERSONA;
   toggleModal:boolean = false
   toggleFotoPefil:boolean = false;
   editFotoBanner:boolean = false;
@@ -20,6 +21,7 @@ export class AboutComponent implements OnInit {
   editAbout:boolean  = false;
   newPerfil:string ="";
   newBanner:string="";
+  copir:boolean= false;
 
 
   constructor(
@@ -29,7 +31,6 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosAbout.getDatos(0).subscribe(data =>{ // El Cero identifica a la secion ABOUT
-      console.log(data);
       this.about = data[0];
     });
   }
@@ -89,6 +90,10 @@ export class AboutComponent implements OnInit {
     this.onAbout();
     this.datosAbout.atualizaDatos(this.about,0).subscribe((perona)=>{
     });
+  }
+
+  ondoble(){
+    this.copir = !this.copir;
   }
 
 }

@@ -21,7 +21,6 @@ export class ExperienciaComponent implements OnInit {
   ngOnInit(): void {
   }
   onDelete(experiencia:Experience){
-    console.log(experiencia);
     this.onDeleteExp.emit(experiencia)
   }
   onEdit(){

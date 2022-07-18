@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders, } from '@angular/common/http';
 import { Injectable} from '@angular/core';
 import {Observable} from 'rxjs'
-import{ Study, Skills, Experience, Persona} from '../interfaces' 
+import{ Study, Skills, Experience, Persona } from '../interfaces' 
 import {STUDY} from '../mok'
 
 
@@ -33,7 +33,7 @@ export class DatosService {
                         '/experiencia',  //4
                         '/idioma',       //5
                         '/proyect',      //6
-                        '/certificado']; //7
+                        '/user'];        //7
 
   constructor( private http:HttpClient ) { }
    
@@ -43,8 +43,6 @@ export class DatosService {
     return  this.http.get(url);
   }
   atualizaDatos(dato:any, seccion:number):Observable<any>{
-    console.log("SERVICIO")
-    console.log(dato)
     const url = `${this.apiUrl}${this.metodoUrl[seccion]}/update`
     return this.http.post<any>(url, dato)
   }
@@ -55,6 +53,11 @@ export class DatosService {
   addSDatos(dato:any,seccion:number):Observable<any>{
     const url = `${this.apiUrl}${this.metodoUrl[seccion]}/new`
     return this.http.post<any>(url, dato)
+  }
+
+  verify(dato:any):Observable<any>{
+    const url = `${this.apiUrl}/user/ok`
+    return this.http.post<any>(url,dato)
   }
 
 }

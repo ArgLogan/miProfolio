@@ -25,6 +25,7 @@
 .contiene-fotos{
     display: flex;
     flex-direction: column;
+    margin-bottom: .5rem;
 }
 
 .about{
@@ -85,7 +86,7 @@
     border: initial;
 }
 .text-about{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: justify;
 }
 

@@ -3,7 +3,7 @@
 
 <div class="contiene-fotos">
     <div id="banner" >
-        <img id="foto-banner" [src]="about.banner" >
+        <img id="foto-banner" [src]="about.banner" alt="banner">
     </div> 
     <div class="social-icons edit-banner" *ngIf="editService.valorIcon" (click)="onFotoBanner()" >
         <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
@@ -11,7 +11,7 @@
     
 
     <div id="foto-perfil">
-        <img id="fperfil" [src]="about.fperfil"> 
+        <img id="fperfil" [src]="about.fperfil" alt="perfil"> 
     </div>
         
     <div class="social-icons edit-foto" *ngIf="editService.valorIcon" (click)="onFotoPerfil()" >
@@ -37,11 +37,11 @@
             <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
         </div>
     
-        <div class="col-sm-6 g-0 ">
+        <div class="col-sm-6 g-0 p-1">
             <p class="text-about">{{about.about}}</p>
         </div>
         
-        <div class="social-icons p-2 col-sm-1 g-0" *ngIf="editService.valorIcon" (click)="onAbout()" >
+        <div class="d-flex justify-content-center social-icons col-sm-1" *ngIf="editService.valorIcon" (click)="onAbout()" >
             <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
         </div>
     </div>
@@ -52,7 +52,7 @@
 </section>
 
 <div class="fixed-top modal-fotos " *ngIf="toggleModal" enctype="multipart/form-data" >
-    <div class="position-relative col-sm-6 fade-in border border-1 border-primary bg-white redondea">
+    <div class="position-relative col-sm-6 fade-in top-50 start-50 translate-middle border border-1 border-primary bg-white redondea">
         <!-- modal del edit foto de perfil  -->
         <div *ngIf="toggleFotoPefil">
             <div class="modal-header">
@@ -95,7 +95,7 @@
                 <div class="mb-3">
                     <input class="form-control"  type="text" placeholder="Nombre" maxlength="20" [(ngModel)]="about.nombre">
                     <input class="form-control"  type="text" placeholder="Apellido" maxlength="10" [(ngModel)]="about.apellido">
-                    <input class="form-control"  type="text" placeholder="Título" maxlength="15" [(ngModel)]="about.titulo">
+                    <input class="form-control"  type="text" placeholder="Título" maxlength="25" [(ngModel)]="about.titulo">
                 </div>
             </div>
             <div class="modal-footer">
@@ -104,7 +104,7 @@
             </div>
         </div>
         <!-- modal del edit about -->
-        <div *ngIf="editAbout">
+        <div *ngIf="editAbout" >
             <div class="modal-header">
                 <h3>Selecione los nuevos datos</h3>
             </div>
@@ -112,8 +112,11 @@
                 <div class="mb-3">
                     <textarea class="form-control" name="textarea" rows="10" cols="70" [(ngModel)]="about.about" ></textarea>
                 </div>
+                <div class="mb-1" *ngIf="copir">
+                    <textarea class="form-control" name="number"  [(ngModel)]="about.copy" ></textarea>
+                </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" (dblclick)="ondoble()">
                 <button type="button" class="btn btn-secondary" (click)="onAbout()">Cerrar</button>
                 <button type="button" class="btn btn-primary"  (click)="cambioAbout()">Aceptar</button>
             </div>
