@@ -22,7 +22,8 @@ export class DatosService {
   apiUrl:string = ' http://localhost:8080/porfolio';
   jsonUrl:string =' db.json/porfolio';
     */
-  apiUrl:string = 'https://arglogan.herokuapp.com';
+  //apiUrl:string = 'https://arglogan.herokuapp.com';
+  apiUrl:string = 'https://nearby-janis-arglogan.koyeb.app'
   //apiUrl:string = ' http://localhost:8080';
 
   //Con esto elijo que secion usa los metodos 

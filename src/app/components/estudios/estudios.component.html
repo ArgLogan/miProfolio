@@ -29,7 +29,7 @@
           </div>
             
           <div class="modal-body">
-            <input class="form-control"  type="text" placeholder="periodo" [(ngModel)]="nuevo.periodo">
+            <input class="form-control"  type="date" placeholder="periodo" [(ngModel)]="nuevo.periodo"  min="2018-01-01" max="2018-12-31">
             <input class="form-control"  type="text" placeholder="institucion" [(ngModel)]="nuevo.institucion">
             <input class="form-control"  type="text" placeholder="titulo" [(ngModel)]="nuevo.titulo">
             <input class="form-control"  type="text" placeholder="descripcion" [(ngModel)]="nuevo.descripcion">
