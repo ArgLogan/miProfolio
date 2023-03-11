@@ -1,5 +1,25 @@
+.proyecto{
+    display:flex;
+    flex-direction: column;
+    height: 430px;
+}
 .card{
+ width: 19rem;
  display: flex;
  flex-direction:column;
+
+
  height:400px;
+}
+img{
+    height: 50%;
+    flex-grow: 3;
+}
+a{
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.card-body{
+    flex-grow: 2;
 }

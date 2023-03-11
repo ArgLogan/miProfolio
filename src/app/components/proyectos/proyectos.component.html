@@ -13,6 +13,7 @@
     <app-proyecto
         *ngFor="let dato of cards"
         [datos]="dato"
+        (onDeleteProyect)="deleteproyect(dato)"
     ></app-proyecto>
 </div>
 

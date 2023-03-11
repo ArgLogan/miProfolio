@@ -13,6 +13,7 @@
 }
 .nombre{
     text-shadow: -.2rem .2rem .1rem gray;
+    text-shadow: 0.2rem -0.1rem 0.1rem #a8b1bf;
     margin-left: 1rem;
     font-size: 2rem;
 }
@@ -20,6 +21,7 @@
     margin-left: 1rem;
     font-size: 1.5rem;
     text-shadow: -.1rem .1rem .1rem gray;
+    text-shadow: 0.2rem -0.1rem 0.1rem #a8b1bf;
 }
 
 .contiene-fotos{

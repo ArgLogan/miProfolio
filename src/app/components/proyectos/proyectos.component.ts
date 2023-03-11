@@ -34,5 +34,18 @@ export class ProyectosComponent implements OnInit {
     })
     alert("Se agregó un nuevo Proyecto");
   }
+  deleteproyect(dato:Proyecto){
+    if(confirm("¿está seguro de quere borrar el proyecto?")){
+
+      this.datosProyect.deleteDatos(dato,6)
+      .subscribe( 
+        ()=>{
+          this.cards = this.cards.filter( (t) => {
+            return t.id !== dato.id
+          })
+        })
+    }
+
+  }
   
 }

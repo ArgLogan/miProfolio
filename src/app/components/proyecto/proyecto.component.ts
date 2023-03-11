@@ -1,4 +1,7 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { from } from 'rxjs';
+import {Proyecto} from '../../interfaces'
+import {PROYECTO} from '../../mok'
 
 @Component({
   selector: 'app-proyecto',
@@ -6,11 +9,15 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./proyecto.component.css']
 })
 export class ProyectoComponent implements OnInit {
-  @Input() datos:any;
+  @Input() datos:any ;
+  @Output() onDeleteProyect:EventEmitter<Proyecto> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onDelete(proyect:Proyecto){
+    this.onDeleteProyect.emit(proyect)
   }
 
 }
