@@ -22,14 +22,13 @@
 
 
 
-<div class ="container">
-    <div class="col-sm-12 d-flex border border-2 border-secondary redondea">
-        
+<div class ="contiene-todo border border-2 border-secondary redondea">
+       
         <div class="about col-sm-4 fs-8 p-2">
             <h1 class="nombre" fs-6>{{about.nombre}} {{about.apellido}}</h1>
             <h2 class="titulo" fs-2>{{about.titulo}}</h2>
-            <div class="social-icons col-sm-2">
-                <a class="social-icon" [href]="about.wahtsapp" target="_blank" ><i class="fab fa-whatsapp"></i></a>
+            <div class="social-icons col-sm-2 wts-ico">
+                <a class="social-icon " [href]="about.wahtsapp" target="_blank" ><i class="fab fa-whatsapp"></i></a>
             </div>
 
         </div>
@@ -44,7 +43,6 @@
         <div class="d-flex justify-content-center social-icons col-sm-1" *ngIf="editService.valorIcon" (click)="onAbout()" >
             <a class="social-icon" href="#" ><i class="fas fa-pen"></i></a>
         </div>
-    </div>
 </div>
 <div class="separador"></div>
 

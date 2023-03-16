@@ -1,6 +1,12 @@
 *{
     font-family: 'Vidaloka', serif;
 }
+.contiene-todo{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 .edit-foto{
     z-index: 5;
     display: inline-block;
@@ -102,4 +108,27 @@
     color: #fff;
     border-radius: 50%;
     font-size: 1.4rem;
+  }
+
+  @media screen and (max-width: 640px){
+
+    .about{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .text-about{
+        margin-left: 5%;
+        width: 90%;
+    }
+    .contiene-todo{
+        margin: 5px;
+        flex-direction: column;
+    }
+    .wts-ico{
+        width: 90%;
+        margin-left: 5%;
+    }
+    
   }
