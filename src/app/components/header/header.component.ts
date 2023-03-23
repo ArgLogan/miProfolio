@@ -13,7 +13,7 @@ import {HEADER, USER} from '../../mok'
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  login:boolean=true;
+  login:boolean=false;
   logout:boolean = false;
   flag:boolean = false;
   token:string = "";
@@ -76,5 +76,7 @@ export class HeaderComponent implements OnInit {
     this.logout = false;
     this.login =true;
   }
- 
+  showLogin(){
+    this.login = !this.login;
+  }
 }

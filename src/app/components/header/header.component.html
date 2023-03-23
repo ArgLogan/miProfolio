@@ -1,12 +1,12 @@
 
-<header>
-    <nav>
+<header (dblclick)="showLogin()">
+    <nav >
         <div id="cont-img">
             <img  class="img-nav" [src]="header.apLogo" alt="arg-prog" > 
             <div id="yo-prog">{{header.apText}}</div>
         </div>
         
-        <div class="social-icons">
+        <div class="social-icons" (dblclick)="showLogin()">
             <a class="social-icon" [href]="header.lidin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             <a class="social-icon" [href]="header.github" target="_blank" ><i class="fab fa-github"></i></a>
             <a class="social-icon" [href]="header.twitter" target="_blank"><i class="fab fa-twitter"></i></a>
