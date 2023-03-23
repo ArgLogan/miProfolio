@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   login:boolean=true;
   logout:boolean = false;
   flag:boolean = false;
+  token:string = "";
 
   password:string ="pasword";
   username:string="user name";
@@ -48,7 +49,12 @@ export class HeaderComponent implements OnInit {
     this.user.usuario = this.username
 
     this.datosHeader.verify(this.user).subscribe(data =>{ 
-      this.flag = data;
+      this.token = data;
+      console.log(this.token + "  "+ data)
+      if (this.token != null){
+        this.flag = true;
+      }
+      
       if(this.flag ){
         this.editService.valorIcon = true;
         this.logout = true;
