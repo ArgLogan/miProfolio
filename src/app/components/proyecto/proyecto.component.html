@@ -1,11 +1,12 @@
 <div class="proyecto">
     <div class="card" (dblclick)="onDelete(datos)">
-        <img [src]="datos.imagen" class="card-img-top" alt="...">
+        <img [src]="datos.imagen" class="card-img-top" [alt]="datos.imagen">
         <div class="card-body">
           <h5 class="card-title">{{datos.nombre}}</h5>
           <p class="card-text">{{datos.detalle}}</p>
         </div>
         <a [href]="datos.enlace" target="_blank" class="btn btn-primary">visitar</a>
     </div>
+
 </div>
 
